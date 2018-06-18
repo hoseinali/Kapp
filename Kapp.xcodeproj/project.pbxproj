@@ -13,6 +13,7 @@
 		16455F3620D839720005B1A2 /* Kapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16455F3420D839720005B1A2 /* Kapp.xcdatamodeld */; };
 		16455F3820D839740005B1A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16455F3720D839740005B1A2 /* Assets.xcassets */; };
 		16455F3B20D839740005B1A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16455F3920D839740005B1A2 /* LaunchScreen.storyboard */; };
+		1E7D07A58ED0250A180D7216 /* Pods_Kapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72A410325F023A3B0079A37 /* Pods_Kapp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		16455F3720D839740005B1A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16455F3A20D839740005B1A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16455F3C20D839740005B1A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53B3787B40C9483E4D27BA70 /* Pods-Kapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kapp/Pods-Kapp.release.xcconfig"; sourceTree = "<group>"; };
+		B887804619821CAF2C227FFA /* Pods-Kapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kapp/Pods-Kapp.debug.xcconfig"; sourceTree = "<group>"; };
+		F72A410325F023A3B0079A37 /* Pods_Kapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E7D07A58ED0250A180D7216 /* Pods_Kapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				16455F2C20D839720005B1A2 /* Kapp */,
 				16455F2B20D839720005B1A2 /* Products */,
+				B7C60FBA8D9F57C8B7A8D716 /* Pods */,
+				2E65BB2E244972E0B0FF8102 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = Kapp;
 			sourceTree = "<group>";
 		};
+		2E65BB2E244972E0B0FF8102 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F72A410325F023A3B0079A37 /* Pods_Kapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7C60FBA8D9F57C8B7A8D716 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B887804619821CAF2C227FFA /* Pods-Kapp.debug.xcconfig */,
+				53B3787B40C9483E4D27BA70 /* Pods-Kapp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16455F3F20D839740005B1A2 /* Build configuration list for PBXNativeTarget "Kapp" */;
 			buildPhases = (
+				089C5A0628C96119248D8496 /* [CP] Check Pods Manifest.lock */,
 				16455F2620D839720005B1A2 /* Sources */,
 				16455F2720D839720005B1A2 /* Frameworks */,
 				16455F2820D839720005B1A2 /* Resources */,
+				83313A7D0D7BD8C5822F0D54 /* [CP] Embed Pods Frameworks */,
+				6580E815C50106A24C0EE7A7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		089C5A0628C96119248D8496 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6580E815C50106A24C0EE7A7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kapp/Pods-Kapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83313A7D0D7BD8C5822F0D54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Kapp/Pods-Kapp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kapp/Pods-Kapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		16455F2620D839720005B1A2 /* Sources */ = {
@@ -282,37 +365,33 @@
 		};
 		16455F4020D839740005B1A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B887804619821CAF2C227FFA /* Pods-Kapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GR5E89RNHJ;
 				INFOPLIST_FILE = Kapp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iPersianDeveloper.Kapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		16455F4120D839740005B1A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53B3787B40C9483E4D27BA70 /* Pods-Kapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GR5E89RNHJ;
 				INFOPLIST_FILE = Kapp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iPersianDeveloper.Kapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
