@@ -13,6 +13,7 @@
 		16455F3620D839720005B1A2 /* Kapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16455F3420D839720005B1A2 /* Kapp.xcdatamodeld */; };
 		16455F3820D839740005B1A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16455F3720D839740005B1A2 /* Assets.xcassets */; };
 		16455F3B20D839740005B1A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16455F3920D839740005B1A2 /* LaunchScreen.storyboard */; };
+		16B2711820D8D70B00C74709 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2711720D8D70B00C74709 /* AuthenticationService.swift */; };
 		1E7D07A58ED0250A180D7216 /* Pods_Kapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72A410325F023A3B0079A37 /* Pods_Kapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		16455F3720D839740005B1A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16455F3A20D839740005B1A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16455F3C20D839740005B1A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16B2711720D8D70B00C74709 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationService.swift; path = ../../../../../Desktop/AuthenticationService.swift; sourceTree = "<group>"; };
 		53B3787B40C9483E4D27BA70 /* Pods-Kapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kapp/Pods-Kapp.release.xcconfig"; sourceTree = "<group>"; };
 		B887804619821CAF2C227FFA /* Pods-Kapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kapp/Pods-Kapp.debug.xcconfig"; sourceTree = "<group>"; };
 		F72A410325F023A3B0079A37 /* Pods_Kapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 		D845218220D83E06001A85C7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				16B2711720D8D70B00C74709 /* AuthenticationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				16455F3620D839720005B1A2 /* Kapp.xcdatamodeld in Sources */,
 				16455F3020D839720005B1A2 /* ViewController.swift in Sources */,
 				16455F2E20D839720005B1A2 /* AppDelegate.swift in Sources */,
+				16B2711820D8D70B00C74709 /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
