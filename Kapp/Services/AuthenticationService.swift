@@ -14,7 +14,7 @@ class AuthenticationService {
     static let instance = AuthenticationService()
     
     let defaults = UserDefaults.standard
-    var newUser = true
+    var GoS2Register = true
     
     // 1
     func loginGetCode(number: String, completion: @escaping COMPLETION_SUCCESS) {
@@ -37,7 +37,7 @@ class AuthenticationService {
                 guard let json = jsonAny as? [String:Any] else {return}
                 guard let type = json["type"] as? String else {return}
                 if type == "sucess" {
-                    self.newUser = true
+                    self.GoS2Register = true
                     completion(true)
                 } else if type == "error" {
                     completion(false)
@@ -107,8 +107,7 @@ class AuthenticationService {
                     guard let uid = data["uid"] as? Int else { return }
                     guard let mobile = data["mobile"] as? String else { return }
                     guard let next = data["next"] as? Bool else { return }
-        
-                    self.newUser = true
+                    self.GoS2Register = next
                     completion(true)
                 } else if type == "error" {
                     completion(false)
@@ -151,6 +150,7 @@ class AuthenticationService {
         }
         task.resume()
     }
+    
     // 5
     func reOkCode(number: String, completion: @escaping COMPLETION_SUCCESS) {
         guard let url = URL.init(string: RESEND_CODE_URL + "\(number)") else { return }
@@ -166,6 +166,40 @@ class AuthenticationService {
                 }
             }
         }
+    }
+    
+    // 8
+    func sendPmUser(title:String, content:String, pretitle:String, completion:@escaping COMPLETION_SUCCESS) {
+        let uid = UserDataService.instance.uid
+        let ssid = UserDataService.instance.ssid
+        guard let url = URL.init(string: SEND_PM_URL + "&uid=\(uid)&ssid=\(ssid)") else {return}
+        let parameters = ["title": "\(title)", "title": "\(title)"]
+        var request = URLRequest.init(url: url)
+        request.httpMethod = "POST"
+        let boundary = generateBoundary()
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type") // add header
+        let dataBody = createDataBody(withParameters: parameters, boundary: boundary)
+        request.httpBody = dataBody
+        let session = URLSession.shared
+        let task = session.dataTask(with: request) { (data, response, error) in
+            if let _ = response {
+                //
+            }
+            if let data = data {
+                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
+                guard let json = jsonAny as? [String: Any] else { return }
+                guard let type = json["type"] as? String else { return }
+                if type == "success" {
+                    guard let data = json["data"] as? String else { return }
+                    //
+                    completion(true)
+                } else if type == "error" {
+                    completion(false)
+                }
+            }
+        }
+        task.resume()
     }
     
     private func generateBoundary() -> String {

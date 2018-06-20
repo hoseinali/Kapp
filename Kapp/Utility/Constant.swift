@@ -22,6 +22,7 @@ let OKCODE_USER_URL = "\(BASE_URL)api-users.php?do=register_s2"
 let RESEND_CODE_URL = "\(BASE_URL)api-users.php?do=reokcode"
 let USER_INFO_URL = "\(BASE_URL)api-users.php?do=reokcode"
 let UPDATE_USER_INFO_URL = "\(BASE_URL)api-users.php?do=profile_up"
+let SEND_PM_URL = "\(BASE_URL)api-users.php?do=pm"
 
 // DEFAULT USERS
 let PHONE_KEY = "phone"

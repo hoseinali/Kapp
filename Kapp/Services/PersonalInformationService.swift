@@ -24,26 +24,26 @@ class PersonalInfromationService {
         let uid = UserDataService.instance.uid
         let ssid = UserDataService.instance.ssid
         let url = USER_INFO_URL + "&uid=\(uid)&ssid=\(ssid)"
-        print(url)
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: DEFAULT_HEADER).responseJSON { (response) in
             if response.result.error == nil {
                 guard let data = response.data else { return }
                 guard let json = try? JSON.init(data: data) else { completion(false) ; return }
                 let type = json["type"].stringValue
                 if type == "sucess" {
-                    let name = json["name"].stringValue
-                    let picture = json["picture"].stringValue
-                    let lastdate = json["lastdate"].stringValue
-                    let date = json["date"].stringValue
-                    let birth = json["birth"].stringValue
-                    let city = json["city"].stringValue
-                    let state = json["state"].stringValue
-                    let melli = json["melli"].stringValue
-                    let zippostal = json["zippostal"].stringValue
-                    let address = json["address"].stringValue
-                    let bankCard = json["bank-card"].stringValue
-                    let bankName = json["bank-name"].stringValue
-                    let bankId = json["bank-id"].stringValue
+                    guard let dadaJson = json["data"].dictionary else { completion(false) ; return  }
+                    let name = dadaJson["name"]!.stringValue
+                    let picture = dadaJson["picture"]!.stringValue
+                    let lastdate = dadaJson["lastdate"]!.stringValue
+                    let date = dadaJson["date"]!.stringValue
+                    let birth = dadaJson["birth"]!.stringValue
+                    let city = dadaJson["city"]!.stringValue
+                    let state = dadaJson["state"]!.stringValue
+                    let melli = dadaJson["melli"]!.stringValue
+                    let zippostal = dadaJson["zippostal"]!.stringValue
+                    let address = dadaJson["address"]!.stringValue
+                    let bankCard = dadaJson["bank-card"]!.stringValue
+                    let bankName = dadaJson["bank-name"]!.stringValue
+                    let bankId = dadaJson["bank-id"]!.stringValue
                     let userInformation = UserInformation.init(name: name, picture: picture, lastdate: lastdate, date: date, birth: birth, melli: melli, city: city, state: state, zippostal: zippostal, address: address, bankCard: bankCard, bankName:bankName , bankId: bankId)
                     self.userInformation = userInformation
                     completion(true)
@@ -79,18 +79,16 @@ class PersonalInfromationService {
                 if type == "success" {
                     //
                     completion(true)
-                } else if message == "USER_REG1_MOBILEIS" {
-                    //
-                    completion(false)
-                } else {
-                    completion(false)
-                }
+               
             } else {
                 completion(false)
+                }
             }
         }
         task.resume()
     }
+    
+
   
     private func generateBoundary() -> String {
         
