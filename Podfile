@@ -6,7 +6,16 @@ target 'Kapp' do
   use_frameworks!
 
   # Pods for Kapp
-pod 'Alamofire'
-pod 'SwiftyJSON'
+    pod 'Alamofire'
+    pod 'SwiftyJSON'
+    pod 'SideMenuController'
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
+    pod 'IQKeyboardManagerSwift'
+    pod 'NVActivityIndicatorView'
+    pod 'CDAlertView'
+    pod 'UICheckbox.Swift'
 
 end

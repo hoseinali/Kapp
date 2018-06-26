@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import GooglePlaces
+import GoogleMaps
+import SideMenuController
 import CoreData
 
 @UIApplicationMain
@@ -14,9 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        SideMenuController.preferences.drawing.menuButtonImage = UIImage(named: "menu")!
+        SideMenuController.preferences.drawing.sidePanelPosition = .overCenterPanelRight
+        SideMenuController.preferences.drawing.sidePanelWidth = 200
+        SideMenuController.preferences.drawing.centerPanelShadow = true
+        SideMenuController.preferences.animating.statusBarBehaviour = .horizontalPan
+        SideMenuController.preferences.animating.transitionAnimator = FadeAnimator.self
+        GMSPlacesClient.provideAPIKey(GOOGLE_API_KEY)
+        GMSServices.provideAPIKey(GOOGLE_API_KEY)
+
+        
         return true
     }
 

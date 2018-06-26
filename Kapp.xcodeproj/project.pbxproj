@@ -8,18 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		16455F2E20D839720005B1A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16455F2D20D839720005B1A2 /* AppDelegate.swift */; };
-		16455F3020D839720005B1A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16455F2F20D839720005B1A2 /* ViewController.swift */; };
+		16455F3020D839720005B1A2 /* CustomSideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16455F2F20D839720005B1A2 /* CustomSideMenuController.swift */; };
 		16455F3320D839720005B1A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16455F3120D839720005B1A2 /* Main.storyboard */; };
 		16455F3620D839720005B1A2 /* Kapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16455F3420D839720005B1A2 /* Kapp.xcdatamodeld */; };
 		16455F3820D839740005B1A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16455F3720D839740005B1A2 /* Assets.xcassets */; };
 		16455F3B20D839740005B1A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16455F3920D839740005B1A2 /* LaunchScreen.storyboard */; };
 		1E7D07A58ED0250A180D7216 /* Pods_Kapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72A410325F023A3B0079A37 /* Pods_Kapp.framework */; };
+		D83941C520E25410008E09C9 /* SpendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83941C420E25410008E09C9 /* SpendTableViewCell.swift */; };
+		D83941C720E25621008E09C9 /* BagResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83941C620E25621008E09C9 /* BagResultTableViewCell.swift */; };
+		D864364B20E05760003CFB4F /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864364A20E05760003CFB4F /* RoundedView.swift */; };
+		D864364D20E058B3003CFB4F /* CarChosenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864364C20E058B3003CFB4F /* CarChosenViewController.swift */; };
+		D878202920DEC61F0076416B /* UIImageExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878202820DEC61F0076416B /* UIImageExtention.swift */; };
+		D878202B20DEE1360076416B /* PopTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878202A20DEE1360076416B /* PopTransitionAnimator.swift */; };
+		D878202D20DEE3E20076416B /* BagResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878202C20DEE3E20076416B /* BagResultViewController.swift */; };
+		D878202F20DEE54C0076416B /* CreditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878202E20DEE54C0076416B /* CreditViewController.swift */; };
+		D878203120DEE7120076416B /* CallUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878203020DEE7120076416B /* CallUsViewController.swift */; };
+		D878203420DEEE200076416B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878203320DEEE200076416B /* RoundedButton.swift */; };
+		D878203620DEF4F50076416B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878203520DEF4F50076416B /* RegisterViewController.swift */; };
+		D878203820DEF51B0076416B /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878203720DEF51B0076416B /* ConfirmViewController.swift */; };
+		D878203A20DEF9A50076416B /* SlideDownTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878203920DEF9A50076416B /* SlideDownTransitionAnimator.swift */; };
+		D88EE4CB20DE908900E04C16 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88EE4CA20DE908900E04C16 /* Constants.swift */; };
+		D88EE4CD20DE916C00E04C16 /* SpendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88EE4CC20DE916C00E04C16 /* SpendViewController.swift */; };
+		D88EE4CF20DE91C600E04C16 /* SideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88EE4CE20DE91C600E04C16 /* SideTableViewController.swift */; };
+		D88EE4D120DE931200E04C16 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88EE4D020DE931200E04C16 /* MainViewController.swift */; };
+		D88EE4D320DEB66F00E04C16 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88EE4D220DEB66E00E04C16 /* RootViewController.swift */; };
+		D88EE4D520DEB81500E04C16 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88EE4D420DEB81500E04C16 /* ProfileTableViewController.swift */; };
+		D88EE4D720DEB97200E04C16 /* Yekan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D88EE4D620DEB93600E04C16 /* Yekan.ttf */; };
+		D8D91E3820E2FEBB00DE332F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D91E3720E2FEBB00DE332F /* Utilities.swift */; };
+		D8FC47BD20E25CF20078CC8C /* UIViewExntension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FC47BC20E25CF20078CC8C /* UIViewExntension.swift */; };
+		D8FC47BF20E261770078CC8C /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FC47BE20E261770078CC8C /* CircleImageView.swift */; };
+		D8FC47E120E2E3BB0078CC8C /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FC47E020E2E3BB0078CC8C /* OrderDetailViewController.swift */; };
+		D8FC47E320E2E4C00078CC8C /* OrderDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FC47E220E2E4C00078CC8C /* OrderDetailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		16455F2A20D839720005B1A2 /* Kapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16455F2D20D839720005B1A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16455F2F20D839720005B1A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		16455F2F20D839720005B1A2 /* CustomSideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSideMenuController.swift; sourceTree = "<group>"; };
 		16455F3220D839720005B1A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16455F3520D839720005B1A2 /* Kapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kapp.xcdatamodel; sourceTree = "<group>"; };
 		16455F3720D839740005B1A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -27,6 +52,32 @@
 		16455F3C20D839740005B1A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53B3787B40C9483E4D27BA70 /* Pods-Kapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kapp/Pods-Kapp.release.xcconfig"; sourceTree = "<group>"; };
 		B887804619821CAF2C227FFA /* Pods-Kapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kapp/Pods-Kapp.debug.xcconfig"; sourceTree = "<group>"; };
+		D83941C420E25410008E09C9 /* SpendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendTableViewCell.swift; sourceTree = "<group>"; };
+		D83941C620E25621008E09C9 /* BagResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagResultTableViewCell.swift; sourceTree = "<group>"; };
+		D864364A20E05760003CFB4F /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		D864364C20E058B3003CFB4F /* CarChosenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarChosenViewController.swift; sourceTree = "<group>"; };
+		D878202820DEC61F0076416B /* UIImageExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtention.swift; sourceTree = "<group>"; };
+		D878202A20DEE1360076416B /* PopTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopTransitionAnimator.swift; sourceTree = "<group>"; };
+		D878202C20DEE3E20076416B /* BagResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagResultViewController.swift; sourceTree = "<group>"; };
+		D878202E20DEE54C0076416B /* CreditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditViewController.swift; sourceTree = "<group>"; };
+		D878203020DEE7120076416B /* CallUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallUsViewController.swift; sourceTree = "<group>"; };
+		D878203320DEEE200076416B /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		D878203520DEF4F50076416B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D878203720DEF51B0076416B /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
+		D878203920DEF9A50076416B /* SlideDownTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideDownTransitionAnimator.swift; sourceTree = "<group>"; };
+		D88EE4CA20DE908900E04C16 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D88EE4CC20DE916C00E04C16 /* SpendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendViewController.swift; sourceTree = "<group>"; };
+		D88EE4CE20DE91C600E04C16 /* SideTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideTableViewController.swift; sourceTree = "<group>"; };
+		D88EE4D020DE931200E04C16 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D88EE4D220DEB66E00E04C16 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		D88EE4D420DEB81500E04C16 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		D88EE4D620DEB93600E04C16 /* Yekan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Yekan.ttf; sourceTree = "<group>"; };
+		D8D91E3720E2FEBB00DE332F /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		D8FC47BC20E25CF20078CC8C /* UIViewExntension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExntension.swift; sourceTree = "<group>"; };
+		D8FC47BE20E261770078CC8C /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		D8FC47C020E263770078CC8C /* Kapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kapp.entitlements; sourceTree = "<group>"; };
+		D8FC47E020E2E3BB0078CC8C /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
+		D8FC47E220E2E4C00078CC8C /* OrderDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailTableViewCell.swift; sourceTree = "<group>"; };
 		F72A410325F023A3B0079A37 /* Pods_Kapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -63,12 +114,18 @@
 		16455F2C20D839720005B1A2 /* Kapp */ = {
 			isa = PBXGroup;
 			children = (
+				D8FC47C020E263770078CC8C /* Kapp.entitlements */,
+				D878202720DEC5F90076416B /* Extention */,
+				D88EE4C920DE907900E04C16 /* Uitilities */,
 				D845218220D83E06001A85C7 /* Services */,
+				D878203220DEEDA90076416B /* View */,
+				D88EE4C720DE89D300E04C16 /* Controller */,
+				D878203B20DF0D6F0076416B /* Transition */,
 				16455F2D20D839720005B1A2 /* AppDelegate.swift */,
-				16455F2F20D839720005B1A2 /* ViewController.swift */,
 				16455F3120D839720005B1A2 /* Main.storyboard */,
 				16455F3720D839740005B1A2 /* Assets.xcassets */,
 				16455F3920D839740005B1A2 /* LaunchScreen.storyboard */,
+				D88EE4D620DEB93600E04C16 /* Yekan.ttf */,
 				16455F3C20D839740005B1A2 /* Info.plist */,
 				16455F3420D839720005B1A2 /* Kapp.xcdatamodeld */,
 			);
@@ -97,6 +154,66 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		D878202720DEC5F90076416B /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				D878202820DEC61F0076416B /* UIImageExtention.swift */,
+				D8FC47BC20E25CF20078CC8C /* UIViewExntension.swift */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
+		D878203220DEEDA90076416B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D878203320DEEE200076416B /* RoundedButton.swift */,
+				D864364A20E05760003CFB4F /* RoundedView.swift */,
+				D83941C420E25410008E09C9 /* SpendTableViewCell.swift */,
+				D83941C620E25621008E09C9 /* BagResultTableViewCell.swift */,
+				D8FC47BE20E261770078CC8C /* CircleImageView.swift */,
+				D8FC47E220E2E4C00078CC8C /* OrderDetailTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D878203B20DF0D6F0076416B /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				D878202A20DEE1360076416B /* PopTransitionAnimator.swift */,
+				D878203920DEF9A50076416B /* SlideDownTransitionAnimator.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		D88EE4C720DE89D300E04C16 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D88EE4D220DEB66E00E04C16 /* RootViewController.swift */,
+				16455F2F20D839720005B1A2 /* CustomSideMenuController.swift */,
+				D88EE4CE20DE91C600E04C16 /* SideTableViewController.swift */,
+				D88EE4D020DE931200E04C16 /* MainViewController.swift */,
+				D88EE4CC20DE916C00E04C16 /* SpendViewController.swift */,
+				D88EE4D420DEB81500E04C16 /* ProfileTableViewController.swift */,
+				D878202C20DEE3E20076416B /* BagResultViewController.swift */,
+				D8FC47E020E2E3BB0078CC8C /* OrderDetailViewController.swift */,
+				D878202E20DEE54C0076416B /* CreditViewController.swift */,
+				D878203020DEE7120076416B /* CallUsViewController.swift */,
+				D878203520DEF4F50076416B /* RegisterViewController.swift */,
+				D878203720DEF51B0076416B /* ConfirmViewController.swift */,
+				D864364C20E058B3003CFB4F /* CarChosenViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D88EE4C920DE907900E04C16 /* Uitilities */ = {
+			isa = PBXGroup;
+			children = (
+				D88EE4CA20DE908900E04C16 /* Constants.swift */,
+				D8D91E3720E2FEBB00DE332F /* Utilities.swift */,
+			);
+			path = Uitilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +251,11 @@
 				TargetAttributes = {
 					16455F2920D839720005B1A2 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -160,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88EE4D720DEB97200E04C16 /* Yekan.ttf in Resources */,
 				16455F3B20D839740005B1A2 /* LaunchScreen.storyboard in Resources */,
 				16455F3820D839740005B1A2 /* Assets.xcassets in Resources */,
 				16455F3320D839720005B1A2 /* Main.storyboard in Resources */,
@@ -193,9 +316,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Kapp/Pods-Kapp-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -210,12 +338,28 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Kapp/Pods-Kapp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CDAlertView/CDAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenuController/SideMenuController.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UICheckbox.Swift/UICheckbox_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenuController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICheckbox_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -229,9 +373,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D864364B20E05760003CFB4F /* RoundedView.swift in Sources */,
+				D83941C520E25410008E09C9 /* SpendTableViewCell.swift in Sources */,
+				D864364D20E058B3003CFB4F /* CarChosenViewController.swift in Sources */,
+				D8FC47E120E2E3BB0078CC8C /* OrderDetailViewController.swift in Sources */,
+				D878202D20DEE3E20076416B /* BagResultViewController.swift in Sources */,
+				D878203420DEEE200076416B /* RoundedButton.swift in Sources */,
+				D88EE4D120DE931200E04C16 /* MainViewController.swift in Sources */,
+				D8FC47BD20E25CF20078CC8C /* UIViewExntension.swift in Sources */,
 				16455F3620D839720005B1A2 /* Kapp.xcdatamodeld in Sources */,
-				16455F3020D839720005B1A2 /* ViewController.swift in Sources */,
+				D878203820DEF51B0076416B /* ConfirmViewController.swift in Sources */,
+				16455F3020D839720005B1A2 /* CustomSideMenuController.swift in Sources */,
+				D878203120DEE7120076416B /* CallUsViewController.swift in Sources */,
+				D88EE4CF20DE91C600E04C16 /* SideTableViewController.swift in Sources */,
+				D83941C720E25621008E09C9 /* BagResultTableViewCell.swift in Sources */,
 				16455F2E20D839720005B1A2 /* AppDelegate.swift in Sources */,
+				D8D91E3820E2FEBB00DE332F /* Utilities.swift in Sources */,
+				D8FC47E320E2E4C00078CC8C /* OrderDetailTableViewCell.swift in Sources */,
+				D88EE4CD20DE916C00E04C16 /* SpendViewController.swift in Sources */,
+				D88EE4D520DEB81500E04C16 /* ProfileTableViewController.swift in Sources */,
+				D8FC47BF20E261770078CC8C /* CircleImageView.swift in Sources */,
+				D878203A20DEF9A50076416B /* SlideDownTransitionAnimator.swift in Sources */,
+				D88EE4D320DEB66F00E04C16 /* RootViewController.swift in Sources */,
+				D878203620DEF4F50076416B /* RegisterViewController.swift in Sources */,
+				D878202920DEC61F0076416B /* UIImageExtention.swift in Sources */,
+				D878202F20DEE54C0076416B /* CreditViewController.swift in Sources */,
+				D88EE4CB20DE908900E04C16 /* Constants.swift in Sources */,
+				D878202B20DEE1360076416B /* PopTransitionAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,9 +544,11 @@
 			baseConfigurationReference = B887804619821CAF2C227FFA /* Pods-Kapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kapp/Kapp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GR5E89RNHJ;
 				INFOPLIST_FILE = Kapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -395,9 +565,11 @@
 			baseConfigurationReference = 53B3787B40C9483E4D27BA70 /* Pods-Kapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kapp/Kapp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GR5E89RNHJ;
 				INFOPLIST_FILE = Kapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
