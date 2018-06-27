@@ -23,7 +23,7 @@ class RootViewController: UIViewController, NVActivityIndicatorViewable {
         if !UserDefaults.standard.bool(forKey: REGISTER_KEY) {
             presentRegisterViewController()
         }
-        updateActivityIndicator()
+        beginActivityIndicator()
     }
 
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
@@ -36,9 +36,14 @@ class RootViewController: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
+    // Objc
+    @objc func dismissActivityIndicator() {
+        endActivityIndicator()
+    }
+    
     // Method
     func updateUI() {
-        //
+        NotificationCenter.default.addObserver(self, selector: #selector(self.dismissActivityIndicator), name: DISMISS_ROOT_INDICATOR_NOTIFI, object: nil)
     }
     
     func presentRegisterViewController() {
@@ -47,7 +52,7 @@ class RootViewController: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
-    func updateActivityIndicator() {
+    func beginActivityIndicator() {
         let padding: CGFloat = 60.0
         let x = (self.view.frame.width / 2) - (padding / 2)
         let y = (self.view.frame.height / 2) - (padding / 2)
@@ -55,6 +60,14 @@ class RootViewController: UIViewController, NVActivityIndicatorViewable {
         activityIndicatorView = NVActivityIndicatorView(frame: frame, type: NVActivityIndicatorType.circleStrokeSpin, color: .darkGray, padding: padding)
         self.view.addSubview(activityIndicatorView!)
         activityIndicatorView!.startAnimating()
+        if WebService.instance.isConnectedToNetwork() {
+            self.endActivityIndicator()
+        } else {
+            self.presentInternetConnection()
+        }
+    }
+    
+    func endActivityIndicator() {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 4) {
             self.activityIndicatorView?.stopAnimating()
             self.performSegue(withIdentifier: CUSTOM_SEGUE, sender: nil)

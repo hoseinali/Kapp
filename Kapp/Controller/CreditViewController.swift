@@ -26,7 +26,7 @@ class CreditViewController: UIViewController, SideMenuControllerDelegate {
         guard let mount = mounthTextField.text else { return }
         guard !mount.isEmpty && Int(mount)! >= 10000 else {
             let message = "مبلغ مورد تایید نیست، حداقل مبلغ شارژ کیف پول ده هزار تومان میباشد !"
-            Utilities.instance.presentWarningAlert(message: message)
+            self.presentWarningAlert(message: message)
             return
         }
         let message = "آیا مبلغ \(mount) تومان مورد تایید است ؟"
@@ -47,14 +47,14 @@ class CreditViewController: UIViewController, SideMenuControllerDelegate {
     }
 
     func presentAgreeAlert(message: String) {
-        let alert = CDAlertView(title: "توجه !", message: message, type: CDAlertViewType.notification)
+        let alert = CDAlertView(title: "توجه", message: message, type: CDAlertViewType.notification)
         alert.titleFont = UIFont(name: YEKAN_WEB_FONT, size: 14)!
         alert.messageFont = UIFont(name: YEKAN_WEB_FONT, size: 13)!
         let done = CDAlertViewAction(title: "بله", font: UIFont(name: YEKAN_WEB_FONT, size: 12)!, textColor: UIColor.darkGray, backgroundColor: .white) { (action) -> Bool in
             self.mounthTextField.resignFirstResponder()
             return true
         }
-        let cancel = CDAlertViewAction(title: "خیر", font: UIFont(name: YEKAN_WEB_FONT, size: 12)!, textColor: UIColor.darkGray, backgroundColor: .white, handler: nil)
+        let cancel = CDAlertViewAction(title: "خیر", font: UIFont(name: YEKAN_WEB_FONT, size: 13)!, textColor: UIColor.darkGray, backgroundColor: .white, handler: nil)
         alert.add(action: done)
         alert.add(action: cancel)
         alert.show()

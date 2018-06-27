@@ -1,0 +1,6 @@
+framework module SBCardPopup {
+  umbrella header "SBCardPopup-umbrella.h"
+
+  export *
+  module * { export * }
+}

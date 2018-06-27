@@ -44,6 +44,7 @@ PODS:
     - NVActivityIndicatorView/Presenter (= 4.1.1)
   - NVActivityIndicatorView/Presenter (4.1.1)
   - Protobuf (3.5.0)
+  - SBCardPopup (0.2.1)
   - SideMenuController (0.2.4)
   - SwiftyJSON (4.0.0)
   - UICheckbox.Swift (1.0.0)
@@ -57,6 +58,7 @@ DEPENDENCIES:
   - GooglePlaces
   - IQKeyboardManagerSwift
   - NVActivityIndicatorView
+  - SBCardPopup
   - SideMenuController
   - SwiftyJSON
   - UICheckbox.Swift
@@ -76,10 +78,11 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
+  SBCardPopup: faef88a31d5df9561e4d4b57cbd899e4f775d1cf
   SideMenuController: b463d2b3aa58e2afe57f57a07938fa9a647894ca
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   UICheckbox.Swift: 85715689206fac5bae38b308f19c2a3e00442c3b
 
-PODFILE CHECKSUM: 28ee82517bb4741706be4b564b3a2275d058f3cb
+PODFILE CHECKSUM: 0c5c7e71a85f18dd7ec069c6c304fc09ea2126d8
 
 COCOAPODS: 1.4.0

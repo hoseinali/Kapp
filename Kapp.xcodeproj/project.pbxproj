@@ -34,7 +34,15 @@
 		D88EE4D320DEB66F00E04C16 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88EE4D220DEB66E00E04C16 /* RootViewController.swift */; };
 		D88EE4D520DEB81500E04C16 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88EE4D420DEB81500E04C16 /* ProfileTableViewController.swift */; };
 		D88EE4D720DEB97200E04C16 /* Yekan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D88EE4D620DEB93600E04C16 /* Yekan.ttf */; };
-		D8D91E3820E2FEBB00DE332F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D91E3720E2FEBB00DE332F /* Utilities.swift */; };
+		D8C9EBE020E3C62400750AEC /* InternetConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C9EBDF20E3C62400750AEC /* InternetConnectionViewController.swift */; };
+		D8C9EBE220E3CB4E00750AEC /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C9EBE120E3CB4E00750AEC /* UIViewControllerExtension.swift */; };
+		D8C9EBE520E3CFB600750AEC /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C9EBE420E3CFB600750AEC /* WebService.swift */; };
+		D8C9EBE920E3D3D600750AEC /* IndicatorPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C9EBE720E3D3D600750AEC /* IndicatorPopupViewController.swift */; };
+		D8C9EBEA20E3D3D600750AEC /* IndicatorPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8C9EBE820E3D3D600750AEC /* IndicatorPopupViewController.xib */; };
+		D8C9EBEE20E42FC900750AEC /* ChosenServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C9EBED20E42FC900750AEC /* ChosenServiceCollectionViewCell.swift */; };
+		D8C9EBF120E436C700750AEC /* CarChosen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C9EBF020E436C700750AEC /* CarChosen.swift */; };
+		D8C9EBF320E438D800750AEC /* CarServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C9EBF220E438D800750AEC /* CarServiceViewController.swift */; };
+		D8C9EBF520E4410400750AEC /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C9EBF420E4410400750AEC /* DropDownButton.swift */; };
 		D8FC47BD20E25CF20078CC8C /* UIViewExntension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FC47BC20E25CF20078CC8C /* UIViewExntension.swift */; };
 		D8FC47BF20E261770078CC8C /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FC47BE20E261770078CC8C /* CircleImageView.swift */; };
 		D8FC47E120E2E3BB0078CC8C /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FC47E020E2E3BB0078CC8C /* OrderDetailViewController.swift */; };
@@ -72,7 +80,15 @@
 		D88EE4D220DEB66E00E04C16 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		D88EE4D420DEB81500E04C16 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		D88EE4D620DEB93600E04C16 /* Yekan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Yekan.ttf; sourceTree = "<group>"; };
-		D8D91E3720E2FEBB00DE332F /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		D8C9EBDF20E3C62400750AEC /* InternetConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionViewController.swift; sourceTree = "<group>"; };
+		D8C9EBE120E3CB4E00750AEC /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		D8C9EBE420E3CFB600750AEC /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		D8C9EBE720E3D3D600750AEC /* IndicatorPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorPopupViewController.swift; sourceTree = "<group>"; };
+		D8C9EBE820E3D3D600750AEC /* IndicatorPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IndicatorPopupViewController.xib; sourceTree = "<group>"; };
+		D8C9EBED20E42FC900750AEC /* ChosenServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenServiceCollectionViewCell.swift; sourceTree = "<group>"; };
+		D8C9EBF020E436C700750AEC /* CarChosen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarChosen.swift; sourceTree = "<group>"; };
+		D8C9EBF220E438D800750AEC /* CarServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarServiceViewController.swift; sourceTree = "<group>"; };
+		D8C9EBF420E4410400750AEC /* DropDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
 		D8FC47BC20E25CF20078CC8C /* UIViewExntension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExntension.swift; sourceTree = "<group>"; };
 		D8FC47BE20E261770078CC8C /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		D8FC47C020E263770078CC8C /* Kapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kapp.entitlements; sourceTree = "<group>"; };
@@ -114,10 +130,12 @@
 		16455F2C20D839720005B1A2 /* Kapp */ = {
 			isa = PBXGroup;
 			children = (
+				D8C9EBE620E3D39400750AEC /* XIBs */,
 				D8FC47C020E263770078CC8C /* Kapp.entitlements */,
 				D878202720DEC5F90076416B /* Extention */,
 				D88EE4C920DE907900E04C16 /* Uitilities */,
 				D845218220D83E06001A85C7 /* Services */,
+				D8C9EBEF20E436B700750AEC /* Model */,
 				D878203220DEEDA90076416B /* View */,
 				D88EE4C720DE89D300E04C16 /* Controller */,
 				D878203B20DF0D6F0076416B /* Transition */,
@@ -152,6 +170,7 @@
 		D845218220D83E06001A85C7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D8C9EBE420E3CFB600750AEC /* WebService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -161,6 +180,7 @@
 			children = (
 				D878202820DEC61F0076416B /* UIImageExtention.swift */,
 				D8FC47BC20E25CF20078CC8C /* UIViewExntension.swift */,
+				D8C9EBE120E3CB4E00750AEC /* UIViewControllerExtension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -174,6 +194,8 @@
 				D83941C620E25621008E09C9 /* BagResultTableViewCell.swift */,
 				D8FC47BE20E261770078CC8C /* CircleImageView.swift */,
 				D8FC47E220E2E4C00078CC8C /* OrderDetailTableViewCell.swift */,
+				D8C9EBED20E42FC900750AEC /* ChosenServiceCollectionViewCell.swift */,
+				D8C9EBF420E4410400750AEC /* DropDownButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,15 +216,18 @@
 				16455F2F20D839720005B1A2 /* CustomSideMenuController.swift */,
 				D88EE4CE20DE91C600E04C16 /* SideTableViewController.swift */,
 				D88EE4D020DE931200E04C16 /* MainViewController.swift */,
-				D88EE4CC20DE916C00E04C16 /* SpendViewController.swift */,
 				D88EE4D420DEB81500E04C16 /* ProfileTableViewController.swift */,
+				D88EE4CC20DE916C00E04C16 /* SpendViewController.swift */,
 				D878202C20DEE3E20076416B /* BagResultViewController.swift */,
 				D8FC47E020E2E3BB0078CC8C /* OrderDetailViewController.swift */,
 				D878202E20DEE54C0076416B /* CreditViewController.swift */,
 				D878203020DEE7120076416B /* CallUsViewController.swift */,
+				D864364C20E058B3003CFB4F /* CarChosenViewController.swift */,
+				D8C9EBF220E438D800750AEC /* CarServiceViewController.swift */,
 				D878203520DEF4F50076416B /* RegisterViewController.swift */,
 				D878203720DEF51B0076416B /* ConfirmViewController.swift */,
-				D864364C20E058B3003CFB4F /* CarChosenViewController.swift */,
+				D8C9EBDF20E3C62400750AEC /* InternetConnectionViewController.swift */,
+				D8C9EBE720E3D3D600750AEC /* IndicatorPopupViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -211,9 +236,24 @@
 			isa = PBXGroup;
 			children = (
 				D88EE4CA20DE908900E04C16 /* Constants.swift */,
-				D8D91E3720E2FEBB00DE332F /* Utilities.swift */,
 			);
 			path = Uitilities;
+			sourceTree = "<group>";
+		};
+		D8C9EBE620E3D39400750AEC /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				D8C9EBE820E3D3D600750AEC /* IndicatorPopupViewController.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
+		D8C9EBEF20E436B700750AEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8C9EBF020E436C700750AEC /* CarChosen.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D88EE4D720DEB97200E04C16 /* Yekan.ttf in Resources */,
+				D8C9EBEA20E3D3D600750AEC /* IndicatorPopupViewController.xib in Resources */,
 				16455F3B20D839740005B1A2 /* LaunchScreen.storyboard in Resources */,
 				16455F3820D839740005B1A2 /* Assets.xcassets in Resources */,
 				16455F3320D839720005B1A2 /* Main.storyboard in Resources */,
@@ -343,6 +384,7 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SBCardPopup/SBCardPopup.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenuController/SideMenuController.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/UICheckbox.Swift/UICheckbox_Swift.framework",
@@ -356,6 +398,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SBCardPopup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenuController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICheckbox_Swift.framework",
@@ -373,12 +416,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C9EBF120E436C700750AEC /* CarChosen.swift in Sources */,
 				D864364B20E05760003CFB4F /* RoundedView.swift in Sources */,
 				D83941C520E25410008E09C9 /* SpendTableViewCell.swift in Sources */,
+				D8C9EBF320E438D800750AEC /* CarServiceViewController.swift in Sources */,
 				D864364D20E058B3003CFB4F /* CarChosenViewController.swift in Sources */,
 				D8FC47E120E2E3BB0078CC8C /* OrderDetailViewController.swift in Sources */,
 				D878202D20DEE3E20076416B /* BagResultViewController.swift in Sources */,
+				D8C9EBE920E3D3D600750AEC /* IndicatorPopupViewController.swift in Sources */,
+				D8C9EBE020E3C62400750AEC /* InternetConnectionViewController.swift in Sources */,
 				D878203420DEEE200076416B /* RoundedButton.swift in Sources */,
+				D8C9EBF520E4410400750AEC /* DropDownButton.swift in Sources */,
 				D88EE4D120DE931200E04C16 /* MainViewController.swift in Sources */,
 				D8FC47BD20E25CF20078CC8C /* UIViewExntension.swift in Sources */,
 				16455F3620D839720005B1A2 /* Kapp.xcdatamodeld in Sources */,
@@ -387,14 +435,16 @@
 				D878203120DEE7120076416B /* CallUsViewController.swift in Sources */,
 				D88EE4CF20DE91C600E04C16 /* SideTableViewController.swift in Sources */,
 				D83941C720E25621008E09C9 /* BagResultTableViewCell.swift in Sources */,
+				D8C9EBE220E3CB4E00750AEC /* UIViewControllerExtension.swift in Sources */,
 				16455F2E20D839720005B1A2 /* AppDelegate.swift in Sources */,
-				D8D91E3820E2FEBB00DE332F /* Utilities.swift in Sources */,
 				D8FC47E320E2E4C00078CC8C /* OrderDetailTableViewCell.swift in Sources */,
 				D88EE4CD20DE916C00E04C16 /* SpendViewController.swift in Sources */,
 				D88EE4D520DEB81500E04C16 /* ProfileTableViewController.swift in Sources */,
 				D8FC47BF20E261770078CC8C /* CircleImageView.swift in Sources */,
 				D878203A20DEF9A50076416B /* SlideDownTransitionAnimator.swift in Sources */,
+				D8C9EBEE20E42FC900750AEC /* ChosenServiceCollectionViewCell.swift in Sources */,
 				D88EE4D320DEB66F00E04C16 /* RootViewController.swift in Sources */,
+				D8C9EBE520E3CFB600750AEC /* WebService.swift in Sources */,
 				D878203620DEF4F50076416B /* RegisterViewController.swift in Sources */,
 				D878202920DEC61F0076416B /* UIImageExtention.swift in Sources */,
 				D878202F20DEE54C0076416B /* CreditViewController.swift in Sources */,

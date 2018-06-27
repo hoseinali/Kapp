@@ -59,7 +59,7 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
         addressTextField.resignFirstResponder()
         guard let text = addressTextField.text, text != "" else {
             let message = "لطفا آدرس خود را وارد کنید !"
-            Utilities.instance.presentWarningAlert(message: message)
+            self.presentWarningAlert(message: message)
             return
         }
         presentAlert()
@@ -83,14 +83,19 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
     }
     
     func presentAlert() {
-        let alert = CDAlertView(title: "توجه !", message: "آیا آدرس خود را به روی نقشه به درستی انتخاب کرده اید ؟", type: CDAlertViewType.notification)
+        let alert = CDAlertView(title: "توجه", message: "آیا آدرس خود را به روی نقشه به درستی انتخاب کرده اید ؟", type: CDAlertViewType.notification)
         alert.titleFont = UIFont(name: YEKAN_WEB_FONT, size: 14)!
         alert.messageFont = UIFont(name: YEKAN_WEB_FONT, size: 13)!
         let done = CDAlertViewAction(title: "بله", font: UIFont(name: YEKAN_WEB_FONT, size: 12)!, textColor: UIColor.darkGray, backgroundColor: .white) { (action) -> Bool in
-            self.performSegue(withIdentifier: CAR_CHOSEN_SEGUE, sender: nil)
+            self.startIndicatorAnimate() // *
+            self.stopIndicatorAnimate() // *
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.1, execute: { // *
+                self.performSegue(withIdentifier: CAR_CHOSEN_SEGUE, sender: nil) // *
+            }) // *
+            
             return true
         }
-        let cancel = CDAlertViewAction(title: "خیر", font: UIFont(name: YEKAN_WEB_FONT, size: 12)!, textColor: UIColor.darkGray, backgroundColor: .white, handler: nil)
+        let cancel = CDAlertViewAction(title: "خیر", font: UIFont(name: YEKAN_WEB_FONT, size: 13)!, textColor: UIColor.darkGray, backgroundColor: .white, handler: nil)
         alert.add(action: done)
         alert.add(action: cancel)
         alert.show()

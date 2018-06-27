@@ -6,7 +6,7 @@
 //  Copyright © 1397 iPersianDeveloper. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 // SEGUE
 let NO_SEGUE = ""
@@ -21,12 +21,14 @@ let CALL_US_SEGUE = "CallUsViewControllerSegue"
 let CONFIRM_SEGUE = "ConfirmViewControllerSegue"
 let CAR_CHOSEN_SEGUE = "CarChosenViewControllerSegue"
 let ORDER_DETAIL_LIST_SEGUE = "OrderDetailViewControllerSegue"
+let CAR_SERVICE_SEGUE = "CarServiceViewControllerSegue"
 
 // UNWIND SEGUE
 let UNWIND_MAIN_SEGUE = "unwindToMainViewControllerSegue"
 
 // STORYBOARD ID
 let REGISTER_VC_ID = "RegisterViewControllerID"
+let INTERNET_VC_ID = "InternetConnectionViewControllerID"
 
 // FONT
 let YEKAN_WEB_FONT = "WeblogmaYekan"
@@ -41,3 +43,14 @@ let REGISTER_KEY = "registerKey"
 let SPEND_CELL = "spendCell"
 let BAG_RESULT_CELL = "bagResultCell"
 let ORDER_DETAIL_CELL = "orderDetailCell"
+let CHOSEN_SERVICE_CELL = "ChosenServiceCell"
+
+// NOTIFICATION
+let DISMISS_ROOT_INDICATOR_NOTIFI = Notification.Name("dismissRootActivityIndicator")
+let DISMISS_INDICATOR_VC_NOTIFI = Notification.Name("dismissIndicatorVCActivityIndicator")
+
+
+
+
+
+

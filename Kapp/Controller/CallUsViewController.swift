@@ -9,6 +9,7 @@
 import UIKit
 import SideMenuController
 import UICheckbox_Swift
+import SBCardPopup
 
 class CallUsViewController: UIViewController, SideMenuControllerDelegate {
     
@@ -27,9 +28,10 @@ class CallUsViewController: UIViewController, SideMenuControllerDelegate {
     @IBAction func agreeButtonPressed(_ sender: RoundedButton) {
         guard let text = observeTextField.text, text != "" else {
             let message = "لطفا نظر خود را وارد کنید !"
-            Utilities.instance.presentWarningAlert(message: message)
+            self.presentWarningAlert(message: message)
             return
         }
+        observeTextField.text = ""
         view.endEditing(true)
         //
     }
