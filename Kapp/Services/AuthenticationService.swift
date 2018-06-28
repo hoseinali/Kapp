@@ -34,22 +34,23 @@ class AuthenticationService {
             }
             if let data = data {
                 guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else {return}
-                guard let json = jsonAny as? [String:Any] else {return}
-                guard let type = json["type"] as? String else {return}
+                guard let json = jsonAny as? [String:Any] else { completion(false);return}
+                guard let type = json["type"] as? String else { completion(false);return}
                 if type == "sucess" {
                     self.GoS2Register = true
                     completion(true)
-                } else if type == "error" {
+                } else {
                     completion(false)
                 }
             }
+            completion(false)
         }
         task.resume()
     }
     // 2
-    func loginGetAccess(number: String, completion: @escaping COMPLETION_SUCCESS) {
+    func loginGetAccess(okCode: String, number: String, completion: @escaping COMPLETION_SUCCESS) {
             guard let url = URL.init(string: LOGIN_GET_ACCESS) else {return}
-            let parameters = ["mobile": "\(number)"]
+            let parameters = ["mobile": "\(number)", "accesscode":"\(okCode)"]
             var request = URLRequest.init(url: url)
             request.httpMethod = "POST"
             let boundary = generateBoundary()
@@ -63,18 +64,20 @@ class AuthenticationService {
                     //
                 }
                 if let data = data {
-                    guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
-                    guard let json = jsonAny as? [String: Any] else { return }
-                    guard let type = json["type"] as? String else { return }
+                    guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { completion(false);return}
+                    guard let json = jsonAny as? [String: Any] else { completion(false);return }
+                    guard let type = json["type"] as? String else {  completion(false);return }
                     if type == "success" {
-                        guard let userData = json["data"] as? [String:Any] else { return }
-                        guard let uid = userData["uid"] as? Int else { return }
-                        guard let ssid = userData["ssid"] as? String else { return }
+                        guard let userData = json["data"] as? [String:Any] else {completion(false);return}
+                        guard let uid = userData["uid"] as? Int else {  completion(false);return }
+                        guard let ssid = userData["ssid"] as? String else {  completion(false);return }
                         UserDataService.instance.setUserData(uid: String(uid), ssid: ssid, isLogin: true, phoneNumber: number)
                         completion(true)
-                    } else if type == "error" {
+                    } else {
                         completion(false)
                     }
+                } else {
+                completion(false)
                 }
             }
             task.resume()
@@ -100,19 +103,22 @@ class AuthenticationService {
             }
             if let data = data {
                 guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
-                guard let json = jsonAny as? [String: Any] else { return }
-                guard let type = json["type"] as? String else { return }
-                if type == "success" {
-                    guard let data = json["data"] as? [String:Any] else { return }
-                    guard let uid = data["uid"] as? Int else { return }
-                    guard let mobile = data["mobile"] as? String else { return }
-                    guard let next = data["next"] as? Bool else { return }
+                    guard let json = jsonAny as? [String: Any] else {  completion(false);return }
+                print(json)
+
+                    guard let type = json["type"] as? String else {  completion(false);return }
+                print(type)
+                    guard let data = json["data"] as? [String:Any] else {  completion(false);return }
+                print(data)
+                    guard let uid = data["uid"] as? Int else {  completion(false);return }
+                print(uid)
+                    guard let mobile = data["mobile"] as? String else {  completion(false);return }
+                print(mobile)
+                    guard let next = data["next"] as? Bool else {  completion(false);return }
                     self.GoS2Register = next
                     completion(true)
-                } else if type == "error" {
-                    completion(false)
-                }
             }
+             completion(false)
         }
         task.resume()
     }
@@ -134,19 +140,20 @@ class AuthenticationService {
                 //
             }
             if let data = data {
-                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
-                guard let json = jsonAny as? [String: Any] else { return }
-                guard let type = json["type"] as? String else { return }
+                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else {  completion(false);return }
+                guard let json = jsonAny as? [String: Any] else {  completion(false);return }
+                guard let type = json["type"] as? String else {  completion(false);return }
                 if type == "success" {
-                    guard let userData = json["data"] as? [String:Any] else { return }
-                    guard let uid = userData["uid"] as? Int else { return }
-                    guard let ssid = userData["ssid"] as? String else { return }
+                    guard let userData = json["data"] as? [String:Any] else {  completion(false);return }
+                    guard let uid = userData["uid"] as? Int else {  completion(false);return }
+                    guard let ssid = userData["ssid"] as? String else {  completion(false);return }
                     UserDataService.instance.setUserData(uid: String(uid), ssid: ssid, isLogin: true, phoneNumber: number)
                     completion(true)
-                } else if type == "error" {
+                } else {
                     completion(false)
                 }
             }
+             completion(false)
         }
         task.resume()
     }
@@ -161,45 +168,12 @@ class AuthenticationService {
                 let type = json["type"].stringValue
                 if type == "success" {
                     completion(true)
-                } else if type == "error" {
+                } else {
                     completion(false)
                 }
             }
+            completion(false)
         }
-    }
-    
-    // 8
-    func sendPmUser(title:String, content:String, pretitle:String, completion:@escaping COMPLETION_SUCCESS) {
-        let uid = UserDataService.instance.uid
-        let ssid = UserDataService.instance.ssid
-        guard let url = URL.init(string: SEND_PM_URL + "&uid=\(uid)&ssid=\(ssid)") else {return}
-        let parameters = ["title": "\(title)", "title": "\(title)"]
-        var request = URLRequest.init(url: url)
-        request.httpMethod = "POST"
-        let boundary = generateBoundary()
-        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type") // add header
-        let dataBody = createDataBody(withParameters: parameters, boundary: boundary)
-        request.httpBody = dataBody
-        let session = URLSession.shared
-        let task = session.dataTask(with: request) { (data, response, error) in
-            if let _ = response {
-                //
-            }
-            if let data = data {
-                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
-                guard let json = jsonAny as? [String: Any] else { return }
-                guard let type = json["type"] as? String else { return }
-                if type == "success" {
-                    guard let data = json["data"] as? String else { return }
-                    //
-                    completion(true)
-                } else if type == "error" {
-                    completion(false)
-                }
-            }
-        }
-        task.resume()
     }
     
     private func generateBoundary() -> String {

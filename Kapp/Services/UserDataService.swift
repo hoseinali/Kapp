@@ -45,6 +45,22 @@ class UserDataService {
             defaults.set(newValue, forKey: SSID_KEY)
         }
     }
+    var mount: Int {
+        get {
+            return defaults.integer(forKey: CASH_KEY)
+        }
+        set {
+            defaults.set(newValue, forKey: CASH_KEY)
+        }
+    }
+    var cash: Int {
+        get {
+            return defaults.integer(forKey: CASH_KEY)
+        }
+        set {
+            defaults.set(newValue, forKey: CASH_KEY)
+        }
+    }
     
     func setUserData(uid: String, ssid: String, isLogin: Bool, phoneNumber: String) {
         self.uid = uid
