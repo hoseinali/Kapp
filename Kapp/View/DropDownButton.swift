@@ -28,7 +28,7 @@ class dropDownBtn: UIButton, dropDownProtocol {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.darkGray
+        self.backgroundColor = UIColor.lightGray
         
         dropView = dropDownView.init(frame: CGRect.init(x: 0, y: 0, width: 0, height: 0))
         dropView.delegate = self
@@ -145,7 +145,7 @@ class dropDownView: UIView, UITableViewDelegate, UITableViewDataSource  {
         cell.textLabel?.textColor = .white
         cell.textLabel?.textAlignment = .right
         cell.textLabel?.text = dropDownOptions[indexPath.row]
-        cell.backgroundColor = UIColor.darkGray
+        cell.backgroundColor = UIColor.lightGray
         return cell
     }
     

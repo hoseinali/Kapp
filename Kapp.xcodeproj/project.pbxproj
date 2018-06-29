@@ -16,6 +16,13 @@
 		1E7D07A58ED0250A180D7216 /* Pods_Kapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72A410325F023A3B0079A37 /* Pods_Kapp.framework */; };
 		D83941C520E25410008E09C9 /* SpendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83941C420E25410008E09C9 /* SpendTableViewCell.swift */; };
 		D83941C720E25621008E09C9 /* BagResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83941C620E25621008E09C9 /* BagResultTableViewCell.swift */; };
+		D83FBE4220E4EA65005FA553 /* CarServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83FBE4120E4EA65005FA553 /* CarServiceCollectionViewCell.swift */; };
+		D83FBE4520E511C3005FA553 /* CarServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83FBE4420E511C3005FA553 /* CarServiceTableViewCell.swift */; };
+		D83FBE4B20E599BD005FA553 /* StepCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83FBE4720E599BC005FA553 /* StepCollectionViewFlowLayout.swift */; };
+		D83FBE4C20E599BD005FA553 /* DateTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83FBE4820E599BC005FA553 /* DateTimePicker.swift */; };
+		D83FBE4D20E599BD005FA553 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83FBE4920E599BC005FA553 /* DateCollectionViewCell.swift */; };
+		D83FBE4E20E599BD005FA553 /* FullDateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83FBE4A20E599BD005FA553 /* FullDateCollectionViewCell.swift */; };
+		D83FBE5020E599E3005FA553 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83FBE4F20E599E3005FA553 /* TimeViewController.swift */; };
 		D864364B20E05760003CFB4F /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864364A20E05760003CFB4F /* RoundedView.swift */; };
 		D864364D20E058B3003CFB4F /* CarChosenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864364C20E058B3003CFB4F /* CarChosenViewController.swift */; };
 		D878202920DEC61F0076416B /* UIImageExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878202820DEC61F0076416B /* UIImageExtention.swift */; };
@@ -62,6 +69,13 @@
 		B887804619821CAF2C227FFA /* Pods-Kapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kapp/Pods-Kapp.debug.xcconfig"; sourceTree = "<group>"; };
 		D83941C420E25410008E09C9 /* SpendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendTableViewCell.swift; sourceTree = "<group>"; };
 		D83941C620E25621008E09C9 /* BagResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagResultTableViewCell.swift; sourceTree = "<group>"; };
+		D83FBE4120E4EA65005FA553 /* CarServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarServiceCollectionViewCell.swift; sourceTree = "<group>"; };
+		D83FBE4420E511C3005FA553 /* CarServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarServiceTableViewCell.swift; sourceTree = "<group>"; };
+		D83FBE4720E599BC005FA553 /* StepCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		D83FBE4820E599BC005FA553 /* DateTimePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimePicker.swift; sourceTree = "<group>"; };
+		D83FBE4920E599BC005FA553 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
+		D83FBE4A20E599BD005FA553 /* FullDateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullDateCollectionViewCell.swift; sourceTree = "<group>"; };
+		D83FBE4F20E599E3005FA553 /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
 		D864364A20E05760003CFB4F /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		D864364C20E058B3003CFB4F /* CarChosenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarChosenViewController.swift; sourceTree = "<group>"; };
 		D878202820DEC61F0076416B /* UIImageExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtention.swift; sourceTree = "<group>"; };
@@ -167,6 +181,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D83FBE4620E599A0005FA553 /* CustomDate */ = {
+			isa = PBXGroup;
+			children = (
+				D83FBE4920E599BC005FA553 /* DateCollectionViewCell.swift */,
+				D83FBE4820E599BC005FA553 /* DateTimePicker.swift */,
+				D83FBE4A20E599BD005FA553 /* FullDateCollectionViewCell.swift */,
+				D83FBE4720E599BC005FA553 /* StepCollectionViewFlowLayout.swift */,
+			);
+			path = CustomDate;
+			sourceTree = "<group>";
+		};
 		D845218220D83E06001A85C7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +213,7 @@
 		D878203220DEEDA90076416B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D83FBE4620E599A0005FA553 /* CustomDate */,
 				D878203320DEEE200076416B /* RoundedButton.swift */,
 				D864364A20E05760003CFB4F /* RoundedView.swift */,
 				D83941C420E25410008E09C9 /* SpendTableViewCell.swift */,
@@ -196,6 +222,8 @@
 				D8FC47E220E2E4C00078CC8C /* OrderDetailTableViewCell.swift */,
 				D8C9EBED20E42FC900750AEC /* ChosenServiceCollectionViewCell.swift */,
 				D8C9EBF420E4410400750AEC /* DropDownButton.swift */,
+				D83FBE4120E4EA65005FA553 /* CarServiceCollectionViewCell.swift */,
+				D83FBE4420E511C3005FA553 /* CarServiceTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -224,6 +252,7 @@
 				D878203020DEE7120076416B /* CallUsViewController.swift */,
 				D864364C20E058B3003CFB4F /* CarChosenViewController.swift */,
 				D8C9EBF220E438D800750AEC /* CarServiceViewController.swift */,
+				D83FBE4F20E599E3005FA553 /* TimeViewController.swift */,
 				D878203520DEF4F50076416B /* RegisterViewController.swift */,
 				D878203720DEF51B0076416B /* ConfirmViewController.swift */,
 				D8C9EBDF20E3C62400750AEC /* InternetConnectionViewController.swift */,
@@ -421,10 +450,12 @@
 				D83941C520E25410008E09C9 /* SpendTableViewCell.swift in Sources */,
 				D8C9EBF320E438D800750AEC /* CarServiceViewController.swift in Sources */,
 				D864364D20E058B3003CFB4F /* CarChosenViewController.swift in Sources */,
+				D83FBE4B20E599BD005FA553 /* StepCollectionViewFlowLayout.swift in Sources */,
 				D8FC47E120E2E3BB0078CC8C /* OrderDetailViewController.swift in Sources */,
 				D878202D20DEE3E20076416B /* BagResultViewController.swift in Sources */,
 				D8C9EBE920E3D3D600750AEC /* IndicatorPopupViewController.swift in Sources */,
 				D8C9EBE020E3C62400750AEC /* InternetConnectionViewController.swift in Sources */,
+				D83FBE4220E4EA65005FA553 /* CarServiceCollectionViewCell.swift in Sources */,
 				D878203420DEEE200076416B /* RoundedButton.swift in Sources */,
 				D8C9EBF520E4410400750AEC /* DropDownButton.swift in Sources */,
 				D88EE4D120DE931200E04C16 /* MainViewController.swift in Sources */,
@@ -436,8 +467,11 @@
 				D88EE4CF20DE91C600E04C16 /* SideTableViewController.swift in Sources */,
 				D83941C720E25621008E09C9 /* BagResultTableViewCell.swift in Sources */,
 				D8C9EBE220E3CB4E00750AEC /* UIViewControllerExtension.swift in Sources */,
+				D83FBE4E20E599BD005FA553 /* FullDateCollectionViewCell.swift in Sources */,
 				16455F2E20D839720005B1A2 /* AppDelegate.swift in Sources */,
+				D83FBE4520E511C3005FA553 /* CarServiceTableViewCell.swift in Sources */,
 				D8FC47E320E2E4C00078CC8C /* OrderDetailTableViewCell.swift in Sources */,
+				D83FBE4D20E599BD005FA553 /* DateCollectionViewCell.swift in Sources */,
 				D88EE4CD20DE916C00E04C16 /* SpendViewController.swift in Sources */,
 				D88EE4D520DEB81500E04C16 /* ProfileTableViewController.swift in Sources */,
 				D8FC47BF20E261770078CC8C /* CircleImageView.swift in Sources */,
@@ -445,6 +479,8 @@
 				D8C9EBEE20E42FC900750AEC /* ChosenServiceCollectionViewCell.swift in Sources */,
 				D88EE4D320DEB66F00E04C16 /* RootViewController.swift in Sources */,
 				D8C9EBE520E3CFB600750AEC /* WebService.swift in Sources */,
+				D83FBE4C20E599BD005FA553 /* DateTimePicker.swift in Sources */,
+				D83FBE5020E599E3005FA553 /* TimeViewController.swift in Sources */,
 				D878203620DEF4F50076416B /* RegisterViewController.swift in Sources */,
 				D878202920DEC61F0076416B /* UIImageExtention.swift in Sources */,
 				D878202F20DEE54C0076416B /* CreditViewController.swift in Sources */,

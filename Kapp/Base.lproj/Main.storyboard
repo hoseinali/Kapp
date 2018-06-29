@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="شماره همراه خود را وارد کنید" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i9X-a7-awK">
-                                <rect key="frame" x="60" y="251.5" width="200" height="17"/>
+                                <rect key="frame" x="60" y="248.5" width="200" height="20"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
@@ -90,13 +90,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="کد تایید را وارد کنید" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YwV-9g-5ub">
-                                <rect key="frame" x="60" y="212" width="200" height="17"/>
+                                <rect key="frame" x="60" y="203.5" width="200" height="20"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2m-6s-ZBE">
-                                <rect key="frame" x="60" y="233" width="200" height="1"/>
+                                <rect key="frame" x="60" y="227.5" width="200" height="1"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Lg4-K7-mtM"/>
@@ -124,19 +124,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvK-0W-fWX">
-                                <rect key="frame" x="246.5" y="246" width="13.5" height="14"/>
+                                <rect key="frame" x="244" y="240.5" width="16" height="16.5"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="14"/>
                                 <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ثانیه تا ارسال مجدد کد" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXV-uN-x4y">
-                                <rect key="frame" x="135" y="246" width="107.5" height="14"/>
+                                <rect key="frame" x="127" y="240.5" width="113" height="16.5"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="14"/>
                                 <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeF-xh-SjL">
-                                <rect key="frame" x="65" y="240" width="62" height="26"/>
+                                <rect key="frame" x="56" y="234.5" width="63" height="29"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="14"/>
                                 <state key="normal" title="درخواست کد"/>
                                 <connections>
@@ -144,7 +144,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UX-29-LaS">
-                                <rect key="frame" x="76" y="264" width="168" height="26"/>
+                                <rect key="frame" x="72.5" y="261" width="175" height="29"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="14"/>
                                 <state key="normal" title="شماره خود را اشتباه وارد کرده اید ؟"/>
                                 <connections>
@@ -450,27 +450,349 @@
             <objects>
                 <viewController id="bpu-A3-oh4" customClass="CarServiceViewController" customModule="Kapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qXA-TL-LF5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.96047198830000002" green="0.96047198830000002" blue="0.96047198830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ffo-Pn-jeq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="748"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4JF-dC-yvz">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="760"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v7N-eh-t3P">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="760"/>
+                                            </imageView>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GoG-ez-DLa">
+                                                <rect key="frame" x="0.0" y="100" width="375" height="230"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="230" id="npQ-KP-NKM"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="u3u-ca-f6f">
+                                                    <size key="itemSize" width="200" height="230"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CarServiceCollectionCell" id="Ueq-o6-jiG" customClass="CarServiceCollectionViewCell" customModule="Kapp" customModuleProvider="target">
+                                                        <rect key="frame" x="20" y="0.0" width="200" height="230"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="230"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TCP-R5-BbP">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="170"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="170" id="VLr-WR-9RY"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H7c-df-I0A">
+                                                                    <rect key="frame" x="0.0" y="170" width="200" height="60"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نام محصول" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3a-a2-K9b">
+                                                                            <rect key="frame" x="8" y="8" width="184" height="17.5"/>
+                                                                            <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="قیمت :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjc-nk-3FN">
+                                                                            <rect key="frame" x="157" y="33.5" width="35" height="17.5"/>
+                                                                            <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عدد" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhw-bH-SKY">
+                                                                            <rect key="frame" x="129" y="33.5" width="20" height="17.5"/>
+                                                                            <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
+                                                                            <color key="textColor" red="0.64525987689999997" green="0.1532079164" blue="0.1650146485" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfG-4z-EKv">
+                                                                            <rect key="frame" x="93" y="33.5" width="28" height="17.5"/>
+                                                                            <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfj-oZ-0ew" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
+                                                                            <rect key="frame" x="8" y="33" width="45" height="20"/>
+                                                                            <color key="backgroundColor" red="0.79649044690000004" green="0.52185975829999998" blue="0.56080340559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="45" id="3mw-wj-ncb"/>
+                                                                                <constraint firstAttribute="height" constant="20" id="Aj3-CW-pDq"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="12"/>
+                                                                            <state key="normal" title="افزودن">
+                                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </state>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="10"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <action selector="agreeButtonPressed:" destination="KO9-Mw-QGd" eventType="touchUpInside" id="GSC-e1-nbX"/>
+                                                                                <action selector="confirmButtonPressed:" destination="9Jb-w0-zjf" eventType="touchUpInside" id="iNk-mb-7ND"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" red="0.96047198830000002" green="0.96047198830000002" blue="0.96047198830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="Zhw-bH-SKY" firstAttribute="centerY" secondItem="kjc-nk-3FN" secondAttribute="centerY" id="21O-mL-YQt"/>
+                                                                        <constraint firstItem="Zhw-bH-SKY" firstAttribute="leading" secondItem="EfG-4z-EKv" secondAttribute="trailing" constant="8" id="9LG-qx-hs2"/>
+                                                                        <constraint firstItem="Sfj-oZ-0ew" firstAttribute="centerY" secondItem="EfG-4z-EKv" secondAttribute="centerY" id="9x2-ZF-LU7"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="h3a-a2-K9b" secondAttribute="trailing" constant="8" id="JUO-Dd-raS"/>
+                                                                        <constraint firstItem="kjc-nk-3FN" firstAttribute="leading" secondItem="Zhw-bH-SKY" secondAttribute="trailing" constant="8" id="Jwb-Oe-84m"/>
+                                                                        <constraint firstItem="EfG-4z-EKv" firstAttribute="centerY" secondItem="Zhw-bH-SKY" secondAttribute="centerY" id="R9l-8S-R7R"/>
+                                                                        <constraint firstItem="h3a-a2-K9b" firstAttribute="top" secondItem="H7c-df-I0A" secondAttribute="top" constant="8" id="Ufy-Pe-7cE"/>
+                                                                        <constraint firstItem="kjc-nk-3FN" firstAttribute="trailing" secondItem="h3a-a2-K9b" secondAttribute="trailing" id="YH8-VC-yGv"/>
+                                                                        <constraint firstItem="kjc-nk-3FN" firstAttribute="top" secondItem="h3a-a2-K9b" secondAttribute="bottom" constant="8" id="dt3-eg-ugF"/>
+                                                                        <constraint firstItem="h3a-a2-K9b" firstAttribute="leading" secondItem="H7c-df-I0A" secondAttribute="leading" constant="8" id="mrZ-Gf-3Sc"/>
+                                                                        <constraint firstItem="Sfj-oZ-0ew" firstAttribute="leading" secondItem="H7c-df-I0A" secondAttribute="leading" constant="8" id="wW5-4Z-p4t"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </view>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="H7c-df-I0A" secondAttribute="bottom" id="3HE-D8-s8S"/>
+                                                            <constraint firstItem="H7c-df-I0A" firstAttribute="leading" secondItem="Ueq-o6-jiG" secondAttribute="leading" id="8P5-X4-nga"/>
+                                                            <constraint firstItem="H7c-df-I0A" firstAttribute="top" secondItem="TCP-R5-BbP" secondAttribute="bottom" id="UXr-U9-aR5"/>
+                                                            <constraint firstAttribute="trailing" secondItem="TCP-R5-BbP" secondAttribute="trailing" id="fal-xd-mfA"/>
+                                                            <constraint firstAttribute="trailing" secondItem="H7c-df-I0A" secondAttribute="trailing" id="ffr-dB-ujw"/>
+                                                            <constraint firstItem="TCP-R5-BbP" firstAttribute="leading" secondItem="Ueq-o6-jiG" secondAttribute="leading" id="lJp-eK-lHm"/>
+                                                            <constraint firstItem="TCP-R5-BbP" firstAttribute="top" secondItem="Ueq-o6-jiG" secondAttribute="top" id="xIq-sr-agp"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outlet property="imageView" destination="TCP-R5-BbP" id="02J-5b-xUq"/>
+                                                            <outlet property="pricelLabel" destination="Zhw-bH-SKY" id="O7P-9q-hXQ"/>
+                                                            <outlet property="productNameLabel" destination="h3a-a2-K9b" id="WsT-vR-7Uv"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لیست خدمات انتخاب شده :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmV-kv-8V9">
+                                                <rect key="frame" x="187" y="346" width="172" height="19"/>
+                                                <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="19"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5v8-be-3u4">
+                                                <rect key="frame" x="0.0" y="373" width="375" height="357"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="2jy-Qk-Zv0"/>
+                                                </constraints>
+                                                <view key="tableFooterView" contentMode="scaleToFill" id="cP3-oO-hnS">
+                                                    <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eN6-26-i0L" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
+                                                            <rect key="frame" x="127.5" y="4" width="120" height="35"/>
+                                                            <color key="backgroundColor" red="0.79649044690000004" green="0.52185975829999998" blue="0.56080340559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="35" id="eJx-nl-GyZ"/>
+                                                                <constraint firstAttribute="width" constant="120" id="h8z-3y-1Lu"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="17"/>
+                                                            <state key="normal" title="انتخاب زمان">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="17.5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="agreeButtonPressed:" destination="KO9-Mw-QGd" eventType="touchUpInside" id="98h-e3-v0i"/>
+                                                                <action selector="agreeButtonPressed:" destination="bpu-A3-oh4" eventType="touchUpInside" id="rW8-oD-WDB"/>
+                                                                <action selector="confirmButtonPressed:" destination="9Jb-w0-zjf" eventType="touchUpInside" id="UfV-eq-YIk"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="eN6-26-i0L" firstAttribute="centerX" secondItem="cP3-oO-hnS" secondAttribute="centerX" id="NQi-Rm-KCX"/>
+                                                        <constraint firstItem="eN6-26-i0L" firstAttribute="centerY" secondItem="cP3-oO-hnS" secondAttribute="centerY" id="aJM-XH-sGQ"/>
+                                                    </constraints>
+                                                </view>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CarServiceTableCell" rowHeight="60" id="BpD-ru-0j6" customClass="CarServiceTableViewCell" customModule="Kapp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BpD-ru-0j6" id="1gi-U1-Xxp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نام  خدمات  انتخاب شده توسط کاربر در این قسمت" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwf-ao-lf7">
+                                                                    <rect key="frame" x="16" y="11" width="344" height="15"/>
+                                                                    <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="قیمت :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="su5-Tm-gdN">
+                                                                    <rect key="frame" x="325" y="34" width="35" height="15"/>
+                                                                    <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuS-kz-SUe">
+                                                                    <rect key="frame" x="261" y="34" width="28" height="15"/>
+                                                                    <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عدد" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5T-Y1-CQg">
+                                                                    <rect key="frame" x="297" y="34" width="20" height="15"/>
+                                                                    <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI7-8N-WUv">
+                                                                    <rect key="frame" x="16" y="28" width="30" height="27"/>
+                                                                    <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
+                                                                    <state key="normal" title="حذف"/>
+                                                                </button>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="j5T-Y1-CQg" firstAttribute="centerY" secondItem="su5-Tm-gdN" secondAttribute="centerY" id="7CV-yt-MKl"/>
+                                                                <constraint firstItem="Gwf-ao-lf7" firstAttribute="leading" secondItem="1gi-U1-Xxp" secondAttribute="leading" constant="16" id="AE9-Bu-ia2"/>
+                                                                <constraint firstItem="Gwf-ao-lf7" firstAttribute="trailing" secondItem="1gi-U1-Xxp" secondAttribute="trailingMargin" id="M7W-6U-x9f"/>
+                                                                <constraint firstItem="su5-Tm-gdN" firstAttribute="trailing" secondItem="Gwf-ao-lf7" secondAttribute="trailing" id="OAf-QE-eRX"/>
+                                                                <constraint firstItem="Gwf-ao-lf7" firstAttribute="top" secondItem="1gi-U1-Xxp" secondAttribute="top" constant="11" id="OY3-Pr-vQI"/>
+                                                                <constraint firstItem="su5-Tm-gdN" firstAttribute="leading" secondItem="j5T-Y1-CQg" secondAttribute="trailing" constant="8" id="WMe-OQ-Hjk"/>
+                                                                <constraint firstItem="j5T-Y1-CQg" firstAttribute="leading" secondItem="AuS-kz-SUe" secondAttribute="trailing" constant="8" id="l7I-IW-Upm"/>
+                                                                <constraint firstItem="GI7-8N-WUv" firstAttribute="centerY" secondItem="AuS-kz-SUe" secondAttribute="centerY" id="qao-el-Y0s"/>
+                                                                <constraint firstItem="su5-Tm-gdN" firstAttribute="top" secondItem="Gwf-ao-lf7" secondAttribute="bottom" constant="8" id="tAd-f8-ONf"/>
+                                                                <constraint firstItem="AuS-kz-SUe" firstAttribute="centerY" secondItem="j5T-Y1-CQg" secondAttribute="centerY" id="tX5-jl-TWE"/>
+                                                                <constraint firstItem="GI7-8N-WUv" firstAttribute="leading" secondItem="1gi-U1-Xxp" secondAttribute="leading" constant="16" id="zQr-8v-qcR"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="v7N-eh-t3P" firstAttribute="top" secondItem="4JF-dC-yvz" secondAttribute="top" id="04X-zV-mwL"/>
+                                            <constraint firstAttribute="height" constant="760" id="1mD-DB-qDb"/>
+                                            <constraint firstAttribute="trailing" secondItem="v7N-eh-t3P" secondAttribute="trailing" id="6XI-e7-Xsu"/>
+                                            <constraint firstAttribute="bottom" secondItem="v7N-eh-t3P" secondAttribute="bottom" id="9Ze-dQ-oLU"/>
+                                            <constraint firstAttribute="trailing" secondItem="5v8-be-3u4" secondAttribute="trailing" id="DSn-Fs-Xjy"/>
+                                            <constraint firstAttribute="trailing" secondItem="mmV-kv-8V9" secondAttribute="trailing" constant="16" id="Kn8-R5-s1R"/>
+                                            <constraint firstItem="v7N-eh-t3P" firstAttribute="leading" secondItem="4JF-dC-yvz" secondAttribute="leading" id="LNH-bi-4hY"/>
+                                            <constraint firstAttribute="trailing" secondItem="GoG-ez-DLa" secondAttribute="trailing" id="MjE-ch-ysX"/>
+                                            <constraint firstItem="mmV-kv-8V9" firstAttribute="top" secondItem="GoG-ez-DLa" secondAttribute="bottom" constant="16" id="SXr-7x-GMF"/>
+                                            <constraint firstItem="GoG-ez-DLa" firstAttribute="leading" secondItem="4JF-dC-yvz" secondAttribute="leading" id="TtK-qY-b9s"/>
+                                            <constraint firstItem="5v8-be-3u4" firstAttribute="leading" secondItem="4JF-dC-yvz" secondAttribute="leading" id="dOS-lP-vuw"/>
+                                            <constraint firstItem="GoG-ez-DLa" firstAttribute="top" secondItem="4JF-dC-yvz" secondAttribute="top" constant="100" id="gZw-1I-KNZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="5v8-be-3u4" secondAttribute="bottom" constant="30" id="pXI-QZ-ivn"/>
+                                            <constraint firstItem="5v8-be-3u4" firstAttribute="top" secondItem="mmV-kv-8V9" secondAttribute="bottom" constant="8" id="yIP-hE-pjC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4JF-dC-yvz" secondAttribute="trailing" id="14K-dG-eGr"/>
+                                    <constraint firstItem="4JF-dC-yvz" firstAttribute="centerX" secondItem="Ffo-Pn-jeq" secondAttribute="centerX" id="FB5-5N-5se"/>
+                                    <constraint firstItem="4JF-dC-yvz" firstAttribute="leading" secondItem="Ffo-Pn-jeq" secondAttribute="leading" id="Lje-hd-lWT"/>
+                                    <constraint firstItem="4JF-dC-yvz" firstAttribute="top" secondItem="Ffo-Pn-jeq" secondAttribute="top" id="MjC-iv-5lm"/>
+                                    <constraint firstAttribute="bottom" secondItem="4JF-dC-yvz" secondAttribute="bottom" id="q57-bs-DDm"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSw-Pz-n7r">
+                                <rect key="frame" x="0.0" y="762" width="375" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="جمع کل :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBB-LC-s9i">
+                                        <rect key="frame" x="212.5" y="14" width="67" height="22"/>
+                                        <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="22"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عـدد" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnW-8x-XCr">
+                                        <rect key="frame" x="170.5" y="14" width="34" height="22"/>
+                                        <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="22"/>
+                                        <color key="textColor" red="0.64525987689999997" green="0.1532079164" blue="0.1650146485" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qt7-AZ-B62">
+                                        <rect key="frame" x="121.5" y="14" width="41" height="22"/>
+                                        <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="22"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qBB-LC-s9i" firstAttribute="centerY" secondItem="nSw-Pz-n7r" secondAttribute="centerY" id="CEC-JU-aom"/>
+                                    <constraint firstAttribute="height" constant="50" id="RKx-94-hPl"/>
+                                    <constraint firstItem="wnW-8x-XCr" firstAttribute="leading" secondItem="Qt7-AZ-B62" secondAttribute="trailing" constant="8" id="bhr-ud-2J1"/>
+                                    <constraint firstItem="Qt7-AZ-B62" firstAttribute="centerY" secondItem="wnW-8x-XCr" secondAttribute="centerY" id="dqM-l6-Ev8"/>
+                                    <constraint firstItem="wnW-8x-XCr" firstAttribute="centerX" secondItem="nSw-Pz-n7r" secondAttribute="centerX" id="oXJ-70-7Kt"/>
+                                    <constraint firstItem="qBB-LC-s9i" firstAttribute="leading" secondItem="wnW-8x-XCr" secondAttribute="trailing" constant="8" id="pQJ-SA-eaX"/>
+                                    <constraint firstItem="wnW-8x-XCr" firstAttribute="centerY" secondItem="qBB-LC-s9i" secondAttribute="centerY" id="t3i-o1-YFP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nSw-Pz-n7r" firstAttribute="bottom" secondItem="hRe-wi-zpc" secondAttribute="bottom" id="6SB-iX-HHg"/>
+                            <constraint firstItem="hRe-wi-zpc" firstAttribute="trailing" secondItem="Ffo-Pn-jeq" secondAttribute="trailing" id="8ns-9B-lp7"/>
+                            <constraint firstItem="Ffo-Pn-jeq" firstAttribute="top" secondItem="hRe-wi-zpc" secondAttribute="top" id="B0m-37-IkN"/>
+                            <constraint firstItem="Ffo-Pn-jeq" firstAttribute="leading" secondItem="hRe-wi-zpc" secondAttribute="leading" id="Bkp-tS-xTb"/>
+                            <constraint firstItem="Ffo-Pn-jeq" firstAttribute="width" secondItem="qXA-TL-LF5" secondAttribute="width" id="FmG-wu-KGB"/>
+                            <constraint firstItem="v7N-eh-t3P" firstAttribute="width" secondItem="qXA-TL-LF5" secondAttribute="width" id="GO1-UK-fQg"/>
+                            <constraint firstItem="nSw-Pz-n7r" firstAttribute="trailing" secondItem="hRe-wi-zpc" secondAttribute="trailing" id="NRB-nV-U0p"/>
+                            <constraint firstItem="4JF-dC-yvz" firstAttribute="width" secondItem="qXA-TL-LF5" secondAttribute="width" id="kmi-dc-670"/>
+                            <constraint firstAttribute="bottom" secondItem="Ffo-Pn-jeq" secondAttribute="bottom" id="pMH-6M-doc"/>
+                            <constraint firstItem="nSw-Pz-n7r" firstAttribute="leading" secondItem="hRe-wi-zpc" secondAttribute="leading" id="pS0-39-E8k"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hRe-wi-zpc"/>
                     </view>
+                    <size key="freeformSize" width="375" height="812"/>
                     <connections>
-                        <segue destination="jhz-eq-uzl" kind="show" id="UT0-Mw-nAV"/>
+                        <outlet property="backgroundImageView" destination="v7N-eh-t3P" id="cE6-tr-4H9"/>
+                        <outlet property="collectionView" destination="GoG-ez-DLa" id="8C9-FH-JcU"/>
+                        <outlet property="scrollView" destination="Ffo-Pn-jeq" id="61x-dl-n9o"/>
+                        <outlet property="tableView" destination="5v8-be-3u4" id="Rzh-Fl-o2N"/>
+                        <segue destination="jhz-eq-uzl" kind="show" identifier="TimeViewControllerSegue" id="UT0-Mw-nAV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FO1-SG-hZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4676" y="-290"/>
+            <point key="canvasLocation" x="4669.6875" y="-292.6056338028169"/>
         </scene>
-        <!--View Controller-->
+        <!--Time View Controller-->
         <scene sceneID="Q8R-E6-YJB">
             <objects>
-                <viewController id="jhz-eq-uzl" sceneMemberID="viewController">
+                <viewController id="jhz-eq-uzl" customClass="TimeViewController" customModule="Kapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l6J-Uy-vGF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQ4-CQ-TjL">
+                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="showTimePickerWithSender:" destination="jhz-eq-uzl" eventType="touchUpInside" id="osu-9a-GZP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1t-kb-P9d">
+                                <rect key="frame" x="137" y="217" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="showDatePickerWithSender:" destination="jhz-eq-uzl" eventType="touchUpInside" id="NPF-7V-KaL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.96047198830000002" green="0.96047198830000002" blue="0.96047198830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="zQ4-CQ-TjL" firstAttribute="centerX" secondItem="l6J-Uy-vGF" secondAttribute="centerX" id="Ahg-Vg-2On"/>
+                            <constraint firstItem="j1t-kb-P9d" firstAttribute="centerX" secondItem="l6J-Uy-vGF" secondAttribute="centerX" id="Ka4-Y7-hM7"/>
+                            <constraint firstItem="zQ4-CQ-TjL" firstAttribute="centerY" secondItem="l6J-Uy-vGF" secondAttribute="centerY" id="MMV-Md-ZTH"/>
+                            <constraint firstItem="zQ4-CQ-TjL" firstAttribute="top" secondItem="j1t-kb-P9d" secondAttribute="bottom" constant="22" id="OaS-Qi-aNC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vHk-fk-AGi"/>
                     </view>
                     <connections>
@@ -554,103 +876,103 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تاریخ :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdF-XH-D7Z">
-                                                            <rect key="frame" x="236" y="8" width="32" height="15"/>
+                                                            <rect key="frame" x="232" y="8" width="36" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کوپن تخفیف :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab6-Nz-hH1">
-                                                            <rect key="frame" x="200" y="62" width="68" height="15"/>
+                                                            <rect key="frame" x="195" y="64.5" width="73" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="زمـان :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pz9-2C-gBH">
-                                                            <rect key="frame" x="119.5" y="8" width="33.5" height="15"/>
+                                                            <rect key="frame" x="113" y="8" width="36" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۱۳۹۷/۰۴/۱۲" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAp-BH-jGw">
-                                                            <rect key="frame" x="161" y="8" width="71" height="15"/>
+                                                            <rect key="frame" x="157" y="8" width="71" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.81568627449999997" green="0.56862745100000001" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ساعت ۱۳:۴۱" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIg-3n-G6E">
-                                                            <rect key="frame" x="47" y="8" width="68.5" height="15"/>
+                                                            <rect key="frame" x="38.5" y="8" width="70.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.81568627449999997" green="0.56862745100000001" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مبلغ :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aY4-wg-dkS">
-                                                            <rect key="frame" x="240" y="154" width="28.5" height="15"/>
+                                                            <rect key="frame" x="238.5" y="166.5" width="30" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="روش پرداخت" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o63-7k-fDP">
-                                                            <rect key="frame" x="199.5" y="85" width="68.5" height="15"/>
+                                                            <rect key="frame" x="201" y="90" width="67" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نام سفارش" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkK-C6-r7F">
-                                                            <rect key="frame" x="211.5" y="39" width="56.5" height="15"/>
+                                                            <rect key="frame" x="209.5" y="39" width="58.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="نام سفارش" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNK-Lo-DiL">
-                                                            <rect key="frame" x="22" y="39" width="182" height="15"/>
+                                                            <rect key="frame" x="22" y="39" width="180" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.48445164349999997" green="0.47824383739999998" blue="0.85353356599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نام کوپن" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yp9-TE-5kQ">
-                                                            <rect key="frame" x="149" y="62" width="43" height="15"/>
+                                                            <rect key="frame" x="142.5" y="64.5" width="44.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.48445164349999997" green="0.47824383739999998" blue="0.85353356599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svO-S6-W9r">
-                                                            <rect key="frame" x="151.5" y="108" width="29.5" height="15"/>
+                                                            <rect key="frame" x="144" y="115.5" width="32.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.48445164349999997" green="0.47824383739999998" blue="0.85353356599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="روش پرداخت" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjG-iB-Oo7">
-                                                            <rect key="frame" x="116" y="131" width="68.5" height="15"/>
+                                                            <rect key="frame" x="117.5" y="141" width="67" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.48445164349999997" green="0.47824383739999998" blue="0.85353356599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="روش پرداخت" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMn-9W-X2J">
-                                                            <rect key="frame" x="123" y="85" width="68.5" height="15"/>
+                                                            <rect key="frame" x="126" y="90" width="67" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.48445164349999997" green="0.47824383739999998" blue="0.85353356599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره پرداخت :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGb-Re-yxV">
-                                                            <rect key="frame" x="189" y="108" width="79" height="15"/>
+                                                            <rect key="frame" x="184.5" y="115.5" width="83.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="روش پرداخت :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jq1-0q-5sl">
-                                                            <rect key="frame" x="193" y="131" width="75.5" height="15"/>
+                                                            <rect key="frame" x="193" y="141" width="75.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مبلغ سفارش" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90f-Df-Uxz">
-                                                            <rect key="frame" x="168.5" y="154" width="63.5" height="15"/>
+                                                            <rect key="frame" x="165" y="166.5" width="65.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.64525987689999997" green="0.1532079164" blue="0.1650146485" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anq-w5-WLD">
-                                                            <rect key="frame" x="133" y="154" width="27.5" height="15"/>
+                                                            <rect key="frame" x="128.5" y="166.5" width="28.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -997,91 +1319,91 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تاریخ :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZJ-6H-AqO">
-                                                            <rect key="frame" x="236" y="8" width="32" height="15"/>
+                                                            <rect key="frame" x="232" y="8" width="36" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نام بانک :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THp-R3-4tW">
-                                                            <rect key="frame" x="220.5" y="62" width="47.5" height="15"/>
+                                                            <rect key="frame" x="216.5" y="64.5" width="51.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="زمـان :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpG-QT-KhV">
-                                                            <rect key="frame" x="119.5" y="8" width="33.5" height="15"/>
+                                                            <rect key="frame" x="113" y="8" width="36" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۱۳۹۷/۰۴/۱۲" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jD8-Hr-hXv">
-                                                            <rect key="frame" x="161" y="8" width="71" height="15"/>
+                                                            <rect key="frame" x="157" y="8" width="71" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.81568627449999997" green="0.56862745100000001" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ساعت ۱۳:۴۱" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTG-eR-88G">
-                                                            <rect key="frame" x="47" y="8" width="68.5" height="15"/>
+                                                            <rect key="frame" x="38.5" y="8" width="70.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.81568627449999997" green="0.56862745100000001" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مبلغ :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6EA-Ij-coz">
-                                                            <rect key="frame" x="125" y="108" width="28.5" height="15"/>
+                                                            <rect key="frame" x="120.5" y="115.5" width="30" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نتیجه بانک :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQj-rc-hO1">
-                                                            <rect key="frame" x="208" y="85" width="60" height="15"/>
+                                                            <rect key="frame" x="204" y="90" width="64" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره فاکتور :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dso-CV-CzB">
-                                                            <rect key="frame" x="197" y="39" width="71" height="15"/>
+                                                            <rect key="frame" x="190.5" y="39" width="77.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره فاکتور" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OP4-U3-Z1Z">
-                                                            <rect key="frame" x="125" y="39" width="64" height="15"/>
+                                                            <rect key="frame" x="113.5" y="39" width="69" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.4844516435268435" green="0.47824383736736564" blue="0.85353356599807739" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نام بانک" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcc-dd-yX5">
-                                                            <rect key="frame" x="172" y="62" width="40.5" height="15"/>
+                                                            <rect key="frame" x="165.5" y="64.5" width="43" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.48445164349999997" green="0.47824383739999998" blue="0.85353356599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="وضعیت" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qx-c6-lRM">
-                                                            <rect key="frame" x="178" y="108" width="37.5" height="15"/>
+                                                            <rect key="frame" x="173" y="115.5" width="39.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.48445164349999997" green="0.47824383739999998" blue="0.85353356599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نتیجه برگشت از بانک" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEX-hE-2h3">
-                                                            <rect key="frame" x="94" y="85" width="106" height="15"/>
+                                                            <rect key="frame" x="83.5" y="90" width="112.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.48445164349999997" green="0.47824383739999998" blue="0.85353356599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="وضعیت :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYM-kA-WPo">
-                                                            <rect key="frame" x="223.5" y="108" width="44.5" height="15"/>
+                                                            <rect key="frame" x="220.5" y="115.5" width="47.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مبلغ سفارش" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c29-pL-mbB">
-                                                            <rect key="frame" x="53.5" y="108" width="63.5" height="15"/>
+                                                            <rect key="frame" x="47" y="115.5" width="65.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.64525987689999997" green="0.1532079164" blue="0.1650146485" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGC-Il-q3H">
-                                                            <rect key="frame" x="18" y="108" width="27.5" height="15"/>
+                                                            <rect key="frame" x="10.5" y="115.5" width="28.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -1194,91 +1516,91 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تاریخ :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wa7-Lx-ZQg">
-                                                            <rect key="frame" x="236" y="8" width="32" height="15"/>
+                                                            <rect key="frame" x="232" y="8" width="36" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="فلگ" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMc-lP-mqH">
-                                                            <rect key="frame" x="246.5" y="62" width="21.5" height="15"/>
+                                                            <rect key="frame" x="248.5" y="64.5" width="19.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="زمـان :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whe-rH-H3Z">
-                                                            <rect key="frame" x="119.5" y="8" width="33.5" height="15"/>
+                                                            <rect key="frame" x="113" y="8" width="36" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۱۳۹۷/۰۴/۱۲" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPu-Ii-Qh4">
-                                                            <rect key="frame" x="161" y="8" width="71" height="15"/>
+                                                            <rect key="frame" x="157" y="8" width="71" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.81568627449999997" green="0.56862745100000001" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ساعت ۱۳:۴۱" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWp-s4-hAs">
-                                                            <rect key="frame" x="47" y="8" width="68.5" height="15"/>
+                                                            <rect key="frame" x="38.5" y="8" width="70.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.81568627449999997" green="0.56862745100000001" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مبلغ :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsy-Km-YEq">
-                                                            <rect key="frame" x="125" y="108" width="28.5" height="15"/>
+                                                            <rect key="frame" x="120.5" y="115.5" width="30" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="توضیحات" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4x8-Kx-toB">
-                                                            <rect key="frame" x="222.5" y="85" width="45.5" height="15"/>
+                                                            <rect key="frame" x="217" y="90" width="51" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره پرداخت :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="806-NO-r7Q">
-                                                            <rect key="frame" x="189" y="39" width="79" height="15"/>
+                                                            <rect key="frame" x="184.5" y="39" width="83.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره پرداخت" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdZ-o7-jKI">
-                                                            <rect key="frame" x="109.5" y="39" width="71.5" height="15"/>
+                                                            <rect key="frame" x="101.5" y="39" width="75" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.48445164349999997" green="0.47824383739999998" blue="0.85353356599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دریافتی" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecA-K4-pNq">
-                                                            <rect key="frame" x="199.5" y="62" width="39" height="15"/>
+                                                            <rect key="frame" x="199.5" y="64.5" width="41" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.48445164349999997" green="0.47824383739999998" blue="0.85353356599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="وضعیت" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsJ-bV-leg">
-                                                            <rect key="frame" x="178" y="108" width="37.5" height="15"/>
+                                                            <rect key="frame" x="173" y="115.5" width="39.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.48445164349999997" green="0.47824383739999998" blue="0.85353356599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نتیجه برگشت از بانک" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="se3-Po-Lev">
-                                                            <rect key="frame" x="108.5" y="85" width="106" height="15"/>
+                                                            <rect key="frame" x="96.5" y="90" width="112.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.48445164349999997" green="0.47824383739999998" blue="0.85353356599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="وضعیت :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JT8-qG-4zc">
-                                                            <rect key="frame" x="223.5" y="108" width="44.5" height="15"/>
+                                                            <rect key="frame" x="220.5" y="115.5" width="47.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مبلغ سفارش" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUZ-zj-Zu4">
-                                                            <rect key="frame" x="53.5" y="108" width="63.5" height="15"/>
+                                                            <rect key="frame" x="47" y="115.5" width="65.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.64525987689999997" green="0.1532079164" blue="0.1650146485" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqD-Ad-hRQ">
-                                                            <rect key="frame" x="18" y="108" width="27.5" height="15"/>
+                                                            <rect key="frame" x="10.5" y="115.5" width="28.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -1427,7 +1749,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="VDk-B4-hX4">
+                        <view key="tableFooterView" contentMode="scaleToFill" misplaced="YES" id="VDk-B4-hX4">
                             <rect key="frame" x="0.0" y="542" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1690,21 +2012,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="04D-bX-Z2j">
-                                <rect key="frame" x="33" y="211" width="254" height="1"/>
+                                <rect key="frame" x="33" y="217" width="254" height="1"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="DF6-A9-nX5"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bgs-Mb-0GH">
-                                <rect key="frame" x="33" y="122" width="254" height="1"/>
+                                <rect key="frame" x="33" y="125" width="254" height="1"/>
                                 <color key="backgroundColor" red="0.81568627449999997" green="0.56862745100000001" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="RfX-jZ-bUN"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="مبلغ را به تومان وارد کنید" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQG-nc-50F">
-                                <rect key="frame" x="33" y="179" width="254" height="30"/>
+                                <rect key="frame" x="33" y="185" width="254" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="JXn-ON-PBr"/>
                                 </constraints>
@@ -1713,19 +2035,19 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="cc-number"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="افزایش اعتبار" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFm-gI-yc5">
-                                <rect key="frame" x="118.5" y="89" width="84.5" height="18"/>
+                                <rect key="frame" x="116.5" y="89" width="87" height="21"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="18"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مبلغ اعتبار :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFF-e6-d6q">
-                                <rect key="frame" x="222.5" y="153" width="64" height="16"/>
+                                <rect key="frame" x="217" y="156" width="69.5" height="19"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="16"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAa-Sd-YSC" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
-                                <rect key="frame" x="100" y="252" width="120" height="35"/>
+                                <rect key="frame" x="100" y="258" width="120" height="35"/>
                                 <color key="backgroundColor" red="0.79649044690000004" green="0.52185975829999998" blue="0.56080340559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="JpI-MH-j57"/>
@@ -1806,7 +2128,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2UZ-Qb-qKF">
-                                <rect key="frame" x="33" y="122" width="254" height="1"/>
+                                <rect key="frame" x="33" y="125" width="254" height="1"/>
                                 <color key="backgroundColor" red="0.81568627449999997" green="0.56862745100000001" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Jlh-Aa-2Fz"/>
@@ -1820,31 +2142,31 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تماس با ما" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZI-1I-tVz">
-                                <rect key="frame" x="129.5" y="89" width="61" height="18"/>
+                                <rect key="frame" x="125.5" y="89" width="69" height="21"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="18"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ثبت نظر" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTY-Z0-JnC">
-                                <rect key="frame" x="136" y="344" width="48" height="18"/>
+                                <rect key="frame" x="134.5" y="341" width="51" height="21"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="18"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شکایت" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYa-vj-c2w">
-                                <rect key="frame" x="247.5" y="476" width="39.5" height="17"/>
+                                <rect key="frame" x="245.5" y="476" width="41.5" height="20"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="17"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نظر" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7t-Ae-GO1">
-                                <rect key="frame" x="169" y="476" width="18.5" height="17"/>
+                                <rect key="frame" x="167" y="476" width="22.5" height="20"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="17"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نظر خود را با ما در میان بگذارید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgt-NO-yre">
-                                <rect key="frame" x="117.5" y="400" width="169.5" height="16"/>
+                                <rect key="frame" x="103.5" y="400" width="183.5" height="19"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="16"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1889,7 +2211,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOR-8O-k4O" customClass="UICheckbox" customModule="UICheckbox_Swift">
-                                <rect key="frame" x="214.5" y="472" width="25" height="25"/>
+                                <rect key="frame" x="212.5" y="473.5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="S8p-Dm-2NZ"/>
                                     <constraint firstAttribute="width" constant="25" id="exe-wQ-fch"/>
@@ -1913,7 +2235,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="se2-yu-LeY" customClass="UICheckbox" customModule="UICheckbox_Swift">
-                                <rect key="frame" x="53" y="473" width="25" height="25"/>
+                                <rect key="frame" x="53" y="474.5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="kmJ-bP-sQY"/>
                                     <constraint firstAttribute="height" constant="25" id="y0A-s6-C8w"/>
@@ -1937,7 +2259,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgB-ht-vcp" customClass="UICheckbox" customModule="UICheckbox_Swift">
-                                <rect key="frame" x="136" y="472.5" width="25" height="25"/>
+                                <rect key="frame" x="134" y="474" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="FlG-bM-ZJq"/>
                                     <constraint firstAttribute="height" constant="25" id="hwx-iE-1jP"/>
@@ -1961,7 +2283,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="پیام" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9s-kH-arm">
-                                <rect key="frame" x="86" y="477" width="23" height="17"/>
+                                <rect key="frame" x="86" y="477" width="22" height="20"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="17"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -2048,12 +2370,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ارتباط با اینترنت قطع میباشد !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsG-fO-Ih1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ارتباط با اینترنت قطع میباشد !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsG-fO-Ih1">
                                 <rect key="frame" x="20" y="157" width="280" height="26"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="لطفا ارتباط خود را با اینترنت بررسی کنید و مجددا تلاش کنید." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyO-Oj-PhD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لطفا ارتباط خود را با اینترنت بررسی کنید و مجددا تلاش کنید." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyO-Oj-PhD">
                                 <rect key="frame" x="16" y="197" width="288" height="42"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="18"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

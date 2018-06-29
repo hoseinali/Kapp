@@ -22,6 +22,7 @@ let CONFIRM_SEGUE = "ConfirmViewControllerSegue"
 let CAR_CHOSEN_SEGUE = "CarChosenViewControllerSegue"
 let ORDER_DETAIL_LIST_SEGUE = "OrderDetailViewControllerSegue"
 let CAR_SERVICE_SEGUE = "CarServiceViewControllerSegue"
+let TIME_SEGUE = "TimeViewControllerSegue"
 
 // UNWIND SEGUE
 let UNWIND_MAIN_SEGUE = "unwindToMainViewControllerSegue"
@@ -44,7 +45,8 @@ let SPEND_CELL = "spendCell"
 let BAG_RESULT_CELL = "bagResultCell"
 let ORDER_DETAIL_CELL = "orderDetailCell"
 let CHOSEN_SERVICE_CELL = "ChosenServiceCell"
-
+let CAR_SERVICE_COLLECTION_CELL = "CarServiceCollectionCell"
+let CAR_SERVICE_TABLE_CELL = "CarServiceTableCell"
 // NOTIFICATION
 let DISMISS_ROOT_INDICATOR_NOTIFI = Notification.Name("dismissRootActivityIndicator")
 let DISMISS_INDICATOR_VC_NOTIFI = Notification.Name("dismissIndicatorVCActivityIndicator")

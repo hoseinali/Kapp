@@ -12,7 +12,7 @@ class ChosenServiceCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.layer.cornerRadius = 5.0
+        updateUI()
     }
     
     // Outlet
@@ -25,5 +25,12 @@ class ChosenServiceCollectionViewCell: UICollectionViewCell {
         self.imageView.image = image
     }
     
+    func updateUI() {
+        self.layer.cornerRadius = 5.0
+        self.layer.shadowOpacity = 0.75
+        self.layer.shadowRadius = 5.0
+        self.layer.shadowColor = UIColor.black.cgColor
+    }
+
     
 }
