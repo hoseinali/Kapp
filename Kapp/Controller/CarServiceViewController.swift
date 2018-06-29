@@ -41,7 +41,7 @@ class CarServiceViewController: UIViewController {
         backButton.setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: YEKAN_WEB_FONT, size: 16)!], for: .normal)
         navigationItem.backBarButtonItem = backButton
         // Apply blurring effect
-        backgroundImageView.image = UIImage(named: "blureImage")
+        backgroundImageView.image = UIImage(named: "tshirt")
         let blurEffect = UIBlurEffect(style: .dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = backgroundImageView.bounds

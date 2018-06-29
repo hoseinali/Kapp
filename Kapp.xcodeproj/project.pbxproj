@@ -50,6 +50,7 @@
 		D8C9EBF120E436C700750AEC /* CarChosen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C9EBF020E436C700750AEC /* CarChosen.swift */; };
 		D8C9EBF320E438D800750AEC /* CarServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C9EBF220E438D800750AEC /* CarServiceViewController.swift */; };
 		D8C9EBF520E4410400750AEC /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C9EBF420E4410400750AEC /* DropDownButton.swift */; };
+		D8E3BFBE20E647FC00BA1A3B /* RegisterOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3BFBD20E647FC00BA1A3B /* RegisterOrderViewController.swift */; };
 		D8FC47BD20E25CF20078CC8C /* UIViewExntension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FC47BC20E25CF20078CC8C /* UIViewExntension.swift */; };
 		D8FC47BF20E261770078CC8C /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FC47BE20E261770078CC8C /* CircleImageView.swift */; };
 		D8FC47E120E2E3BB0078CC8C /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FC47E020E2E3BB0078CC8C /* OrderDetailViewController.swift */; };
@@ -103,6 +104,7 @@
 		D8C9EBF020E436C700750AEC /* CarChosen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarChosen.swift; sourceTree = "<group>"; };
 		D8C9EBF220E438D800750AEC /* CarServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarServiceViewController.swift; sourceTree = "<group>"; };
 		D8C9EBF420E4410400750AEC /* DropDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
+		D8E3BFBD20E647FC00BA1A3B /* RegisterOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterOrderViewController.swift; sourceTree = "<group>"; };
 		D8FC47BC20E25CF20078CC8C /* UIViewExntension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExntension.swift; sourceTree = "<group>"; };
 		D8FC47BE20E261770078CC8C /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		D8FC47C020E263770078CC8C /* Kapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kapp.entitlements; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				D864364C20E058B3003CFB4F /* CarChosenViewController.swift */,
 				D8C9EBF220E438D800750AEC /* CarServiceViewController.swift */,
 				D83FBE4F20E599E3005FA553 /* TimeViewController.swift */,
+				D8E3BFBD20E647FC00BA1A3B /* RegisterOrderViewController.swift */,
 				D878203520DEF4F50076416B /* RegisterViewController.swift */,
 				D878203720DEF51B0076416B /* ConfirmViewController.swift */,
 				D8C9EBDF20E3C62400750AEC /* InternetConnectionViewController.swift */,
@@ -445,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E3BFBE20E647FC00BA1A3B /* RegisterOrderViewController.swift in Sources */,
 				D8C9EBF120E436C700750AEC /* CarChosen.swift in Sources */,
 				D864364B20E05760003CFB4F /* RoundedView.swift in Sources */,
 				D83941C520E25410008E09C9 /* SpendTableViewCell.swift in Sources */,

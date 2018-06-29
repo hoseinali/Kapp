@@ -9,6 +9,9 @@
 import UIKit
 
 class TimeViewController: UIViewController, DateTimePickerDelegate {
+    
+    // Outlet
+    @IBOutlet weak var backgroundImageView: UIImageView!
 
     var datePicker: DateTimePicker?
     var timePicker: DateTimePicker?
@@ -17,6 +20,10 @@ class TimeViewController: UIViewController, DateTimePickerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+    }
+    
+    @IBAction func agreeButtonPressed(_ sender: RoundedButton) {
+        performSegue(withIdentifier: REGISTER_ORDER_SEGUE, sender: sender)
     }
     
     // Action
@@ -43,7 +50,6 @@ class TimeViewController: UIViewController, DateTimePickerDelegate {
             formatter.calendar = Calendar.init(identifier: .persian)
             formatter.locale = Locale(identifier: "en")
             formatter.dateFormat = "YYYY/MM/dd"
-            self.title = formatter.string(from: date)
         }
         datePicker.delegate = self
         self.datePicker = datePicker
@@ -73,7 +79,6 @@ class TimeViewController: UIViewController, DateTimePickerDelegate {
             formatter.calendar = Calendar.init(identifier: .persian)
             formatter.locale = Locale(identifier: "en")
             formatter.dateFormat = "YYYY/MM/dd"
-            self.title = formatter.string(from: date)
         }
         timePicker.delegate = self
         self.timePicker = timePicker
@@ -90,6 +95,12 @@ class TimeViewController: UIViewController, DateTimePickerDelegate {
     }
     
     func updateUI() {
+        // Apply blurring effect
+        backgroundImageView.image = UIImage(named: "cloud")
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = UIScreen.main.bounds
+        backgroundImageView.addSubview(blurEffectView)
         self.navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: YEKAN_WEB_FONT, size: 40)!], for: .normal)
         let backButton = UIBarButtonItem(title: "بازگشت", style: UIBarButtonItemStyle.plain, target: self, action: nil)
         backButton.setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: YEKAN_WEB_FONT, size: 16)!], for: .normal)

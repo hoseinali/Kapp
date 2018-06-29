@@ -23,6 +23,7 @@ let CAR_CHOSEN_SEGUE = "CarChosenViewControllerSegue"
 let ORDER_DETAIL_LIST_SEGUE = "OrderDetailViewControllerSegue"
 let CAR_SERVICE_SEGUE = "CarServiceViewControllerSegue"
 let TIME_SEGUE = "TimeViewControllerSegue"
+let REGISTER_ORDER_SEGUE = "RegisterOrderViewControllerSegue"
 
 // UNWIND SEGUE
 let UNWIND_MAIN_SEGUE = "unwindToMainViewControllerSegue"
