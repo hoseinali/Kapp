@@ -46,5 +46,6 @@ class SideTableViewController: UITableViewController {
         alert.add(action: cancel)
         alert.show()
     }
+    
 
 }

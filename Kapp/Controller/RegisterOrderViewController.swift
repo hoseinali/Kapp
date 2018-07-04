@@ -37,7 +37,6 @@ class RegisterOrderViewController: UIViewController {
     
     // Objc
     @objc func closeTouch() {
-        print("close touch pressed")
         view.endEditing(true)
     }
     

@@ -29,6 +29,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>اجازه دسترسی به عکس ها برای انتخاب عکس پروفایل کاربری</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>اجازه دسترسی به جی پی اس دستگاه برای تشخیص نشانی دقیق کاربر</string>
 	<key>NSLocationUsageDescription</key>

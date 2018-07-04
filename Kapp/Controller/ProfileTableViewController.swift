@@ -28,7 +28,6 @@ class ProfileTableViewController: UITableViewController, SideMenuControllerDeleg
         self.present(imagePicker,animated: true,completion: nil)
     }
 
-
     // Method
     func updateUI() {
         sideMenuController?.delegate = self
@@ -46,7 +45,6 @@ class ProfileTableViewController: UITableViewController, SideMenuControllerDeleg
         print(#function)
     }
 
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             profileImage.image = selectedImage

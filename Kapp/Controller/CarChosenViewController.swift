@@ -50,7 +50,6 @@ class CarChosenViewController: UIViewController {
     }
     
     
-    
 }
 
 extension CarChosenViewController: UICollectionViewDataSource, UICollectionViewDelegate {
