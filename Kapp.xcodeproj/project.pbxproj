@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		161B29F720E5292100139032 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161B29F620E5292100139032 /* Payment.swift */; };
 		1620643B20E3DB9800A4C9B4 /* BagService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1620643A20E3DB9800A4C9B4 /* BagService.swift */; };
 		1620643D20E3DFDC00A4C9B4 /* BagSpend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1620643C20E3DFDC00A4C9B4 /* BagSpend.swift */; };
 		1620643F20E3E09A00A4C9B4 /* PayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1620643E20E3E09A00A4C9B4 /* PayList.swift */; };
@@ -28,7 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		161B29F620E5292100139032 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		1620643A20E3DB9800A4C9B4 /* BagService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagService.swift; sourceTree = "<group>"; };
 		1620643C20E3DFDC00A4C9B4 /* BagSpend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagSpend.swift; sourceTree = "<group>"; };
 		1620643E20E3E09A00A4C9B4 /* PayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayList.swift; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 				163E82D920D9BEAE000692A0 /* Media.swift */,
 				1620643C20E3DFDC00A4C9B4 /* BagSpend.swift */,
 				1620643E20E3E09A00A4C9B4 /* PayList.swift */,
-				161B29F620E5292100139032 /* Payment.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -288,7 +285,6 @@
 			files = (
 				16AB684F20D9156600EEDC9C /* UserDataService.swift in Sources */,
 				16455F3620D839720005B1A2 /* Kapp.xcdatamodeld in Sources */,
-				161B29F720E5292100139032 /* Payment.swift in Sources */,
 				16455F3020D839720005B1A2 /* ViewController.swift in Sources */,
 				16B2712020D8EF7B00C74709 /* Constant.swift in Sources */,
 				163E82DA20D9BEAE000692A0 /* Media.swift in Sources */,
