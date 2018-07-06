@@ -27,6 +27,8 @@ let CASH_GET_URL = "\(BASE_URL)api-pay.php?do=cashget"
 let PAY_LIST_URL = "\(BASE_URL)api-pay.php?do=paylist"
 let CASH_LOG_URL = "\(BASE_URL)api-pay.php?do=cashlog"
 let BANK_CASH_URL = "\(BASE_URL)api-pay.php?do=pay"
+let ORDER_LIST_URL = "\(BASE_URL)api-order.php?do=orderlist"
+let COPON_CHECK_URL = "\(BASE_URL)api-order.php?do=coponcheck"
 
 
 // DEFAULT USERS
