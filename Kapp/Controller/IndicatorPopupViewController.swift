@@ -42,7 +42,7 @@ class IndicatorPopupViewController: UIViewController, NVActivityIndicatorViewabl
     }
     
     func endActivityIndicator() {
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0) {
             self.activityIndicatorView?.stopAnimating()
             self.removeAnimate()
         }

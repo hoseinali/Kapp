@@ -20,15 +20,77 @@ class ConfirmViewController: UIViewController {
         super.viewDidLoad()
         updateUI()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        startTimer()
+    }
 
     // Action
     @IBAction func resendButtonPressed(_ sender: UIButton) {
-        resetTimer()
+        startIndicatorAnimate()
+        AuthenticationService.instance.reOkCode(number: AuthenticationService.instance.phoneNumber) { (success) in
+            if success {
+                print("success resend code to phone \(AuthenticationService.instance.phoneNumber)")
+                self.stopIndicatorAnimate()
+                self.resetTimer()
+                self.startTimer()
+                DispatchQueue.main.async {
+                    let message = "کد تایید مجددا ارسال شد !"
+                    self.presentWarningAlert(message: message)
+                }
+            } else {
+                self.stopIndicatorAnimate()
+                print("failed resend code to \(AuthenticationService.instance.phoneNumber)")
+                DispatchQueue.main.async {
+                    let message = "خطا در ارسال کد لطفا مجددا تلاش کنید !"
+                    self.presentWarningAlert(message: message)
+                }
+            }
+        }
     }
     
     @IBAction func confirmButtonPressed(_ sender: RoundedButton) {
         UserDefaults.standard.set(true, forKey: REGISTER_KEY)
-        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+        guard let code = codeTextField.text, code != "" else {
+            presentWarningAlert(message: "کد تایید را وارد کنید !")
+            return
+        }
+        startIndicatorAnimate()
+        if AuthenticationService.instance.isOldUser {
+            AuthenticationService.instance.loginGetAccess(okCode: code, number: AuthenticationService.instance.phoneNumber) { (success) in
+                if success {
+                    self.stopIndicatorAnimate()
+                    DispatchQueue.main.async {
+                        print("success old user login code with ssid: \(UserDataService.instance.ssid)")
+                        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+                    }
+                } else {
+                    print("failed old user login code")
+                    self.stopIndicatorAnimate()
+                    DispatchQueue.main.async {
+                        let message = "ورود با مشکل واجه شده است لطفا مجددا تلاش کنید !"
+                        self.presentWarningAlert(message: message)
+                    }
+                }
+            }
+        } else {
+            AuthenticationService.instance.registerGetAccess(okCode: code, number: AuthenticationService.instance.phoneNumber) { (success) in
+                if success {
+                    self.stopIndicatorAnimate()
+                    DispatchQueue.main.async {
+                        print("success new user login code with ssid: \(UserDataService.instance.ssid)")
+                        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+                    }
+                } else {
+                    print("failed new user login code")
+                    self.stopIndicatorAnimate()
+                    DispatchQueue.main.async {
+                        let message = "ورود با مشکل واجه شده است لطفا مجددا تلاش کنید !"
+                        self.presentWarningAlert(message: message)
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func wrongNumberButtonPressed(_ sender: UIButton) {
@@ -39,7 +101,6 @@ class ConfirmViewController: UIViewController {
     // Method
     func updateUI() {
         self.resendButton.isEnabled = false
-        startTimer()
         codeTextField.keyboardType = .asciiCapableNumberPad
     }
     

@@ -22,6 +22,7 @@ class UserDataService {
             defaults.set(newValue, forKey: LOGGED_IN_KEY)
         }
     }
+    
     public private(set) var phoneNumber: String {
         get {
             return defaults.value(forKey: PHONE_KEY) as! String
@@ -30,6 +31,7 @@ class UserDataService {
             defaults.set(newValue, forKey: PHONE_KEY)
         }
     }
+    
     public private(set) var uid: String {
         get {
             return defaults.value(forKey: UID_KEY) as! String
@@ -39,6 +41,7 @@ class UserDataService {
             
         }
     }
+    
     public private(set) var ssid: String {
         get {
             return defaults.value(forKey: SSID_KEY) as! String
@@ -47,6 +50,7 @@ class UserDataService {
             defaults.set(newValue, forKey: SSID_KEY)
         }
     }
+    
     var mount: Int {
         get {
             return defaults.integer(forKey: CASH_KEY)
@@ -55,6 +59,7 @@ class UserDataService {
             defaults.set(newValue, forKey: CASH_KEY)
         }
     }
+    
     var cash: Int {
         get {
             return defaults.integer(forKey: CASH_KEY)
@@ -65,13 +70,6 @@ class UserDataService {
     }
     
     func setUserData(uid: String, ssid: String, isLogin: Bool, phoneNumber: String) {
-        self.uid = uid
-        self.ssid = ssid
-        self.isLogin = isLogin
-        self.phoneNumber = phoneNumber
-    }
-    
-    func setUserDataS1(uid: String, ssid: String, isLogin: Bool, phoneNumber: String) {
         self.uid = uid
         self.ssid = ssid
         self.isLogin = isLogin
