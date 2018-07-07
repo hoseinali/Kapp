@@ -1173,7 +1173,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" estimatedRowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ljb-ve-Hwc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="230" estimatedRowHeight="230" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ljb-ve-Hwc">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="EwN-Zi-KPx">
@@ -1182,15 +1182,15 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="orderDetailCell" rowHeight="200" id="81g-3x-ctM" customClass="OrderDetailTableViewCell" customModule="Kapp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="320" height="200"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="orderDetailCell" rowHeight="230" id="81g-3x-ctM" customClass="OrderDetailTableViewCell" customModule="Kapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="320" height="230"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="81g-3x-ctM" id="eOY-Gl-6Je">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wyr-4B-PyM" customClass="RoundedView" customModule="Kapp" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="11" width="290" height="178"/>
+                                                    <rect key="frame" x="15" y="11" width="290" height="208"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7t-LU-6dE">
                                                             <rect key="frame" x="22" y="30" width="246" height="1"/>
@@ -1230,7 +1230,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مبلغ :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aY4-wg-dkS">
-                                                            <rect key="frame" x="240" y="154" width="28.5" height="15"/>
+                                                            <rect key="frame" x="240" y="177" width="28.5" height="15"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -1289,16 +1289,28 @@
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="وضعیت سفارش :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nB-5K-i8e">
+                                                            <rect key="frame" x="181.5" y="154" width="87" height="15"/>
+                                                            <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مبلغ سفارش" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90f-Df-Uxz">
-                                                            <rect key="frame" x="168.5" y="154" width="63.5" height="15"/>
+                                                            <rect key="frame" x="168.5" y="177" width="63.5" height="15"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.64525987689999997" green="0.1532079164" blue="0.1650146485" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anq-w5-WLD">
-                                                            <rect key="frame" x="132.5" y="154" width="28" height="15"/>
+                                                            <rect key="frame" x="132.5" y="177" width="28" height="15"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="روش پرداخت" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGI-uG-smD">
+                                                            <rect key="frame" x="105" y="154" width="68.5" height="15"/>
+                                                            <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
+                                                            <color key="textColor" red="0.48445164349999997" green="0.47824383739999998" blue="0.85353356599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -1307,6 +1319,7 @@
                                                         <constraint firstItem="svO-S6-W9r" firstAttribute="centerY" secondItem="lGb-Re-yxV" secondAttribute="centerY" id="1jc-81-CaG"/>
                                                         <constraint firstItem="V7t-LU-6dE" firstAttribute="leading" secondItem="Wyr-4B-PyM" secondAttribute="leading" constant="22" id="5mA-Om-syS"/>
                                                         <constraint firstItem="Jq1-0q-5sl" firstAttribute="trailing" secondItem="lGb-Re-yxV" secondAttribute="trailing" id="92E-6g-Pcu"/>
+                                                        <constraint firstItem="aY4-wg-dkS" firstAttribute="top" secondItem="5nB-5K-i8e" secondAttribute="bottom" constant="8" id="ABp-Ka-Tan"/>
                                                         <constraint firstItem="jAp-BH-jGw" firstAttribute="centerY" secondItem="GdF-XH-D7Z" secondAttribute="centerY" id="AjW-kJ-cRS"/>
                                                         <constraint firstItem="GdF-XH-D7Z" firstAttribute="top" secondItem="Wyr-4B-PyM" secondAttribute="top" constant="8" id="B5O-uz-7Q5"/>
                                                         <constraint firstItem="ab6-Nz-hH1" firstAttribute="top" secondItem="RkK-C6-r7F" secondAttribute="bottom" constant="8" id="BON-OV-BzB"/>
@@ -1315,13 +1328,14 @@
                                                         <constraint firstItem="PjG-iB-Oo7" firstAttribute="centerY" secondItem="Jq1-0q-5sl" secondAttribute="centerY" id="Hmq-Z5-dfs"/>
                                                         <constraint firstItem="90f-Df-Uxz" firstAttribute="centerY" secondItem="aY4-wg-dkS" secondAttribute="centerY" id="I25-qC-ntA"/>
                                                         <constraint firstItem="lNK-Lo-DiL" firstAttribute="top" secondItem="V7t-LU-6dE" secondAttribute="bottom" constant="8" id="KtY-Sx-aqS"/>
-                                                        <constraint firstItem="aY4-wg-dkS" firstAttribute="top" secondItem="Jq1-0q-5sl" secondAttribute="bottom" constant="8" id="LE7-HX-ldV"/>
+                                                        <constraint firstItem="5nB-5K-i8e" firstAttribute="top" secondItem="Jq1-0q-5sl" secondAttribute="bottom" constant="8" id="PAd-Pt-WQk"/>
                                                         <constraint firstItem="o63-7k-fDP" firstAttribute="trailing" secondItem="ab6-Nz-hH1" secondAttribute="trailing" id="Q2W-Aj-Ph5"/>
                                                         <constraint firstItem="aY4-wg-dkS" firstAttribute="trailing" secondItem="Jq1-0q-5sl" secondAttribute="trailing" id="QIz-P1-9Ff"/>
                                                         <constraint firstItem="pz9-2C-gBH" firstAttribute="leading" secondItem="DIg-3n-G6E" secondAttribute="trailing" constant="4" id="QLj-PT-L0B"/>
                                                         <constraint firstItem="Anq-w5-WLD" firstAttribute="centerY" secondItem="90f-Df-Uxz" secondAttribute="centerY" id="Sff-Tk-2SQ"/>
                                                         <constraint firstItem="pz9-2C-gBH" firstAttribute="centerY" secondItem="jAp-BH-jGw" secondAttribute="centerY" id="UgC-Oi-WC6"/>
                                                         <constraint firstItem="yp9-TE-5kQ" firstAttribute="centerY" secondItem="ab6-Nz-hH1" secondAttribute="centerY" id="XnB-IE-e7b"/>
+                                                        <constraint firstItem="xGI-uG-smD" firstAttribute="centerY" secondItem="5nB-5K-i8e" secondAttribute="centerY" id="Xp1-xl-k8O"/>
                                                         <constraint firstItem="Jq1-0q-5sl" firstAttribute="top" secondItem="lGb-Re-yxV" secondAttribute="bottom" constant="8" id="ZVy-Sm-s24"/>
                                                         <constraint firstAttribute="trailing" secondItem="RkK-C6-r7F" secondAttribute="trailing" constant="22" id="atd-4c-f8P"/>
                                                         <constraint firstItem="lNK-Lo-DiL" firstAttribute="centerY" secondItem="RkK-C6-r7F" secondAttribute="centerY" id="bji-z9-F7V"/>
@@ -1337,7 +1351,9 @@
                                                         <constraint firstItem="Jq1-0q-5sl" firstAttribute="leading" secondItem="PjG-iB-Oo7" secondAttribute="trailing" constant="8" id="owt-od-hwx"/>
                                                         <constraint firstAttribute="trailing" secondItem="GdF-XH-D7Z" secondAttribute="trailing" constant="22" id="q7M-wO-AEh"/>
                                                         <constraint firstItem="ab6-Nz-hH1" firstAttribute="leading" secondItem="yp9-TE-5kQ" secondAttribute="trailing" constant="8" id="qGg-oS-C7Q"/>
+                                                        <constraint firstItem="5nB-5K-i8e" firstAttribute="trailing" secondItem="Jq1-0q-5sl" secondAttribute="trailing" id="rov-s4-dxt"/>
                                                         <constraint firstItem="GdF-XH-D7Z" firstAttribute="leading" secondItem="jAp-BH-jGw" secondAttribute="trailing" constant="4" id="sb0-2Y-vjI"/>
+                                                        <constraint firstItem="5nB-5K-i8e" firstAttribute="leading" secondItem="xGI-uG-smD" secondAttribute="trailing" constant="8" id="t54-M6-sSU"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="178" id="wbg-sq-haQ"/>
                                                         <constraint firstItem="ab6-Nz-hH1" firstAttribute="trailing" secondItem="RkK-C6-r7F" secondAttribute="trailing" id="x2I-A4-gjA"/>
                                                         <constraint firstItem="lNK-Lo-DiL" firstAttribute="leading" secondItem="Wyr-4B-PyM" secondAttribute="leading" constant="22" id="xKm-Xd-vhD"/>
