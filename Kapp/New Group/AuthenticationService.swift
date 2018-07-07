@@ -14,11 +14,11 @@ class AuthenticationService {
     
     static let instance = AuthenticationService()
     
-    let defaults = UserDefaults.standard
-    var GoS2Register = true
+    var phoneNumber = ""
+    var isOldUser = false
     
     func loginGetCode(number: String, completion: @escaping COMPLETION_SUCCESS) {
-        guard let url = URL.init(string: LOGIN_GET_CODE) else {return}
+        guard let url = URL.init(string: LOGIN_GET_CODE_URL) else {return}
         let parameters = ["mobile": "\(number)"]
         var request = URLRequest.init(url: url)
         request.httpMethod = "POST"
@@ -33,23 +33,25 @@ class AuthenticationService {
                 //
             }
             if let data = data {
-                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else {return}
-                guard let json = jsonAny as? [String:Any] else { completion(false);return}
-                guard let type = json["type"] as? String else { completion(false);return}
-                if type == "sucess" {
-                    self.GoS2Register = true
+                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { completion(false); return }
+                guard let json = jsonAny as? [String:Any] else { completion(false); return }
+                guard let type = json["type"] as? String else { completion(false); return }
+                if type == "success" {
+                    self.isOldUser = true
+                    self.phoneNumber = number
                     completion(true)
                 } else {
                     completion(false)
                 }
+            } else {
+                completion(false)
             }
-            completion(false)
         }
         task.resume()
     }
 
     func loginGetAccess(okCode: String, number: String, completion: @escaping COMPLETION_SUCCESS) {
-        guard let url = URL.init(string: LOGIN_GET_ACCESS) else {return}
+        guard let url = URL.init(string: LOGIN_GET_ACCESS_URL) else { return }
         let parameters = ["mobile": "\(number)", "accesscode":"\(okCode)"]
         var request = URLRequest.init(url: url)
         request.httpMethod = "POST"
@@ -64,13 +66,13 @@ class AuthenticationService {
                 //
             }
             if let data = data {
-                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { completion(false);return}
+                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { completion(false); return }
                 guard let json = jsonAny as? [String: Any] else { completion(false);return }
-                guard let type = json["type"] as? String else {  completion(false);return }
+                guard let type = json["type"] as? String else { completion(false);return }
                 if type == "success" {
-                    guard let userData = json["data"] as? [String:Any] else {completion(false);return}
-                    guard let uid = userData["uid"] as? Int else {  completion(false);return }
-                    guard let ssid = userData["ssid"] as? String else {  completion(false);return }
+                    guard let userData = json["data"] as? [String:Any] else { completion(false); return }
+                    guard let uid = userData["uid"] as? Int else { completion(false); return }
+                    guard let ssid = userData["ssid"] as? String else { completion(false); return }
                     UserDataService.instance.setUserData(uid: String(uid), ssid: ssid, isLogin: true, phoneNumber: number)
                     completion(true)
                 } else {
@@ -83,11 +85,11 @@ class AuthenticationService {
         task.resume()
     }
 
-    func registerS1(number: String, refMobileNumber: String?, completion: @escaping COMPLETION_SUCCESS) {
+    func registerGetCode(number: String, refMobileNumber: String?, completion: @escaping COMPLETION_SUCCESS) {
         guard let url = URL.init(string: REGISTER_S1_URL) else { return }
         var parameters = ["mobile": "\(number)"]
         if let refMobileNumber = refMobileNumber {
-            parameters.updateValue("\(refMobileNumber)", forKey: "ref")
+            parameters.updateValue(refMobileNumber, forKey: "ref")
         }
         var request = URLRequest.init(url: url)
         request.httpMethod = "POST"
@@ -102,28 +104,28 @@ class AuthenticationService {
                 //
             }
             if let data = data {
-                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
-                guard let json = jsonAny as? [String: Any] else {  completion(false);return }
-                print(json)
-                
-                guard let type = json["type"] as? String else {  completion(false);return }
-                print(type)
-                guard let data = json["data"] as? [String:Any] else {  completion(false);return }
-                print(data)
-                guard let uid = data["uid"] as? Int else {  completion(false);return }
-                print(uid)
-                guard let mobile = data["mobile"] as? String else {  completion(false);return }
-                print(mobile)
-                guard let next = data["next"] as? Bool else {  completion(false);return }
-                self.GoS2Register = next
-                completion(true)
+                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { completion(false); return }
+                guard let json = jsonAny as? [String: Any] else { completion(false); return }
+                guard let type = json["type"] as? String else { completion(false); return }
+                guard let data = json["data"] as? [String:Any] else { completion(false); return }
+                guard let _ = data["uid"] as? Int else { completion(false); return }
+                guard let _ = data["mobile"] as? String else { completion(false); return }
+                guard let _ = data["next"] as? Bool else { completion(false); return }
+                if type == "success" {
+                    self.phoneNumber = number
+                    self.isOldUser = false
+                    completion(true)
+                } else {
+                    completion(false)
+                }
+            } else {
+                completion(false)
             }
-            completion(false)
         }
         task.resume()
     }
     
-    func registerCode(okCode: String, number: String, completion: @escaping COMPLETION_SUCCESS) {
+    func registerGetAccess(okCode: String, number: String, completion: @escaping COMPLETION_SUCCESS) {
         guard let url = URL.init(string: OKCODE_USER_URL + "\(number)") else { return }
         let parameters = ["okcode": "\(okCode)"]
         var request = URLRequest.init(url: url)
@@ -139,20 +141,21 @@ class AuthenticationService {
                 //
             }
             if let data = data {
-                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else {  completion(false);return }
-                guard let json = jsonAny as? [String: Any] else {  completion(false);return }
-                guard let type = json["type"] as? String else {  completion(false);return }
+                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { completion(false); return }
+                guard let json = jsonAny as? [String: Any] else { completion(false); return }
+                guard let type = json["type"] as? String else { completion(false); return }
                 if type == "success" {
-                    guard let userData = json["data"] as? [String:Any] else {  completion(false);return }
-                    guard let uid = userData["uid"] as? Int else {  completion(false);return }
-                    guard let ssid = userData["ssid"] as? String else {  completion(false);return }
+                    guard let userData = json["data"] as? [String:Any] else { completion(false); return }
+                    guard let uid = userData["uid"] as? Int else { completion(false); return }
+                    guard let ssid = userData["ssid"] as? String else { completion(false); return }
                     UserDataService.instance.setUserData(uid: String(uid), ssid: ssid, isLogin: true, phoneNumber: number)
                     completion(true)
                 } else {
                     completion(false)
                 }
+            } else {
+                completion(false)
             }
-            completion(false)
         }
         task.resume()
     }
@@ -169,8 +172,9 @@ class AuthenticationService {
                 } else {
                     completion(false)
                 }
+            } else {
+                completion(false)
             }
-            completion(false)
         }
     }
     

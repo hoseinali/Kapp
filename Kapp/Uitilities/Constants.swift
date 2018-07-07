@@ -14,11 +14,11 @@ typealias FORMDATA_PARAMETER = [String:String]
 
 // URL
 let BASE_URL = "https://samcarcare.ir/ic-app/"
-let LOGIN_GET_CODE = "\(BASE_URL)api-users.php?do=login&lvl=getcode"
-let LOGIN_GET_ACCESS = "\(BASE_URL)api-users.php?do=login&lvl=getaccess"
+let LOGIN_GET_CODE_URL = "\(BASE_URL)api-users.php?do=login&lvl=getcode"
+let LOGIN_GET_ACCESS_URL = "\(BASE_URL)api-users.php?do=login&lvl=getaccess"
 let REGISTER_S1_URL = "\(BASE_URL)api-users.php?do=register_s1"
-let OKCODE_USER_URL = "\(BASE_URL)api-users.php?do=register_s2"
-let RESEND_CODE_URL = "\(BASE_URL)api-users.php?do=reokcode"
+let OKCODE_USER_URL = "\(BASE_URL)api-users.php?do=register_s2&mobile="
+let RESEND_CODE_URL = "\(BASE_URL)api-users.php?do=reokcode&mobile="
 let USER_INFO_URL = "\(BASE_URL)api-users.php?do=user_info"
 let UPDATE_USER_INFO_URL = "\(BASE_URL)api-users.php?do=profile_up"
 let SEND_PM_URL = "\(BASE_URL)api-users.php?do=pm"

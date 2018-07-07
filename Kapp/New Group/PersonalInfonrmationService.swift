@@ -21,10 +21,10 @@ class PersonalInfromationService {
         let url = USER_INFO_URL + "&uid=\(uid)&ssid=\(ssid)"
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: DEFAULT_HEADER).responseJSON { (response) in
             if response.result.error == nil {
-                guard let data = response.data else { return }
+                guard let data = response.data else { completion(false) ; return }
                 guard let json = try? JSON.init(data: data) else { completion(false) ; return }
                 let type = json["type"].stringValue
-                guard let dadaJson = json["data"].dictionary else { completion(false) ; return  }
+                guard let dadaJson = json["data"].dictionary else { completion(false) ; return }
                 let name = dadaJson["name"]!.stringValue
                 let picture = dadaJson["picture"]!.stringValue
                 let lastdate = dadaJson["lastdate"]!.stringValue
@@ -40,13 +40,17 @@ class PersonalInfromationService {
                 let bankId = dadaJson["bank-id"]!.stringValue
                 let userInformation = UserInformation.init(name: name, picture: picture, lastdate: lastdate, date: date, birth: birth, melli: melli, city: city, state: state, zippostal: zippostal, address: address, bankCard: bankCard, bankName:bankName , bankId: bankId)
                 self.userInformation = userInformation
-                completion(true)
+                if type == "success" {
+                    completion(true)
+                } else {
+                    completion(false)
+                }
+            } else {
+                completion(false)
             }
-            completion(false)
         }
     }
     
-    // 7
     func updateUserInformation(withParameters parameters: FORMDATA_PARAMETER?, completion: @escaping COMPLETION_SUCCESS) {
         let uid = UserDataService.instance.uid
         let ssid = UserDataService.instance.ssid
@@ -67,23 +71,24 @@ class PersonalInfromationService {
                 guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
                 guard let json = jsonAny as? [String: Any] else { completion(false) ; return }
                 guard let type = json["type"] as? String else { completion(false) ; return }
-                guard let message = json["massage"] as? String else {  completion(false);return }
+                guard let _ = json["massage"] as? String else {  completion(false); return }
                 if type == "success" {
                     completion(true)
                 } else {
                     completion(false)
                 }
+            } else {
+                completion(false)
             }
-            completion(false)
         }
         task.resume()
     }
-    // 8
-    func sendPmUser(title:String, content:String, pretitle:String, completion:@escaping COMPLETION_SUCCESS) {
+
+    func sendPmUser(title: String, content: String, pretitle: String, completion:@escaping COMPLETION_SUCCESS) {
         let uid = UserDataService.instance.uid
         let ssid = UserDataService.instance.ssid
-        guard let url = URL.init(string: SEND_PM_URL + "&uid=\(uid)&ssid=\(ssid)") else {return}
-        let parameters = ["title": "\(title)", "content": "\(content)", "pretitle": "\(pretitle)" ]
+        guard let url = URL.init(string: SEND_PM_URL + "&uid=\(uid)&ssid=\(ssid)") else { return }
+        let parameters = ["title": "\(title)", "content": "\(content)", "pretitle": "\(pretitle)"]
         var request = URLRequest.init(url: url)
         request.httpMethod = "POST"
         let boundary = generateBoundary()
@@ -96,11 +101,11 @@ class PersonalInfromationService {
             if let _ = response {
             }
             if let data = data {
-                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else {  completion(false);return }
-                guard let json = jsonAny as? [String: Any] else {  completion(false);return }
-                guard let type = json["type"] as? String else {  completion(false);return }
+                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { completion(false); return }
+                guard let json = jsonAny as? [String: Any] else { completion(false); return }
+                guard let type = json["type"] as? String else { completion(false); return }
                 if type == "success" {
-                    guard let data = json["data"] as? String else {  completion(false);return }
+                    guard let data = json["data"] as? String else { completion(false); return }
                     completion(true)
                 } else {
                     completion(false)
