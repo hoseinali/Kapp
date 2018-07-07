@@ -15,9 +15,12 @@ class CallUsViewController: UIViewController, SideMenuControllerDelegate {
     
     // Outlet
     @IBOutlet weak var observeTextField: UITextField!
+    @IBOutlet weak var titleObserveTextField: UITextField!
     @IBOutlet weak var rumbleCheckBox: UICheckbox!
     @IBOutlet weak var pmCheckBox: UICheckbox!
     @IBOutlet weak var observeCheckBox: UICheckbox!
+    
+    var pretitle: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +29,38 @@ class CallUsViewController: UIViewController, SideMenuControllerDelegate {
     
     // Action
     @IBAction func agreeButtonPressed(_ sender: RoundedButton) {
-        guard let text = observeTextField.text, text != "" else {
-            let message = "لطفا نظر خود را وارد کنید !"
+        guard let title = titleObserveTextField.text, title != "" else {
+            let message = "لطفا متن نظر خود را وارد کنید !"
             self.presentWarningAlert(message: message)
             return
         }
-        observeTextField.text = ""
-        view.endEditing(true)
-        //
+        guard let content = observeTextField.text, content != "" else {
+            let message = "لطفا موضوع نظر خود را وارد کنید !"
+            self.presentWarningAlert(message: message)
+            return
+        }
+        guard let preTitle = pretitle else {
+            let message = "لطفا نوع پیام را مشخص کنید !"
+            self.presentWarningAlert(message: message)
+            return
+        }
+        self.view.endEditing(true)
+        startIndicatorAnimate()
+        PersonalInfromationService.instance.sendPmUser(title: title, content: content, pretitle: preTitle) { (success, message) in
+            if success {
+                self.stopIndicatorAnimate()
+                DispatchQueue.main.async {
+                    self.observeTextField.text = ""
+                    self.titleObserveTextField.text = ""
+                    self.presentWarningAlert(message: message)
+                }
+            } else {
+                self.stopIndicatorAnimate()
+                DispatchQueue.main.async {
+                    self.presentWarningAlert(message: message)
+                }
+            }
+        }
     }
     
     // Oject
@@ -62,7 +89,7 @@ class CallUsViewController: UIViewController, SideMenuControllerDelegate {
             if selected {
                 self.rumbleCheckBox.isSelected = false
                 self.pmCheckBox.isSelected = false
-                //
+                self.pretitle = 3
             }
         }
     }
@@ -73,7 +100,7 @@ class CallUsViewController: UIViewController, SideMenuControllerDelegate {
                 debugPrint("Clicked - pm")
                 self.observeCheckBox.isSelected = false
                 self.rumbleCheckBox.isSelected = false
-                //
+                self.pretitle = 2
             }
         }
     }
@@ -84,7 +111,7 @@ class CallUsViewController: UIViewController, SideMenuControllerDelegate {
                 debugPrint("Clicked - rumble")
                 self.pmCheckBox.isSelected = false
                 self.observeCheckBox.isSelected = false
-                //
+                self.pretitle = 1
             }
         }
     }

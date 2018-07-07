@@ -2502,21 +2502,15 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نظر خود را با ما در میان بگذارید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgt-NO-yre">
-                                <rect key="frame" x="117.5" y="400" width="169.5" height="16"/>
-                                <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="16"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prz-PO-yYr">
-                                <rect key="frame" x="53" y="450" width="234" height="1"/>
+                                <rect key="frame" x="53" y="460" width="234" height="1"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Gk6-EZ-GNn"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="نظر خود را بنویسید" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wEQ-Up-ssn">
-                                <rect key="frame" x="33" y="418" width="254" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="متن نظر خود را با ما در میان بگذارید" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wEQ-Up-ssn">
+                                <rect key="frame" x="33" y="428" width="254" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="btJ-PV-9Zr"/>
                                 </constraints>
@@ -2525,7 +2519,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXT-na-Djh" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
-                                <rect key="frame" x="100" y="511" width="120" height="35"/>
+                                <rect key="frame" x="100" y="521" width="120" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="dkx-7k-SaN"/>
@@ -2622,19 +2616,36 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kdq-kx-IeM">
+                                <rect key="frame" x="53" y="418" width="234" height="1"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="bp7-PH-BEw"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="موضوع نظر را بنویسید" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sl6-xR-Z2Y">
+                                <rect key="frame" x="53" y="386" width="234" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rYg-DR-gEc"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2UZ-Qb-qKF" firstAttribute="top" secondItem="9ZI-1I-tVz" secondAttribute="bottom" constant="15" id="2XF-0v-m2x"/>
                             <constraint firstItem="prz-PO-yYr" firstAttribute="leading" secondItem="wEQ-Up-ssn" secondAttribute="leading" constant="20" id="2kX-BL-WNy"/>
-                            <constraint firstItem="IYa-vj-c2w" firstAttribute="top" secondItem="prz-PO-yYr" secondAttribute="bottom" constant="25" id="4r5-qR-t1O"/>
+                            <constraint firstItem="IYa-vj-c2w" firstAttribute="top" secondItem="prz-PO-yYr" secondAttribute="bottom" constant="15" id="4r5-qR-t1O"/>
                             <constraint firstItem="F7t-Ae-GO1" firstAttribute="centerY" secondItem="FOR-8O-k4O" secondAttribute="centerY" id="6XX-0E-xqA"/>
+                            <constraint firstItem="Kdq-kx-IeM" firstAttribute="top" secondItem="sl6-xR-Z2Y" secondAttribute="bottom" constant="2" id="Bfy-j5-e9N"/>
                             <constraint firstItem="FOR-8O-k4O" firstAttribute="centerY" secondItem="IYa-vj-c2w" secondAttribute="centerY" id="CD7-xg-3P8"/>
                             <constraint firstItem="kCW-qt-6Oq" firstAttribute="top" secondItem="tTY-Z0-JnC" secondAttribute="bottom" constant="15" id="ClA-Rf-MGC"/>
                             <constraint firstItem="prz-PO-yYr" firstAttribute="trailing" secondItem="wEQ-Up-ssn" secondAttribute="trailing" id="EOa-Od-5Ma"/>
-                            <constraint firstItem="hgt-NO-yre" firstAttribute="trailing" secondItem="wEQ-Up-ssn" secondAttribute="trailing" id="GQP-XJ-MGJ"/>
                             <constraint firstItem="9ZI-1I-tVz" firstAttribute="top" secondItem="mvq-ub-WXL" secondAttribute="top" constant="25" id="H3g-JB-bvc"/>
                             <constraint firstItem="wEQ-Up-ssn" firstAttribute="trailing" secondItem="kCW-qt-6Oq" secondAttribute="trailing" id="IDu-2R-jJR"/>
+                            <constraint firstItem="Kdq-kx-IeM" firstAttribute="leading" secondItem="sl6-xR-Z2Y" secondAttribute="leading" id="JTB-9h-Kui"/>
                             <constraint firstItem="mvq-ub-WXL" firstAttribute="bottom" secondItem="kCW-qt-6Oq" secondAttribute="bottom" constant="190" id="LQJ-Km-AES"/>
                             <constraint firstItem="IYa-vj-c2w" firstAttribute="trailing" secondItem="wEQ-Up-ssn" secondAttribute="trailing" id="LTy-UI-12o"/>
                             <constraint firstItem="prz-PO-yYr" firstAttribute="top" secondItem="wEQ-Up-ssn" secondAttribute="bottom" constant="2" id="Mcx-QS-48L"/>
@@ -2643,20 +2654,23 @@
                             <constraint firstAttribute="trailingMargin" secondItem="kCW-qt-6Oq" secondAttribute="trailing" constant="17" id="SRR-9x-bgX"/>
                             <constraint firstItem="se2-yu-LeY" firstAttribute="leading" secondItem="prz-PO-yYr" secondAttribute="leading" id="TYc-GK-3qs"/>
                             <constraint firstItem="F7t-Ae-GO1" firstAttribute="leading" secondItem="qgB-ht-vcp" secondAttribute="trailing" constant="8" id="Tsh-6H-jLU"/>
+                            <constraint firstItem="Kdq-kx-IeM" firstAttribute="trailing" secondItem="sl6-xR-Z2Y" secondAttribute="trailing" id="VST-eD-8fV"/>
                             <constraint firstItem="tTY-Z0-JnC" firstAttribute="centerX" secondItem="Csg-V7-nKf" secondAttribute="centerX" id="WJp-X4-0Oq"/>
-                            <constraint firstItem="wEQ-Up-ssn" firstAttribute="top" secondItem="kCW-qt-6Oq" secondAttribute="bottom" constant="40" id="XLN-Qy-XFA"/>
+                            <constraint firstItem="wEQ-Up-ssn" firstAttribute="top" secondItem="kCW-qt-6Oq" secondAttribute="bottom" constant="50" id="XLN-Qy-XFA"/>
                             <constraint firstItem="9ZI-1I-tVz" firstAttribute="centerX" secondItem="Csg-V7-nKf" secondAttribute="centerX" id="Yfr-be-zm7"/>
                             <constraint firstItem="2UZ-Qb-qKF" firstAttribute="leading" secondItem="Csg-V7-nKf" secondAttribute="leadingMargin" constant="17" id="ZkI-RH-gRp"/>
                             <constraint firstItem="e9s-kH-arm" firstAttribute="leading" secondItem="se2-yu-LeY" secondAttribute="trailing" constant="8" id="boy-GZ-21T"/>
                             <constraint firstItem="bXT-na-Djh" firstAttribute="top" secondItem="prz-PO-yYr" secondAttribute="bottom" constant="60" id="c7j-oR-PCB"/>
                             <constraint firstItem="e9s-kH-arm" firstAttribute="centerY" secondItem="qgB-ht-vcp" secondAttribute="centerY" id="eCb-O5-91D"/>
-                            <constraint firstItem="hgt-NO-yre" firstAttribute="top" secondItem="kCW-qt-6Oq" secondAttribute="bottom" constant="22" id="eYN-Pa-yG7"/>
                             <constraint firstItem="IYa-vj-c2w" firstAttribute="leading" secondItem="FOR-8O-k4O" secondAttribute="trailing" constant="8" id="fMt-ok-pcE"/>
                             <constraint firstItem="se2-yu-LeY" firstAttribute="centerY" secondItem="e9s-kH-arm" secondAttribute="centerY" id="fsl-e8-tdi"/>
                             <constraint firstItem="F7t-Ae-GO1" firstAttribute="centerX" secondItem="Csg-V7-nKf" secondAttribute="centerX" constant="18" id="gKW-K1-wgt"/>
                             <constraint firstItem="wEQ-Up-ssn" firstAttribute="leading" secondItem="kCW-qt-6Oq" secondAttribute="leading" id="lcI-FG-Ear"/>
+                            <constraint firstItem="sl6-xR-Z2Y" firstAttribute="leading" secondItem="prz-PO-yYr" secondAttribute="leading" id="sSc-9b-GMY"/>
+                            <constraint firstItem="sl6-xR-Z2Y" firstAttribute="top" secondItem="kCW-qt-6Oq" secondAttribute="bottom" constant="8" id="sli-Mj-szO"/>
                             <constraint firstItem="bXT-na-Djh" firstAttribute="centerX" secondItem="Csg-V7-nKf" secondAttribute="centerX" id="tGB-8C-MFt"/>
                             <constraint firstItem="kCW-qt-6Oq" firstAttribute="leading" secondItem="Csg-V7-nKf" secondAttribute="leadingMargin" constant="17" id="wNq-Nd-mUN"/>
+                            <constraint firstItem="sl6-xR-Z2Y" firstAttribute="trailing" secondItem="wEQ-Up-ssn" secondAttribute="trailing" id="zQK-tR-bQU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mvq-ub-WXL"/>
                     </view>
@@ -2666,6 +2680,7 @@
                         <outlet property="observeTextField" destination="wEQ-Up-ssn" id="JIy-jR-84e"/>
                         <outlet property="pmCheckBox" destination="se2-yu-LeY" id="grC-A6-Mgo"/>
                         <outlet property="rumbleCheckBox" destination="FOR-8O-k4O" id="eKo-uM-MDM"/>
+                        <outlet property="titleObserveTextField" destination="sl6-xR-Z2Y" id="dSn-Wg-aF7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PzU-hw-c03" userLabel="First Responder" sceneMemberID="firstResponder"/>
