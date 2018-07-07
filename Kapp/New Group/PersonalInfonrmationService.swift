@@ -40,7 +40,11 @@ class PersonalInfromationService {
                 let bankId = dadaJson["bank-id"]!.stringValue
                 let userInformation = UserInformation.init(name: name, picture: picture, lastdate: lastdate, date: date, birth: birth, melli: melli, city: city, state: state, zippostal: zippostal, address: address, bankCard: bankCard, bankName:bankName , bankId: bankId)
                 self.userInformation = userInformation
-                completion(true)
+                if type == "success" {
+                    completion(true)
+                } else {
+                    completion(false)
+                }
             } else {
                 completion(false)
             }
@@ -67,7 +71,7 @@ class PersonalInfromationService {
                 guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
                 guard let json = jsonAny as? [String: Any] else { completion(false) ; return }
                 guard let type = json["type"] as? String else { completion(false) ; return }
-                guard let message = json["massage"] as? String else {  completion(false); return }
+                guard let _ = json["massage"] as? String else {  completion(false); return }
                 if type == "success" {
                     completion(true)
                 } else {
