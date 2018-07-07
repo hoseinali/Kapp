@@ -16,6 +16,7 @@ class RootViewController: UIViewController, NVActivityIndicatorViewable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+   
         updateUI()
     }
     
