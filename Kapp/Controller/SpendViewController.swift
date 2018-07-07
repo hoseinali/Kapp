@@ -18,6 +18,10 @@ class SpendViewController: UIViewController, SideMenuControllerDelegate {
         super.viewDidLoad()
         updateUI()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        fetechBagResults()
+    }
 
     // Method
     func sideMenuControllerDidHide(_ sideMenuController: SideMenuController) {
@@ -33,6 +37,23 @@ class SpendViewController: UIViewController, SideMenuControllerDelegate {
         tableView.dataSource = self
         tableView.delegate = self
     }
+    func fetechBagResults() {
+        startIndicatorAnimate()
+        BagService.instance.payList { (success) in
+            if success {
+                self.stopIndicatorAnimate()
+                self.tableView.reloadData()
+            } else {
+                self.stopIndicatorAnimate()
+                DispatchQueue.main.async {
+                    let message = "خطا در بروز رسانی اطلاعات !"
+                    self.presentWarningAlert(message: message)
+                }
+            }
+        }
+    }
+    
+    
 }
 
 extension SpendViewController: UITableViewDelegate, UITableViewDataSource {
@@ -44,11 +65,13 @@ extension SpendViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 10
+        return BagService.instance.bagSpends.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SPEND_CELL, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: SPEND_CELL, for: indexPath) as! SpendTableViewCell
+        let spendResult = BagService.instance.bagSpends[indexPath.row]
+        cell.configureCell(date: spendResult.date, time: spendResult.time, id: spendResult.id, bankName: spendResult.bank_name, status: spendResult.status, mount: spendResult.mount, bankResponse: spendResult.bank_response)
         
         return cell
     }

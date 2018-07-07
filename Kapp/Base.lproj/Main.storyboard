@@ -1374,6 +1374,16 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="Wyr-4B-PyM" secondAttribute="trailing" id="ksp-dT-9k1"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="jAp-BH-jGw" id="3kb-qi-zri"/>
+                                            <outlet property="mountLabel" destination="90f-Df-Uxz" id="ytm-3k-IIH"/>
+                                            <outlet property="nameCoponLabel" destination="yp9-TE-5kQ" id="jzL-7O-2Fc"/>
+                                            <outlet property="orderNameLabel" destination="lNK-Lo-DiL" id="vra-nI-q6T"/>
+                                            <outlet property="payIdLabel" destination="svO-S6-W9r" id="hyH-Nz-6S0"/>
+                                            <outlet property="payMetodLabel" destination="PjG-iB-Oo7" id="HnP-3M-Xnc"/>
+                                            <outlet property="sendTimeLabel" destination="PMn-9W-X2J" id="f6v-wC-WKG"/>
+                                            <outlet property="timeLabel" destination="DIg-3n-G6E" id="jAS-1u-bne"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1799,6 +1809,15 @@
                                                 <constraint firstItem="TiJ-Yx-s5F" firstAttribute="trailing" secondItem="LK3-fx-MiX" secondAttribute="trailingMargin" id="qc9-IK-0nW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bankNameLabel" destination="kcc-dd-yX5" id="Tyf-A5-KKz"/>
+                                            <outlet property="dateLabel" destination="jD8-Hr-hXv" id="HE5-FH-KV0"/>
+                                            <outlet property="factorIdLabel" destination="OP4-U3-Z1Z" id="uBs-hG-k9W"/>
+                                            <outlet property="mountLabel" destination="c29-pL-mbB" id="Oio-dY-kVD"/>
+                                            <outlet property="resultBankLabel" destination="KEX-hE-2h3" id="RUn-Qa-dll"/>
+                                            <outlet property="statusLabel" destination="0Qx-c6-lRM" id="1cD-30-xMn"/>
+                                            <outlet property="timeLabel" destination="oTG-eR-88G" id="4Kf-QF-9D0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1996,6 +2015,15 @@
                                                 <constraint firstItem="eFH-D4-m7e" firstAttribute="leading" secondItem="qG9-Yx-wtD" secondAttribute="leadingMargin" id="cLd-Xe-z66"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="XPu-Ii-Qh4" id="8np-6q-Mh8"/>
+                                            <outlet property="descLabel" destination="se3-Po-Lev" id="4ek-8l-VNU"/>
+                                            <outlet property="flagLabel" destination="ecA-K4-pNq" id="PMT-OV-sGm"/>
+                                            <outlet property="idLabel" destination="pdZ-o7-jKI" id="5ZA-fL-rHw"/>
+                                            <outlet property="mountLabel" destination="NUZ-zj-Zu4" id="W5U-u5-E4k"/>
+                                            <outlet property="statusLabel" destination="tsJ-bV-leg" id="nSi-X5-N3r"/>
+                                            <outlet property="timeLabel" destination="XWp-s4-hAs" id="Kep-bb-zIV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -2275,7 +2303,7 @@
                                                         <constraint firstAttribute="height" constant="160" id="IGe-MC-G9e"/>
                                                     </constraints>
                                                     <date key="date" timeIntervalSinceReferenceDate="551745794.02668202">
-                                                        <!--1397-04-05 22:43:14 +0000-->
+                                                        <!--2018-06-26 22:43:14 +0000-->
                                                     </date>
                                                     <locale key="locale" localeIdentifier="fa"/>
                                                 </datePicker>
