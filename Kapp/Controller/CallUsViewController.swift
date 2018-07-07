@@ -52,6 +52,7 @@ class CallUsViewController: UIViewController, SideMenuControllerDelegate {
                 DispatchQueue.main.async {
                     self.observeTextField.text = ""
                     self.titleObserveTextField.text = ""
+                    self.pretitle = nil
                     self.presentWarningAlert(message: message)
                 }
             } else {
