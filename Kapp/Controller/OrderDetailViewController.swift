@@ -26,7 +26,7 @@ class OrderDetailViewController: UIViewController, SideMenuControllerDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 200.0
+        tableView.estimatedRowHeight = 230
     }
     
     func sideMenuControllerDidHide(_ sideMenuController: SideMenuController) {
