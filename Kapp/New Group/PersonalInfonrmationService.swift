@@ -105,7 +105,6 @@ class PersonalInfromationService {
                 guard let json = jsonAny as? [String: Any] else { completion(false); return }
                 guard let type = json["type"] as? String else { completion(false); return }
                 if type == "success" {
-                    guard let data = json["data"] as? String else { completion(false); return }
                     completion(true)
                 } else {
                     completion(false)
