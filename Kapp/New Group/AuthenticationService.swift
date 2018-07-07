@@ -11,6 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class AuthenticationService {
+    
     static let instance = AuthenticationService()
     
     let defaults = UserDefaults.standard
@@ -46,7 +47,7 @@ class AuthenticationService {
         }
         task.resume()
     }
-    // 2
+
     func loginGetAccess(okCode: String, number: String, completion: @escaping COMPLETION_SUCCESS) {
         guard let url = URL.init(string: LOGIN_GET_ACCESS) else {return}
         let parameters = ["mobile": "\(number)", "accesscode":"\(okCode)"]
@@ -81,7 +82,7 @@ class AuthenticationService {
         }
         task.resume()
     }
-    // 3
+
     func registerS1(number: String, refMobileNumber: String?, completion: @escaping COMPLETION_SUCCESS) {
         guard let url = URL.init(string: REGISTER_S1_URL) else { return }
         var parameters = ["mobile": "\(number)"]
@@ -121,7 +122,6 @@ class AuthenticationService {
         }
         task.resume()
     }
-    // 4
     
     func registerCode(okCode: String, number: String, completion: @escaping COMPLETION_SUCCESS) {
         guard let url = URL.init(string: OKCODE_USER_URL + "\(number)") else { return }
@@ -157,7 +157,6 @@ class AuthenticationService {
         task.resume()
     }
     
-    // 5
     func reOkCode(number: String, completion: @escaping COMPLETION_SUCCESS) {
         guard let url = URL.init(string: RESEND_CODE_URL + "\(number)") else { return }
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: DEFAULT_HEADER).responseJSON { (response) in

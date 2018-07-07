@@ -67,10 +67,7 @@ class BagService {
                 guard let data = response.data else { completion(false) ; return }
                 guard let json = try? JSON.init(data: data) else { completion(false) ; return }
                 let type = json["type"].stringValue
-                print("dfff")
                 guard let items = json["data"].array else { completion(false) ; return }
-                print("dfff")
-                
                 for item in items {
                     let id = item["id"].intValue
                     let uid = item["id"].intValue
@@ -118,7 +115,6 @@ class BagService {
         let uid = UserDataService.instance.uid
         let ssid = UserDataService.instance.ssid
         let mount = UserDataService.instance.mount
-        
         guard let url = URL.init(string: BANK_CASH_URL + "&uid=\(uid)&ssid=\(ssid)&mount=\(mount)") else { completion(false) ; return }
         DispatchQueue.main.async {
             print(url.path)
