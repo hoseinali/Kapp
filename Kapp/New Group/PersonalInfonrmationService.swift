@@ -84,7 +84,7 @@ class PersonalInfromationService {
         task.resume()
     }
 
-    func sendPmUser(title: String, content: String, pretitle: String, completion:@escaping COMPLETION_SUCCESS) {
+    func sendPmUser(title: String, content: String, pretitle: Int, completion: @escaping (_ success: Bool, _ message: String) -> Void) {
         let uid = UserDataService.instance.uid
         let ssid = UserDataService.instance.ssid
         guard let url = URL.init(string: SEND_PM_URL + "&uid=\(uid)&ssid=\(ssid)") else { return }
@@ -101,16 +101,17 @@ class PersonalInfromationService {
             if let _ = response {
             }
             if let data = data {
-                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { completion(false); return }
-                guard let json = jsonAny as? [String: Any] else { completion(false); return }
-                guard let type = json["type"] as? String else { completion(false); return }
+                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { completion(false,"قطعی ارتباط با سرور !"); return }
+                guard let json = jsonAny as? [String: Any] else { completion(false,"قطعی ارتباط با سرور !"); return }
+                guard let type = json["type"] as? String else { completion(false,"قطعی ارتباط با سرور !"); return }
+                guard let message = json["data"] as? String else { completion(false,"قطعی ارتباط با سرور !"); return }
                 if type == "success" {
-                    completion(true)
+                    completion(true,message)
                 } else {
-                    completion(false)
+                    completion(false,message)
                 }
             } else {
-                completion(false)
+                completion(false,"ارتباط با اینترنت قطع میباشد !")
             }
         }
         task.resume()
