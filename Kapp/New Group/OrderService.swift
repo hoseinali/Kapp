@@ -21,10 +21,11 @@ class OrderService {
         let url = ORDER_LIST_URL + "&uid=\(uid)&ssid=\(ssid)"
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: DEFAULT_HEADER).responseJSON { (response) in
             if response.result.error == nil {
-                guard  let data = response.data else {completion(false);return}
-                guard let json = try? JSON.init(data: data) else {completion(false);return}
+                guard  let data = response.data else {completion(false); return} 
+                guard let json = try? JSON.init(data: data) else {completion(false); return}
                 let type = json["type"].stringValue
-                guard let items = json["data"].array else {completion(false);return}
+                guard let items = json["data"].array else {completion(false); return }
+                let disPathGroup = DispatchGroup()
                 for item in items {
                     let cart = item["cart"].stringValue
                     let send_time = item["send-time"].stringValue
@@ -43,18 +44,27 @@ class OrderService {
                     let date = item["date"].stringValue
                     let time = item["time"].stringValue
                     let status = item["status"].stringValue
-                    let order = Order.init(cart: cart, send_time: send_time, send_day: send_day, copon: copon, price: price, pay_method: pay_method, pay_id: pay_id, uid: uid, address: address, formatted_address: formatted_address, lat: lat, lng: lng, comment: comment, upm: upm, date: date, time: time, status: status)
-                    self.Orderlists.append(order)
+                    disPathGroup.enter()
+                    self.orderListName(cart: cart, completion: { (success, orderName) in
+                        if success {
+                            let order = Order(orderName: orderName!, cart: cart, send_time: send_time, send_day: send_day, copon: copon, price: price, pay_method: pay_method, pay_id: pay_id, uid: uid, address: address, formatted_address: formatted_address, lat: lat, lng: lng, comment: comment, upm: upm, date: date, time: time, status: status)
+                            self.Orderlists.append(order)
+                            disPathGroup.leave()
+                        }
+                    })
+
                 }
-                if type == "sucess" {
+                disPathGroup.notify(queue: .main, execute: {
                     completion(true)
-                } else {
-                    completion(false)
-                }
+                })
             } else {
                 completion(false)
             }
         }
+    }
+    
+    func orderListName(cart: String, completion: @escaping (_ success: Bool, _ orderName: String?) -> Void) {
+        //
     }
 
     func CoponCheck(copon:String, completion: @escaping COMPLETION_SUCCESS) {
