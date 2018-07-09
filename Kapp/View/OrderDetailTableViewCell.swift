@@ -19,6 +19,7 @@ class OrderDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var mountLabel: UILabel!
     @IBOutlet weak var payMetodLabel: UILabel!
     @IBOutlet weak var sendTimeLabel: UILabel!
+    @IBOutlet weak var StatusOrderLable: UILabel!
     
     
     
@@ -33,16 +34,34 @@ class OrderDetailTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(date:String, time:String, orderName:String, nameCopon:Int, pay_id:Int, mount:Int, payMetod:String, sendTimeLabel:String) {
+    func configureCell(date:String, time:String, orderName:String, nameCopon:Int, pay_id:Int, mount:Int, payMetod:Int, sendTime:String, status:String) {
         dateLabel.text = date
         timeLabel.text = time
         orderNameLabel.text = orderName
         nameCoponLabel.text = String(nameCopon)
         mountLabel.text = String(mount)
         payIdLabel.text = String(pay_id)
-        
-        
-        
+        sendTimeLabel.text = sendTime
+        switch payMetod {
+        case 1: payMetodLabel.text = "در محل"
+        case 2: payMetodLabel.text = "اعتباری"
+        case 3: payMetodLabel.text = "آنلاین"
+        default: payMetodLabel.text = "نامعلوم"
+        }
+        switch status {
+        case "0": StatusOrderLable.text = "ثبت اولیه"
+        case "1": StatusOrderLable.text = "تایید سفارش"
+        case "2": StatusOrderLable.text = "امور مالی"
+        case "3": StatusOrderLable.text = "پردازش سفارش"
+        case "4": StatusOrderLable.text = "در حال تامین"
+        case "5": StatusOrderLable.text = "بسته بندی شده"
+        case "6": StatusOrderLable.text = "ارسال شده"
+        case "7": StatusOrderLable.text = "تحویل مشتری"
+        case "8": StatusOrderLable.text = "برگشت مرسوله"
+        case "9": StatusOrderLable.text = "مرجوع شده"
+        case "10": StatusOrderLable.text = "رد / کنسل شده"
+        default: StatusOrderLable.text = "ثبت اولیه"
+        }
     }
 
 }
