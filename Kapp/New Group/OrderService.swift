@@ -122,7 +122,6 @@ class OrderService {
                 guard let json = jsonAny as? [String:Any] else { completion(false) ; return }
                 guard let data = json["data"] as? [String:Any] else { completion(false) ; return }
                 let title = data["title"] as? String
-                let desc = data["desc"] as? String
                 let price = data["price"] as? String
                 let copon_id = data["copon-id"] as? Int
                 completion(true)
