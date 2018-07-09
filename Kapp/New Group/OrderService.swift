@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class OrderService {
     
-    let instance = OrderService()
+    static let instance = OrderService()
     var Orderlists = [Order]()
     
     func Orderlist (completion: @escaping COMPLETION_SUCCESS) {
@@ -21,10 +21,11 @@ class OrderService {
         let url = ORDER_LIST_URL + "&uid=\(uid)&ssid=\(ssid)"
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: DEFAULT_HEADER).responseJSON { (response) in
             if response.result.error == nil {
-                guard  let data = response.data else {completion(false);return}
-                guard let json = try? JSON.init(data: data) else {completion(false);return}
-                let type = json["type"].stringValue
-                guard let items = json["data"].array else {completion(false);return}
+                guard  let data = response.data else { completion(false); return}
+                guard let json = try? JSON.init(data: data) else { completion(false); return}
+                let _ = json["type"].stringValue
+                guard let items = json["data"].array else { completion(false); return }
+                let disPathGroup = DispatchGroup()
                 for item in items {
                     let cart = item["cart"].stringValue
                     let send_time = item["send-time"].stringValue
@@ -43,25 +44,31 @@ class OrderService {
                     let date = item["date"].stringValue
                     let time = item["time"].stringValue
                     let status = item["status"].stringValue
-                    let order = Order.init(cart: cart, send_time: send_time, send_day: send_day, copon: copon, price: price, pay_method: pay_method, pay_id: pay_id, uid: uid, address: address, formatted_address: formatted_address, lat: lat, lng: lng, comment: comment, upm: upm, date: date, time: time, status: status)
-                    self.Orderlists.append(order)
+                    disPathGroup.enter()
+                    self.orderListName(cart: cart, completion: { (success, orderName) in
+                        if success {
+                            let order = Order(orderName: orderName!, cart: cart, send_time: send_time, send_day: send_day, copon: copon, price: price, pay_method: pay_method, pay_id: pay_id, uid: uid, address: address, formatted_address: formatted_address, lat: lat, lng: lng, comment: comment, upm: upm, date: date, time: time, status: status)
+                            self.Orderlists.append(order)
+                            disPathGroup.leave()
+                        } else {
+                            disPathGroup.leave()
+                        }
+                    })
                 }
-                if type == "sucess" {
+                disPathGroup.notify(queue: .main, execute: {
                     completion(true)
-                } else {
-                    completion(false)
-                }
+                })
             } else {
                 completion(false)
             }
         }
     }
-
-    func CoponCheck(copon:String, completion: @escaping COMPLETION_SUCCESS) {
+    
+    func orderListName(cart: String, completion: @escaping (_ success: Bool, _ orderName: String?) -> Void) {
         let uid = UserDataService.instance.uid
         let ssid = UserDataService.instance.ssid
-        guard let url = URL.init(string: COPON_CHECK_URL + "&uid=\(uid)&ssid=\(ssid)") else { return }
-        var parameters: FORMDATA_PARAMETER = ["copon":"\(copon)"]
+        guard let url = URL.init(string: ORDER_LIST_URL + "&uid=\(uid)&ssid\(ssid)") else {return}
+        let parameters:FORMDATA_PARAMETER = ["cart":"\(cart)"]
         var request = URLRequest.init(url: url)
         request.httpMethod = "POST"
         let boundary = generateBoundary()
@@ -71,10 +78,66 @@ class OrderService {
         request.httpBody = dataBody
         let session = URLSession.shared
         let task = session.dataTask(with: request) { (data, response, error) in
+            if let _ = response {
+                //
+            }
+            if let data = data {
+                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { completion(false,nil) ; return }
+                guard let json = jsonAny as? [String: Any] else { completion(false,nil) ; return }
+                guard let type = json["type"] as? String else { completion(false,nil) ; return }
+                guard let items = json["data"] as? [String] else { completion(false,nil) ; return }
+                var massage = ""
+                for item in items {
+                    massage += ", \(item)"
+                    completion(true,massage)
+                }
+                if type == "sucess" {
+                    completion(true,massage)
+                } else {
+                    completion(false,nil)
+                }
+            }
+            else {
+                completion(false,nil)
+            }
+        }
+        task.resume()
+    }
+
+    func CoponCheck(copon:String, completion: @escaping COMPLETION_SUCCESS) {
+        let uid = UserDataService.instance.uid
+        let ssid = UserDataService.instance.ssid
+        guard let url = URL.init(string: COPON_CHECK_URL + "&uid=\(uid)&ssid=\(ssid)") else { return }
+        let parameters: FORMDATA_PARAMETER = ["copon":"\(copon)"]
+        var request = URLRequest.init(url: url)
+        request.httpMethod = "POST"
+        let boundary = generateBoundary()
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        let dataBody = createDataBody(withParameters: parameters, media: nil, boundary: boundary)
+        request.httpBody = dataBody
+        let session = URLSession.shared
+        let task = session.dataTask(with: request) { (data, response, error) in
+            if let _ = response {
+                //
+            }
+            if let data = data {
+                guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { completion(false) ; return }
+                guard let json = jsonAny as? [String:Any] else { completion(false) ; return }
+                guard let data = json["data"] as? [String:Any] else { completion(false) ; return }
+                let title = data["title"] as? String
+                let desc = data["desc"] as? String
+                let price = data["price"] as? String
+                let copon_id = data["copon-id"] as? Int
+                completion(true)
+            } else {
+                completion(false)
+            }
             
         }
-        
+        task.resume()
     }
+    
     
     private func generateBoundary() -> String {
         

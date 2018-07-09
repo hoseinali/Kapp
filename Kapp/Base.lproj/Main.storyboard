@@ -1375,6 +1375,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="StatusOrderLable" destination="xGI-uG-smD" id="OyW-Vv-fL3"/>
                                             <outlet property="dateLabel" destination="jAp-BH-jGw" id="3kb-qi-zri"/>
                                             <outlet property="mountLabel" destination="90f-Df-Uxz" id="ytm-3k-IIH"/>
                                             <outlet property="nameCoponLabel" destination="yp9-TE-5kQ" id="jzL-7O-2Fc"/>
@@ -2303,7 +2304,7 @@
                                                         <constraint firstAttribute="height" constant="160" id="IGe-MC-G9e"/>
                                                     </constraints>
                                                     <date key="date" timeIntervalSinceReferenceDate="551745794.02668202">
-                                                        <!--1397-04-05 22:43:14 +0000-->
+                                                        <!--2018-06-26 22:43:14 +0000-->
                                                     </date>
                                                     <locale key="locale" localeIdentifier="fa"/>
                                                 </datePicker>

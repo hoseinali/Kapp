@@ -71,7 +71,7 @@ class PersonalInfromationService {
                 guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
                 guard let json = jsonAny as? [String: Any] else { completion(false) ; return }
                 guard let type = json["type"] as? String else { completion(false) ; return }
-                guard let _ = json["massage"] as? String else {  completion(false); return }
+                guard let _ = json["massage"] as? String else {  completion(false) ; return }
                 if type == "success" {
                     completion(true)
                 } else {

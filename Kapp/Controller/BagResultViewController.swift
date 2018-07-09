@@ -47,10 +47,6 @@ class BagResultViewController: UIViewController, SideMenuControllerDelegate {
                 self.tableView.reloadData()
             } else {
                 self.stopIndicatorAnimate()
-                DispatchQueue.main.async {
-                    let message = "خطا در بروز رسانی اطلاعات !"
-                    self.presentWarningAlert(message: message)
-                }
             }
         }
     }
