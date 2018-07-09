@@ -29,6 +29,7 @@ let BANK_CASH_URL = "\(BASE_URL)api-pay.php?do=pay"
 let ORDER_LIST_URL = "\(BASE_URL)api-order.php?do=orderlist"
 let COPON_CHECK_URL = "\(BASE_URL)api-order.php?do=coponcheck"
 let ORDER_CART_URL = "\(BASE_URL)api-users.php?do=ordercart"
+let CONTROLL_SERVICE_URL = "\(BASE_URL)api-users.php?do=partika"
 
 // DEFAULT USERS
 let PHONE_KEY = "phone"
