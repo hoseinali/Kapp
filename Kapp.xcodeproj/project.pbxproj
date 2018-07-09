@@ -13,7 +13,7 @@
 		16455F3620D839720005B1A2 /* Kapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16455F3420D839720005B1A2 /* Kapp.xcdatamodeld */; };
 		16455F3820D839740005B1A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16455F3720D839740005B1A2 /* Assets.xcassets */; };
 		16455F3B20D839740005B1A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16455F3920D839740005B1A2 /* LaunchScreen.storyboard */; };
-		16DD4B5520F3F7CE009D6347 /* SettingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DD4B5420F3F7CE009D6347 /* SettingService.swift */; };
+		1650031F20F4144900B53295 /* SettingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1650031E20F4144900B53295 /* SettingService.swift */; };
 		16DD4B5720F40417009D6347 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DD4B5620F40417009D6347 /* Setting.swift */; };
 		1E7D07A58ED0250A180D7216 /* Pods_Kapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72A410325F023A3B0079A37 /* Pods_Kapp.framework */; };
 		D83941C520E25410008E09C9 /* SpendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83941C420E25410008E09C9 /* SpendTableViewCell.swift */; };
@@ -81,6 +81,7 @@
 		16455F3720D839740005B1A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16455F3A20D839740005B1A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16455F3C20D839740005B1A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1650031E20F4144900B53295 /* SettingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingService.swift; sourceTree = "<group>"; };
 		16DD4B5420F3F7CE009D6347 /* SettingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingService.swift; sourceTree = "<group>"; };
 		16DD4B5620F40417009D6347 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		53B3787B40C9483E4D27BA70 /* Pods-Kapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kapp/Pods-Kapp.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +163,7 @@
 				16455F2B20D839720005B1A2 /* Products */,
 				B7C60FBA8D9F57C8B7A8D716 /* Pods */,
 				2E65BB2E244972E0B0FF8102 /* Frameworks */,
+				1650031B20F4133B00B53295 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +196,14 @@
 				16455F3420D839720005B1A2 /* Kapp.xcdatamodeld */,
 			);
 			path = Kapp;
+			sourceTree = "<group>";
+		};
+		1650031B20F4133B00B53295 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				16DD4B5420F3F7CE009D6347 /* SettingService.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		2E65BB2E244972E0B0FF8102 /* Frameworks */ = {
@@ -328,6 +338,7 @@
 				D8F020BB20F142BA00F4BD0D /* OrderService.swift */,
 				D8C9EBE420E3CFB600750AEC /* WebService.swift */,
 				D8F4275620F403F800573E88 /* UserOrderService.swift */,
+				1650031E20F4144900B53295 /* SettingService.swift */,
 			);
 			name = Services;
 			path = "New Group";
@@ -532,7 +543,6 @@
 				D83FBE4D20E599BD005FA553 /* DateCollectionViewCell.swift in Sources */,
 				D8F020BC20F142BA00F4BD0D /* OrderService.swift in Sources */,
 				D88EE4CD20DE916C00E04C16 /* SpendViewController.swift in Sources */,
-				16DD4B5520F3F7CE009D6347 /* SettingService.swift in Sources */,
 				D88EE4D520DEB81500E04C16 /* ProfileTableViewController.swift in Sources */,
 				D8FC47BF20E261770078CC8C /* CircleImageView.swift in Sources */,
 				D878203A20DEF9A50076416B /* SlideDownTransitionAnimator.swift in Sources */,
@@ -542,6 +552,7 @@
 				D8C9EBE520E3CFB600750AEC /* WebService.swift in Sources */,
 				16DD4B5720F40417009D6347 /* Setting.swift in Sources */,
 				D8F020B320ED62BB00F4BD0D /* AuthenticationService.swift in Sources */,
+				1650031F20F4144900B53295 /* SettingService.swift in Sources */,
 				D83FBE4C20E599BD005FA553 /* DateTimePicker.swift in Sources */,
 				D83FBE5020E599E3005FA553 /* TimeViewController.swift in Sources */,
 				D8F020AE20ED627700F4BD0D /* PayList.swift in Sources */,
