@@ -33,18 +33,25 @@ class SideTableViewController: UITableViewController {
     }
     
     // Method
-    func exitProfile() {
+    private func exitProfile() {
         let alert = CDAlertView(title: "توجه !", message: "آیا میخواهید از پروفایل کاربری خود خارج شوید ؟", type: CDAlertViewType.notification)
         alert.titleFont = UIFont(name: YEKAN_WEB_FONT, size: 14)!
         alert.messageFont = UIFont(name: YEKAN_WEB_FONT, size: 13)!
         let done = CDAlertViewAction(title: "بله", font: UIFont(name: YEKAN_WEB_FONT, size: 12)!, textColor: UIColor.darkGray, backgroundColor: .white) { (action) -> Bool in
-            // dismiss to root
+            UserDataService.instance.logoutProfile()
+            self.presentRegisterViewController()
             return true
         }
         let cancel = CDAlertViewAction(title: "خیر", font: UIFont(name: YEKAN_WEB_FONT, size: 12)!, textColor: UIColor.darkGray, backgroundColor: .white, handler: nil)
         alert.add(action: done)
         alert.add(action: cancel)
         alert.show()
+    }
+    
+    private func presentRegisterViewController() {
+        if let registerViewController = storyboard?.instantiateViewController(withIdentifier: REGISTER_VC_ID) as? RegisterViewController {
+            self.present(registerViewController, animated: true, completion: nil)
+        }
     }
     
 

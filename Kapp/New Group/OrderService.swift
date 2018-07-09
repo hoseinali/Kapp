@@ -86,11 +86,7 @@ class OrderService {
                 guard let json = jsonAny as? [String: Any] else { completion(false,nil) ; return }
                 guard let type = json["type"] as? String else { completion(false,nil) ; return }
                 guard let items = json["data"] as? [String] else { completion(false,nil) ; return }
-                var massage = ""
-                for item in items {
-                    massage += ", \(item)"
-                    completion(true,massage)
-                }
+                let massage = items.joined(separator: "| ")
                 if type == "sucess" {
                     completion(true,massage)
                 } else {

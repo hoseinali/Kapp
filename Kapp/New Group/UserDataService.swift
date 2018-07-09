@@ -6,7 +6,7 @@
 //  Copyright © 2018 iPersianDeveloper. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class UserDataService {
     
@@ -74,6 +74,17 @@ class UserDataService {
         self.ssid = ssid
         self.isLogin = isLogin
         self.phoneNumber = phoneNumber
+    }
+    
+    func logoutProfile() {
+        UserDataService.instance.setUserData(uid: "", ssid: "", isLogin: false, phoneNumber: "")
+        self.cash = 0
+        self.mount = 0
+        UserDefaults.standard.set(false, forKey: REGISTER_KEY)
+        let image = UIImage(named: "profileDefault")!
+        if let media = Media(withImage: image, forKey: "") {
+            Media.encode(save: media, directory: Media.archiveURL) // save^
+        }
     }
     
     

@@ -87,12 +87,11 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
         alert.titleFont = UIFont(name: YEKAN_WEB_FONT, size: 14)!
         alert.messageFont = UIFont(name: YEKAN_WEB_FONT, size: 13)!
         let done = CDAlertViewAction(title: "بله", font: UIFont(name: YEKAN_WEB_FONT, size: 12)!, textColor: UIColor.darkGray, backgroundColor: .white) { (action) -> Bool in
-            self.startIndicatorAnimate() // *
-            self.stopIndicatorAnimate() // *
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.1, execute: { // *
-                self.performSegue(withIdentifier: CAR_CHOSEN_SEGUE, sender: nil) // *
-            }) // *
-            
+            self.startIndicatorAnimate()
+            self.stopIndicatorAnimate()
+            self.performSegue(withIdentifier: CAR_CHOSEN_SEGUE, sender: nil)
+            let userLocation: (lat: String, long: String) = (lat: "\(self.userCurrentLocation.latitude)",long: "\(self.userCurrentLocation.longitude)")
+            UserOrderService.instance.userLocation = userLocation
             return true
         }
         let cancel = CDAlertViewAction(title: "خیر", font: UIFont(name: YEKAN_WEB_FONT, size: 13)!, textColor: UIColor.darkGray, backgroundColor: .white, handler: nil)

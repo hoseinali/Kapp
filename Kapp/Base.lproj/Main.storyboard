@@ -156,7 +156,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeF-xh-SjL">
-                                <rect key="frame" x="65" y="240.5" width="62" height="26"/>
+                                <rect key="frame" x="65" y="240" width="62" height="26"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="14"/>
                                 <state key="normal" title="درخواست کد"/>
                                 <connections>
@@ -535,7 +535,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfj-oZ-0ew" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
-                                                                            <rect key="frame" x="8" y="29" width="45" height="20"/>
+                                                                            <rect key="frame" x="8" y="28.5" width="45" height="20"/>
                                                                             <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="45" id="3mw-wj-ncb"/>
@@ -1290,7 +1290,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="وضعیت سفارش :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nB-5K-i8e">
-                                                            <rect key="frame" x="181.5" y="154" width="87" height="15"/>
+                                                            <rect key="frame" x="182" y="154" width="86.5" height="15"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -1308,7 +1308,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="وضعیت سفارش" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGI-uG-smD">
-                                                            <rect key="frame" x="93.5" y="154" width="80" height="15"/>
+                                                            <rect key="frame" x="94.5" y="154" width="79.5" height="15"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.48445164349999997" green="0.47824383739999998" blue="0.85353356599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
@@ -1332,6 +1332,7 @@
                                                         <constraint firstItem="o63-7k-fDP" firstAttribute="trailing" secondItem="ab6-Nz-hH1" secondAttribute="trailing" id="Q2W-Aj-Ph5"/>
                                                         <constraint firstItem="aY4-wg-dkS" firstAttribute="trailing" secondItem="Jq1-0q-5sl" secondAttribute="trailing" id="QIz-P1-9Ff"/>
                                                         <constraint firstItem="pz9-2C-gBH" firstAttribute="leading" secondItem="DIg-3n-G6E" secondAttribute="trailing" constant="4" id="QLj-PT-L0B"/>
+                                                        <constraint firstAttribute="bottom" secondItem="aY4-wg-dkS" secondAttribute="bottom" constant="16" id="S1j-Ph-SDH"/>
                                                         <constraint firstItem="Anq-w5-WLD" firstAttribute="centerY" secondItem="90f-Df-Uxz" secondAttribute="centerY" id="Sff-Tk-2SQ"/>
                                                         <constraint firstItem="pz9-2C-gBH" firstAttribute="centerY" secondItem="jAp-BH-jGw" secondAttribute="centerY" id="UgC-Oi-WC6"/>
                                                         <constraint firstItem="yp9-TE-5kQ" firstAttribute="centerY" secondItem="ab6-Nz-hH1" secondAttribute="centerY" id="XnB-IE-e7b"/>
@@ -1912,7 +1913,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="توضیحات :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4x8-Kx-toB">
-                                                            <rect key="frame" x="215" y="85" width="53" height="15"/>
+                                                            <rect key="frame" x="215.5" y="85" width="52.5" height="15"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -1942,7 +1943,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نتیجه برگشت از بانک" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="se3-Po-Lev">
-                                                            <rect key="frame" x="101" y="85" width="106" height="15"/>
+                                                            <rect key="frame" x="101.5" y="85" width="106" height="15"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" red="0.48445164349999997" green="0.47824383739999998" blue="0.85353356599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
@@ -2304,7 +2305,7 @@
                                                         <constraint firstAttribute="height" constant="160" id="IGe-MC-G9e"/>
                                                     </constraints>
                                                     <date key="date" timeIntervalSinceReferenceDate="551745794.02668202">
-                                                        <!--2018-06-26 22:43:14 +0000-->
+                                                        <!--1397-04-05 22:43:14 +0000-->
                                                     </date>
                                                     <locale key="locale" localeIdentifier="fa"/>
                                                 </datePicker>
@@ -2382,13 +2383,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="04D-bX-Z2j">
-                                <rect key="frame" x="33" y="211" width="254" height="1"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="DF6-A9-nX5"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bgs-Mb-0GH">
                                 <rect key="frame" x="33" y="122" width="254" height="1"/>
                                 <color key="backgroundColor" red="0.81568627449999997" green="0.56862745100000001" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2396,36 +2390,21 @@
                                     <constraint firstAttribute="height" constant="1" id="RfX-jZ-bUN"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="مبلغ را به تومان وارد کنید" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQG-nc-50F">
-                                <rect key="frame" x="33" y="179" width="254" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="JXn-ON-PBr"/>
-                                </constraints>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="cc-number"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="افزایش اعتبار" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFm-gI-yc5">
                                 <rect key="frame" x="118.5" y="89" width="84.5" height="18"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="18"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مبلغ اعتبار :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFF-e6-d6q">
-                                <rect key="frame" x="222.5" y="153" width="64" height="16"/>
-                                <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="16"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAa-Sd-YSC" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
-                                <rect key="frame" x="100" y="252" width="120" height="35"/>
+                                <rect key="frame" x="60" y="153" width="200" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="JpI-MH-j57"/>
+                                    <constraint firstAttribute="width" constant="200" id="JpI-MH-j57"/>
                                     <constraint firstAttribute="height" constant="35" id="uGu-EO-35D"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="17"/>
-                                <state key="normal" title="تایید">
+                                <state key="normal" title="برای افزایش اعتبار کلیک کنید">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -2433,32 +2412,24 @@
                                         <real key="value" value="17.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="agreeButtonPressed:" destination="RfE-tT-T7o" eventType="touchUpInside" id="Eka-sr-OTh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bQG-nc-50F" firstAttribute="top" secondItem="uFF-e6-d6q" secondAttribute="bottom" constant="10" id="1xt-ea-GBS"/>
-                            <constraint firstItem="uFF-e6-d6q" firstAttribute="top" secondItem="Bgs-Mb-0GH" secondAttribute="bottom" constant="30" id="2gf-Fe-aTK"/>
-                            <constraint firstItem="04D-bX-Z2j" firstAttribute="top" secondItem="bQG-nc-50F" secondAttribute="bottom" constant="2" id="6FU-5X-c6g"/>
                             <constraint firstItem="wAa-Sd-YSC" firstAttribute="centerX" secondItem="fY1-Z1-OJY" secondAttribute="centerX" id="8yg-ci-z4k"/>
-                            <constraint firstItem="04D-bX-Z2j" firstAttribute="trailing" secondItem="bQG-nc-50F" secondAttribute="trailing" id="9Hy-az-xvS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Bgs-Mb-0GH" secondAttribute="trailing" constant="17" id="9V7-Uf-fxr"/>
-                            <constraint firstItem="bQG-nc-50F" firstAttribute="leading" secondItem="Bgs-Mb-0GH" secondAttribute="leading" id="9tT-rr-2ud"/>
                             <constraint firstItem="Bgs-Mb-0GH" firstAttribute="top" secondItem="sFm-gI-yc5" secondAttribute="bottom" constant="15" id="CT5-dm-zw7"/>
-                            <constraint firstItem="uFF-e6-d6q" firstAttribute="trailing" secondItem="Bgs-Mb-0GH" secondAttribute="trailing" id="CcL-va-cLq"/>
-                            <constraint firstItem="wAa-Sd-YSC" firstAttribute="top" secondItem="04D-bX-Z2j" secondAttribute="bottom" constant="40" id="TKf-CT-6Ct"/>
                             <constraint firstItem="sFm-gI-yc5" firstAttribute="centerX" secondItem="fY1-Z1-OJY" secondAttribute="centerX" id="TXH-fm-qqj"/>
+                            <constraint firstItem="wAa-Sd-YSC" firstAttribute="top" secondItem="Bgs-Mb-0GH" secondAttribute="bottom" constant="30" id="bke-4E-9xa"/>
                             <constraint firstItem="sFm-gI-yc5" firstAttribute="top" secondItem="m0d-Jt-uCx" secondAttribute="top" constant="25" id="dNe-up-mBP"/>
-                            <constraint firstItem="bQG-nc-50F" firstAttribute="trailing" secondItem="uFF-e6-d6q" secondAttribute="trailing" id="ezc-sk-4P2"/>
                             <constraint firstItem="Bgs-Mb-0GH" firstAttribute="leading" secondItem="fY1-Z1-OJY" secondAttribute="leadingMargin" constant="17" id="i6r-qO-8oV"/>
-                            <constraint firstItem="04D-bX-Z2j" firstAttribute="leading" secondItem="bQG-nc-50F" secondAttribute="leading" id="wBl-x8-KCN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m0d-Jt-uCx"/>
                     </view>
                     <navigationItem key="navigationItem" id="6j2-R0-sfz"/>
-                    <connections>
-                        <outlet property="mounthTextField" destination="bQG-nc-50F" id="51q-6o-y6h"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LlF-pq-vdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2816,7 +2787,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WmJ-lD-gGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1509.375" y="-990.84507042253517"/>
+            <point key="canvasLocation" x="1508" y="-1131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nVv-mD-JDG">
