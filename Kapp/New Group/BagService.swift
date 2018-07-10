@@ -32,7 +32,6 @@ class BagService {
                 let total = data["total"]!.intValue
                 let pagecount = data["pagecount"]!.intValue
                 guard let items = json["result"].array else { completion(false) ;return }
-                
                 for item in items {
                     let id = item["id"].intValue
                     let mount = item["mount"].intValue
@@ -42,7 +41,6 @@ class BagService {
                     let date = item["date"].stringValue
                     let time = item["time"].stringValue
                     let status = item["status"].intValue
-                    
                     let bagResult = PayList(id: id, mount: mount, flag: flag, massage: massage, description: description, uid: uid,  date: date, time: time, status: status, total: total, pagecount: pagecount)
                     self.bagResults.append(bagResult)
                 }
@@ -92,7 +90,7 @@ class BagService {
         }
     }
     
-    func bagCash(completion: @escaping (_ success: Bool) -> Void) {
+    func bagCash(completion: @escaping COMPLETION_SUCCESS) {
         let uid = UserDataService.instance.uid
         let ssid = UserDataService.instance.ssid
         let url = CASH_GET_URL + "&uid=\(uid)&ssid=\(ssid)"
@@ -100,8 +98,6 @@ class BagService {
             if response.result.error == nil {
                 guard let data = response.data else { completion(false) ; return }
                 guard let json = try? JSON.init(data: data) else {completion(false) ; return }
-                let type = json["type"].stringValue
-                guard type == "success" else { completion(false) ; return }
                 guard let money = json["data"].int else { completion(false) ; return }
                 UserDataService.instance.cash = money
                 completion(true)

@@ -30,12 +30,12 @@ class SpendTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(date:String, time:String, id:Int, bankName:String, status:String ,mount:String ,bankResponse:String) {
+    func configureCell(date: String, time: String, id: Int, bankName: String,  status: String , mount: String , bankResponse: String) {
         dateLabel.text = date
         timeLabel.text = time
         factorIdLabel.text = String(id)
         bankNameLabel.text = bankName
-        mountLabel.text = mount
+        mountLabel.text = mount.seperateByCama
         resultBankLabel.text = bankResponse
         switch status {
         case "0":self.statusLabel.text = "پرداخت نشده"

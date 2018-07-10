@@ -11,11 +11,16 @@ import CDAlertView
 
 class SideTableViewController: UITableViewController {
     
+    // Outlet
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var moneyLabel: UILabel!
+    
     let segues = [NO_SEGUE,MAIN_SEGUE,PROFILE_SEGUE,ORDER_DETAIL_LIST_SEGUE,SPEND_SEGUE,BAG_RESULT_SEGUE,CREDIT_SEGUE,CALL_US_SEGUE]
     private var previousIndex: NSIndexPath?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)  {
@@ -33,6 +38,12 @@ class SideTableViewController: UITableViewController {
     }
     
     // Method
+    
+    func updateUI() {
+        moneyLabel.text = UserDataService.instance.cash.seperateByCama
+        nameLabel.text = PersonalInfromationService.instance.userInformation?.name
+    }
+    
     private func exitProfile() {
         let alert = CDAlertView(title: "توجه !", message: "آیا میخواهید از پروفایل کاربری خود خارج شوید ؟", type: CDAlertViewType.notification)
         alert.titleFont = UIFont(name: YEKAN_WEB_FONT, size: 14)!

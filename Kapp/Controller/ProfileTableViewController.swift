@@ -19,9 +19,23 @@ class ProfileTableViewController: UITableViewController, SideMenuControllerDeleg
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var postalCodeTextField: UITextField!
     
+    var birthday: Date? {
+        get {
+            return UserDefaults.standard.value(forKey: BIRTHDAY_KEY) as? Date
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: BIRTHDAY_KEY)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+    }
+    
+    // Objc
+    @objc func closeTouch() {
+        view.endEditing(true)
     }
     
     // Action
@@ -41,6 +55,7 @@ class ProfileTableViewController: UITableViewController, SideMenuControllerDeleg
             if success {
                 self.stopIndicatorAnimate()
                 DispatchQueue.main.async {
+                    self.birthday = self.datePicker.date
                     self.presentAlert()
                     self.view.endEditing(true)
                 }
@@ -65,6 +80,8 @@ class ProfileTableViewController: UITableViewController, SideMenuControllerDeleg
             profileImage.image = UIImage(data: media.data)
         }
         fetchPersonalInformation()
+        let touch = UITapGestureRecognizer(target: self, action: #selector(closeTouch))
+        self.view.addGestureRecognizer(touch)
     }
     
     func fetchPersonalInformation() {
@@ -78,6 +95,9 @@ class ProfileTableViewController: UITableViewController, SideMenuControllerDeleg
                     self.nameTextField.text = userInformation?.name
                     self.addressTextField.text = userInformation?.address
                     self.postalCodeTextField.text = userInformation?.zippostal
+                    if let date = self.birthday {
+                        self.datePicker.date = date
+                    }
                 }
             } else {
                 self.stopIndicatorAnimate()

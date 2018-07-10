@@ -23,6 +23,7 @@ class CarChosenViewController: UIViewController {
 
     // Action
     @IBAction func closeButtonPressed(_ sender: UIBarButtonItem) {
+        UserOrderService.instance.clearUserOrder()
         dismiss(animated: true, completion: nil)
     }
     

@@ -13,5 +13,14 @@ class UserOrderService {
     static let instance = UserOrderService()
     
     public var userLocation: (lat: String, long: String)?
+    public var orderTime: String?
+    public var orderDate: String?
     
+    func clearUserOrder() {
+        userLocation = nil
+        orderTime = nil
+        orderDate = nil
+    }
+    
+
 }

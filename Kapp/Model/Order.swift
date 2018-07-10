@@ -10,7 +10,7 @@ import Foundation
 
 struct Order {
     
-    let orderName: String
+    var orderName: String
     let cart: String
     let send_time: String
     let send_day: Int

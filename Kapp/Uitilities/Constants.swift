@@ -38,6 +38,7 @@ let SSID_KEY = "ssid"
 let LOGGED_IN_KEY = "loggedIn"
 let CASH_KEY = "cashKey"
 let REGISTER_KEY = "registerKey"
+let BIRTHDAY_KEY = "birthdayKey"
 
 // HEADERS
 let DEFAULT_HEADER = ["Content-Type": "application/json; charset=utf-8"]

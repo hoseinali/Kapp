@@ -19,6 +19,10 @@ class OrderDetailViewController: UIViewController, SideMenuControllerDelegate {
         updateUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        fetechOrderList()
+    }
+    
     // Method
     func updateUI() {
         sideMenuController?.delegate = self

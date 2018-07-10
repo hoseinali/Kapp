@@ -13,6 +13,7 @@ import SwiftyJSON
 class SettingService {
     
     static let instance = SettingService()
+    
     var setting: Setting!
     
     func fetechStteings(completion:@escaping COMPLETION_SUCCESS) {
@@ -68,15 +69,31 @@ class SettingService {
         return true
     }
     
-    
-    var openShopTime: [String] {
+    var todayOpenTime: [String] {
         var times = [String]()
         let amStart = Int(setting.AM_START)!
         let amStop = Int(setting.AM_STOP)!
         let pmStart = Int(setting.PM_START)!
         let pmStop = Int(setting.PM_STOP)!
-
+        
         return [String]()
+    }
+    
+    var weekOpenTime: [String] {
+        var times = [String]()
+        let amStart = Int(setting.AM_START)!
+        let amStop = Int(setting.AM_STOP)!
+        let pmStart = Int(setting.PM_START)!
+        let pmStop = Int(setting.PM_STOP)!
+        for number in amStart..<amStop {
+            times.append("\(number)")
+        }
+        for number in pmStart..<pmStop {
+            times.append("\(number)")
+        }
+        print("open week times is \(times.joined(separator: " | "))")
+        
+        return times
     }
     
 

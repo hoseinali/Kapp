@@ -30,10 +30,10 @@ class BagResultTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(id:Int, mount:Int, flag:String, desc:String, date:String ,time:String ,status:Int) {
+    func configureCell(id: Int, mount: Int, flag: String, desc: String, date: String , time: String , status: Int) {
         dateLabel.text = date
         idLabel.text = String(id)
-        mountLabel.text = String(mount)
+        mountLabel.text = mount.seperateByCama
         flagLabel.text = flag
         descLabel.text = desc
         timeLabel.text = time

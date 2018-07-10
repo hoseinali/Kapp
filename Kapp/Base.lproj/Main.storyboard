@@ -48,7 +48,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4DD-3B-8DW" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
                                 <rect key="frame" x="90" y="294" width="140" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.5211390843" green="0.61101948750000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="spR-qp-SfP"/>
                                     <constraint firstAttribute="width" constant="140" id="xAp-Lv-QoJ"/>
@@ -125,7 +125,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lco-d2-ffV" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
                                 <rect key="frame" x="90" y="294" width="140" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.5211390843" green="0.61101948750000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="NIx-RN-xWg"/>
                                     <constraint firstAttribute="height" constant="40" id="PJx-js-37c"/>
@@ -276,7 +276,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFo-ix-gve" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
                                         <rect key="frame" x="70" y="57" width="120" height="35"/>
-                                        <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.5211390843" green="0.61101948750000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="d6o-rb-gE4"/>
                                             <constraint firstAttribute="width" constant="120" id="lyS-rs-QZL"/>
@@ -528,15 +528,15 @@
                                                                             <color key="textColor" red="0.64525987689999997" green="0.1532079164" blue="0.1650146485" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfG-4z-EKv">
-                                                                            <rect key="frame" x="93" y="31" width="28" height="15"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ریال" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfG-4z-EKv">
+                                                                            <rect key="frame" x="98" y="31" width="23" height="15"/>
                                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfj-oZ-0ew" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
                                                                             <rect key="frame" x="8" y="28.5" width="45" height="20"/>
-                                                                            <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <color key="backgroundColor" red="0.5211390843" green="0.61101948750000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="45" id="3mw-wj-ncb"/>
                                                                                 <constraint firstAttribute="height" constant="20" id="Aj3-CW-pDq"/>
@@ -605,7 +605,7 @@
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eN6-26-i0L" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
                                                             <rect key="frame" x="127.5" y="4" width="120" height="35"/>
-                                                            <color key="backgroundColor" red="1" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="backgroundColor" red="0.5211390843" green="0.61101948750000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="35" id="eJx-nl-GyZ"/>
                                                                 <constraint firstAttribute="width" constant="120" id="h8z-3y-1Lu"/>
@@ -650,8 +650,8 @@
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuS-kz-SUe">
-                                                                    <rect key="frame" x="261" y="34" width="28" height="15"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ریال" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuS-kz-SUe">
+                                                                    <rect key="frame" x="266" y="34" width="23" height="15"/>
                                                                     <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -840,7 +840,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3E-Y6-BOu" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
                                 <rect key="frame" x="100" y="294" width="120" height="35"/>
-                                <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.5211390843" green="0.61101948750000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="86w-MT-wjN"/>
                                     <constraint firstAttribute="height" constant="35" id="zxp-Gb-H96"/>
@@ -882,6 +882,8 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="gw2-JZ-9DZ" id="4Ov-Hc-vSa"/>
+                        <outlet property="dateButton" destination="C01-UX-Eu7" id="Tgq-Rb-fg8"/>
+                        <outlet property="timeButton" destination="gBU-PA-gBD" id="tMm-hJ-6Kr"/>
                         <segue destination="iwK-8Y-HbT" kind="show" identifier="RegisterOrderViewControllerSegue" id="E0z-o3-SJb"/>
                     </connections>
                 </viewController>
@@ -970,8 +972,8 @@
                                         <color key="textColor" red="0.64525987689999997" green="0.1532079164" blue="0.1650146485" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yd-8r-r7J">
-                                        <rect key="frame" x="148.5" y="237" width="32" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ریال" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yd-8r-r7J">
+                                        <rect key="frame" x="155.5" y="237" width="25" height="17"/>
                                         <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -994,7 +996,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xa-9r-xPm" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
                                         <rect key="frame" x="10" y="189" width="100" height="30"/>
-                                        <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.5211390843" green="0.61101948750000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="6ef-vO-eJI"/>
                                             <constraint firstAttribute="height" constant="30" id="G7q-XD-AuW"/>
@@ -1008,10 +1010,13 @@
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="coponCheckButtonPressed:" destination="iwK-8Y-HbT" eventType="touchUpInside" id="8Rn-fl-C3P"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4W1-7O-qEV" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
                                         <rect key="frame" x="10" y="264" width="270" height="35"/>
-                                        <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.5211390843" green="0.61101948750000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="mbx-Cc-K8O"/>
                                         </constraints>
@@ -1030,7 +1035,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wl4-T4-Khy" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
                                         <rect key="frame" x="10" y="342" width="270" height="35"/>
-                                        <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.5211390843" green="0.61101948750000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="zzy-XP-InM"/>
                                         </constraints>
@@ -1049,7 +1054,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiY-pn-6HN" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
                                         <rect key="frame" x="10" y="303" width="270" height="35"/>
-                                        <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.5211390843" green="0.61101948750000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="4V8-zG-Srv"/>
                                         </constraints>
@@ -1137,7 +1142,12 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="VpH-C1-VaE" id="nya-xe-Kow"/>
+                        <outlet property="coponTextField" destination="loR-sR-hbA" id="IeZ-wc-rWO"/>
+                        <outlet property="dateLabel" destination="MIN-f2-omv" id="kXH-Im-bf2"/>
                         <outlet property="factorView" destination="MUf-UY-4bR" id="e46-yS-Ms7"/>
+                        <outlet property="productNameLabel" destination="FBT-HQ-D54" id="Das-6q-pfQ"/>
+                        <outlet property="timeLabel" destination="X9m-EU-6Ta" id="8FL-H8-IhZ"/>
+                        <outlet property="totalPriceLabel" destination="CjE-i8-6r1" id="Oqe-k2-fIS"/>
                         <segue destination="bUE-WG-tX0" kind="unwind" identifier="unwindToMainViewControllerSegue" unwindAction="unwindToMainViewController:" id="7c7-e0-gU7"/>
                     </connections>
                 </viewController>
@@ -1301,8 +1311,8 @@
                                                             <color key="textColor" red="0.64525987689999997" green="0.1532079164" blue="0.1650146485" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anq-w5-WLD">
-                                                            <rect key="frame" x="132.5" y="177" width="28" height="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ریال" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anq-w5-WLD">
+                                                            <rect key="frame" x="137.5" y="177" width="23" height="15"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -1444,8 +1454,8 @@
                                                     <color key="textColor" red="0.81568627449999997" green="0.56862745100000001" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqB-ha-v5H">
-                                                    <rect key="frame" x="197" y="77" width="33" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ریال" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqB-ha-v5H">
+                                                    <rect key="frame" x="201" y="77" width="27" height="18"/>
                                                     <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="18"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -1456,7 +1466,7 @@
                                                 <constraint firstItem="1yu-8i-2z3" firstAttribute="top" secondItem="dQg-mo-MqA" secondAttribute="bottom" constant="8" id="T29-r4-fvN"/>
                                                 <constraint firstItem="dQg-mo-MqA" firstAttribute="centerY" secondItem="mxf-pt-5LY" secondAttribute="centerY" id="aGu-3L-zMg"/>
                                                 <constraint firstItem="1yu-8i-2z3" firstAttribute="trailing" secondItem="mxf-pt-5LY" secondAttribute="trailingMargin" id="aTB-z5-27t"/>
-                                                <constraint firstItem="Hod-Sa-QaC" firstAttribute="leading" secondItem="sqB-ha-v5H" secondAttribute="trailing" constant="4" id="c2f-ON-2Z1"/>
+                                                <constraint firstItem="Hod-Sa-QaC" firstAttribute="leading" secondItem="sqB-ha-v5H" secondAttribute="trailing" constant="6" id="c2f-ON-2Z1"/>
                                                 <constraint firstItem="1yu-8i-2z3" firstAttribute="leading" secondItem="Hod-Sa-QaC" secondAttribute="trailing" constant="4" id="kkc-2i-EJq"/>
                                                 <constraint firstItem="dQg-mo-MqA" firstAttribute="trailing" secondItem="mxf-pt-5LY" secondAttribute="trailingMargin" id="qQW-iC-eXp"/>
                                                 <constraint firstItem="sqB-ha-v5H" firstAttribute="centerY" secondItem="Hod-Sa-QaC" secondAttribute="centerY" id="x0Y-YQ-Set"/>
@@ -1631,6 +1641,10 @@
                             <outlet property="delegate" destination="zAP-78-Ob0" id="ALp-Eo-MF1"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="moneyLabel" destination="Hod-Sa-QaC" id="twk-uV-nfh"/>
+                        <outlet property="nameLabel" destination="dQg-mo-MqA" id="uPP-1u-ei6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEc-Gd-66s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1754,8 +1768,8 @@
                                                             <color key="textColor" red="0.64525987689999997" green="0.1532079164" blue="0.1650146485" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGC-Il-q3H">
-                                                            <rect key="frame" x="18" y="108" width="27.5" height="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ریال" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGC-Il-q3H">
+                                                            <rect key="frame" x="23" y="108" width="22.5" height="15"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -1960,8 +1974,8 @@
                                                             <color key="textColor" red="0.64525987689999997" green="0.1532079164" blue="0.1650146485" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تومان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqD-Ad-hRQ">
-                                                            <rect key="frame" x="18" y="108" width="27.5" height="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ریال" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqD-Ad-hRQ">
+                                                            <rect key="frame" x="23" y="108" width="22.5" height="15"/>
                                                             <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -2120,7 +2134,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="VDk-B4-hX4">
-                            <rect key="frame" x="0.0" y="542" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="552" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
@@ -2144,7 +2158,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUe-PT-g8p">
                                                     <rect key="frame" x="204" y="10" width="100" height="125"/>
                                                     <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="14"/>
-                                                    <state key="normal" title="تغییر تصویر کاربری"/>
+                                                    <state key="normal" title="تغییر تصویر کاربری">
+                                                        <color key="titleColor" red="0.5211390843" green="0.61101948750000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="changeImageButtonPressed:" destination="3yr-K1-JVr" eventType="touchUpInside" id="XpE-Fa-n1C"/>
                                                     </connections>
@@ -2173,18 +2189,18 @@
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="نام و نام خانوادگی خود را وارد کنید" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IxW-VZ-SRo">
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="نام و نام خانوادگی خود را وارد کنید" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IxW-VZ-SRo">
                                                     <rect key="frame" x="16" y="7" width="177.5" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="B2q-hT-3LS"/>
                                                     </constraints>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                    <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                                                 </textField>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4u-cK-sKH">
-                                                    <rect key="frame" x="16" y="39" width="177.5" height="1"/>
-                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="16" y="39" width="288" height="1"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="2cB-Cm-cHy"/>
                                                     </constraints>
@@ -2195,9 +2211,9 @@
                                                 <constraint firstItem="IxW-VZ-SRo" firstAttribute="centerY" secondItem="jyt-4m-P5J" secondAttribute="centerY" id="6z1-PI-10p"/>
                                                 <constraint firstItem="IxW-VZ-SRo" firstAttribute="leading" secondItem="RG6-dC-KvA" secondAttribute="leading" constant="16" id="8YU-yI-7Oy"/>
                                                 <constraint firstItem="t4u-cK-sKH" firstAttribute="top" secondItem="IxW-VZ-SRo" secondAttribute="bottom" constant="2" id="AXb-Ik-XmN"/>
+                                                <constraint firstItem="t4u-cK-sKH" firstAttribute="trailing" secondItem="jyt-4m-P5J" secondAttribute="trailing" id="PeF-TF-MmI"/>
                                                 <constraint firstItem="jyt-4m-P5J" firstAttribute="centerY" secondItem="RG6-dC-KvA" secondAttribute="centerY" id="WHl-8x-Y5v"/>
                                                 <constraint firstItem="jyt-4m-P5J" firstAttribute="trailing" secondItem="RG6-dC-KvA" secondAttribute="trailingMargin" id="XzD-oG-Puh"/>
-                                                <constraint firstItem="t4u-cK-sKH" firstAttribute="trailing" secondItem="IxW-VZ-SRo" secondAttribute="trailing" id="oxh-cA-fs7"/>
                                                 <constraint firstItem="t4u-cK-sKH" firstAttribute="leading" secondItem="IxW-VZ-SRo" secondAttribute="leading" id="u58-gf-gZp"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -2220,13 +2236,13 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="OmA-dz-b3q"/>
                                                     </constraints>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                    <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="street-address"/>
                                                 </textField>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1e6-UL-nFK">
-                                                    <rect key="frame" x="16" y="39" width="239" height="1"/>
-                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="16" y="39" width="288" height="1"/>
+                                                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="8Eu-LF-A5F"/>
                                                     </constraints>
@@ -2236,8 +2252,8 @@
                                                 <constraint firstItem="DjJ-sP-NqE" firstAttribute="leading" secondItem="Drt-Zq-uRV" secondAttribute="trailing" constant="8" id="3Aa-7x-zCb"/>
                                                 <constraint firstItem="Drt-Zq-uRV" firstAttribute="centerY" secondItem="DjJ-sP-NqE" secondAttribute="centerY" id="6J2-5C-w35"/>
                                                 <constraint firstItem="Drt-Zq-uRV" firstAttribute="leading" secondItem="55I-aU-xjI" secondAttribute="leading" constant="16" id="8Of-tS-vHc"/>
+                                                <constraint firstItem="1e6-UL-nFK" firstAttribute="trailing" secondItem="DjJ-sP-NqE" secondAttribute="trailing" id="LD6-hW-bkR"/>
                                                 <constraint firstItem="DjJ-sP-NqE" firstAttribute="centerY" secondItem="55I-aU-xjI" secondAttribute="centerY" id="S9S-w1-FFl"/>
-                                                <constraint firstItem="1e6-UL-nFK" firstAttribute="trailing" secondItem="Drt-Zq-uRV" secondAttribute="trailing" id="Shb-aA-eux"/>
                                                 <constraint firstItem="1e6-UL-nFK" firstAttribute="leading" secondItem="Drt-Zq-uRV" secondAttribute="leading" id="Y7f-Gx-gLb"/>
                                                 <constraint firstItem="DjJ-sP-NqE" firstAttribute="trailing" secondItem="55I-aU-xjI" secondAttribute="trailingMargin" id="f5i-fW-jUa"/>
                                                 <constraint firstItem="1e6-UL-nFK" firstAttribute="top" secondItem="Drt-Zq-uRV" secondAttribute="bottom" constant="2" id="zM5-9Z-yUF"/>
@@ -2262,13 +2278,13 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="TGm-v5-CNL"/>
                                                     </constraints>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                    <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="cc-number"/>
                                                 </textField>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a59-kU-QrF">
-                                                    <rect key="frame" x="16" y="39" width="228.5" height="1"/>
-                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="16" y="39" width="288" height="1"/>
+                                                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="j2u-Hj-zTW"/>
                                                     </constraints>
@@ -2277,51 +2293,79 @@
                                             <constraints>
                                                 <constraint firstItem="a59-kU-QrF" firstAttribute="leading" secondItem="EVg-38-cgT" secondAttribute="leading" id="7VW-Gq-5lP"/>
                                                 <constraint firstItem="EVg-38-cgT" firstAttribute="centerY" secondItem="MU3-kv-6Rp" secondAttribute="centerY" id="BYU-9l-ksY"/>
-                                                <constraint firstItem="a59-kU-QrF" firstAttribute="trailing" secondItem="EVg-38-cgT" secondAttribute="trailing" id="HaG-tp-fac"/>
                                                 <constraint firstItem="MU3-kv-6Rp" firstAttribute="centerY" secondItem="WGB-2f-UOK" secondAttribute="centerY" id="Jeg-WJ-Nnd"/>
                                                 <constraint firstItem="EVg-38-cgT" firstAttribute="leading" secondItem="WGB-2f-UOK" secondAttribute="leading" constant="16" id="SCk-ro-WW9"/>
+                                                <constraint firstItem="a59-kU-QrF" firstAttribute="trailing" secondItem="MU3-kv-6Rp" secondAttribute="trailing" id="WxY-oH-1wR"/>
                                                 <constraint firstItem="a59-kU-QrF" firstAttribute="top" secondItem="EVg-38-cgT" secondAttribute="bottom" constant="2" id="d7e-Ps-pRe"/>
                                                 <constraint firstItem="MU3-kv-6Rp" firstAttribute="leading" secondItem="EVg-38-cgT" secondAttribute="trailing" constant="8" id="hRn-8z-b4W"/>
                                                 <constraint firstItem="MU3-kv-6Rp" firstAttribute="trailing" secondItem="WGB-2f-UOK" secondAttribute="trailingMargin" id="xC7-Sy-qlt"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="190" id="bTg-D7-2iY">
-                                        <rect key="frame" x="0.0" y="282" width="320" height="190"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="200" id="bTg-D7-2iY">
+                                        <rect key="frame" x="0.0" y="282" width="320" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bTg-D7-2iY" id="fg7-m4-K8H">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تاریخ تولد خود را معین کنید :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7QO-wk-Lej">
-                                                    <rect key="frame" x="147.5" y="11" width="156.5" height="16"/>
+                                                    <rect key="frame" x="147.5" y="21" width="156.5" height="16"/>
                                                     <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="16"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="O9u-BE-jHF">
-                                                    <rect key="frame" x="0.0" y="30" width="320" height="160"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtK-bl-Ofb" customClass="RoundedView" customModule="Kapp" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="45" width="288" height="144"/>
+                                                    <subviews>
+                                                        <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="3Pu-XU-UI1">
+                                                            <rect key="frame" x="4" y="4" width="280" height="136"/>
+                                                            <color key="backgroundColor" red="0.96047198830000002" green="0.96047198830000002" blue="0.96047198830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <date key="date" timeIntervalSinceReferenceDate="551745794.02668202">
+                                                                <!--1397-04-05 22:43:14 +0000-->
+                                                            </date>
+                                                            <date key="minimumDate" timeIntervalSinceReferenceDate="-2177412944">
+                                                                <!--1310-10-11 11:04:16 +0000-->
+                                                            </date>
+                                                            <date key="maximumDate" timeIntervalSinceReferenceDate="568033200">
+                                                                <!--1397-10-11 11:00:00 +0000-->
+                                                            </date>
+                                                            <locale key="locale" localeIdentifier="fa"/>
+                                                        </datePicker>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.96047198830000002" green="0.96047198830000002" blue="0.96047198830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="160" id="IGe-MC-G9e"/>
+                                                        <constraint firstAttribute="bottom" secondItem="3Pu-XU-UI1" secondAttribute="bottom" constant="4" id="AOt-4u-bIA"/>
+                                                        <constraint firstItem="3Pu-XU-UI1" firstAttribute="top" secondItem="vtK-bl-Ofb" secondAttribute="top" constant="4" id="WP4-Xw-kU5"/>
+                                                        <constraint firstAttribute="trailing" secondItem="3Pu-XU-UI1" secondAttribute="trailing" constant="4" id="jGQ-cB-8Q0"/>
+                                                        <constraint firstItem="3Pu-XU-UI1" firstAttribute="leading" secondItem="vtK-bl-Ofb" secondAttribute="leading" constant="4" id="tEa-eb-hEd"/>
                                                     </constraints>
-                                                    <date key="date" timeIntervalSinceReferenceDate="551745794.02668202">
-                                                        <!--1397-04-05 22:43:14 +0000-->
-                                                    </date>
-                                                    <locale key="locale" localeIdentifier="fa"/>
-                                                </datePicker>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="7QO-wk-Lej" firstAttribute="top" secondItem="fg7-m4-K8H" secondAttribute="topMargin" id="Y89-4O-cH1"/>
-                                                <constraint firstAttribute="trailing" secondItem="O9u-BE-jHF" secondAttribute="trailing" id="cIZ-kN-X1M"/>
+                                                <constraint firstItem="vtK-bl-Ofb" firstAttribute="trailing" secondItem="fg7-m4-K8H" secondAttribute="trailingMargin" id="KFX-qw-D39"/>
+                                                <constraint firstItem="vtK-bl-Ofb" firstAttribute="bottom" secondItem="fg7-m4-K8H" secondAttribute="bottomMargin" id="OYv-NF-gct"/>
+                                                <constraint firstItem="7QO-wk-Lej" firstAttribute="top" secondItem="fg7-m4-K8H" secondAttribute="topMargin" constant="10" id="Y89-4O-cH1"/>
                                                 <constraint firstItem="7QO-wk-Lej" firstAttribute="trailing" secondItem="fg7-m4-K8H" secondAttribute="trailingMargin" id="dXi-Cr-CPq"/>
+                                                <constraint firstItem="vtK-bl-Ofb" firstAttribute="leading" secondItem="fg7-m4-K8H" secondAttribute="leadingMargin" id="gKy-7w-aTq"/>
                                                 <constraint firstItem="7QO-wk-Lej" firstAttribute="trailing" secondItem="fg7-m4-K8H" secondAttribute="trailingMargin" id="gbJ-Hx-Rk9"/>
-                                                <constraint firstItem="O9u-BE-jHF" firstAttribute="leading" secondItem="fg7-m4-K8H" secondAttribute="leading" id="hzY-2E-2PG"/>
-                                                <constraint firstAttribute="bottom" secondItem="O9u-BE-jHF" secondAttribute="bottom" id="qro-9a-QjO"/>
+                                                <constraint firstItem="vtK-bl-Ofb" firstAttribute="top" secondItem="7QO-wk-Lej" secondAttribute="bottom" constant="8" id="y8I-AY-TzS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="70" id="pwm-bg-HuY">
-                                        <rect key="frame" x="0.0" y="472" width="320" height="70"/>
+                                        <rect key="frame" x="0.0" y="482" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pwm-bg-HuY" id="9JF-wM-eVb">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
@@ -2329,7 +2373,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ac-xg-i27" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
                                                     <rect key="frame" x="100" y="17.5" width="120" height="35"/>
-                                                    <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" red="0.52113908433630385" green="0.61101948747384416" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="BJN-Mm-RBV"/>
                                                         <constraint firstAttribute="height" constant="35" id="TBm-lB-cYZ"/>
@@ -2365,7 +2409,7 @@
                     <navigationItem key="navigationItem" title="اطلاعات کاربری" id="j7Z-Gf-8aT"/>
                     <connections>
                         <outlet property="addressTextField" destination="Drt-Zq-uRV" id="d1q-Oa-JgG"/>
-                        <outlet property="datePicker" destination="O9u-BE-jHF" id="ZCa-wf-5GJ"/>
+                        <outlet property="datePicker" destination="3Pu-XU-UI1" id="kv3-wK-Y1C"/>
                         <outlet property="nameTextField" destination="IxW-VZ-SRo" id="WtN-2s-c8h"/>
                         <outlet property="postalCodeTextField" destination="EVg-38-cgT" id="o8X-vb-fIF"/>
                         <outlet property="profileImage" destination="z5t-Fq-e7v" id="3BM-co-PCA"/>
@@ -2391,14 +2435,14 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="افزایش اعتبار" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFm-gI-yc5">
-                                <rect key="frame" x="118.5" y="89" width="84.5" height="18"/>
+                                <rect key="frame" x="118" y="89" width="84.5" height="18"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="18"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAa-Sd-YSC" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
                                 <rect key="frame" x="60" y="153" width="200" height="35"/>
-                                <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.5211390843" green="0.61101948750000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="JpI-MH-j57"/>
                                     <constraint firstAttribute="height" constant="35" id="uGu-EO-35D"/>
@@ -2520,7 +2564,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXT-na-Djh" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
                                 <rect key="frame" x="100" y="521" width="120" height="35"/>
-                                <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.5211390843" green="0.61101948750000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="dkx-7k-SaN"/>
                                     <constraint firstAttribute="width" constant="120" id="lWi-yA-RZs"/>
@@ -2719,13 +2763,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ارتباط با اینترنت قطع میباشد !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsG-fO-Ih1">
-                                <rect key="frame" x="20" y="157" width="280" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="ارتباط با اینترنت قطع میباشد !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsG-fO-Ih1">
+                                <rect key="frame" x="20" y="157" width="280" height="32"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="لطفا ارتباط خود را با اینترنت بررسی کنید و مجددا تلاش کنید." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyO-Oj-PhD">
-                                <rect key="frame" x="16" y="197" width="288" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لطفا ارتباط خود را با اینترنت بررسی کنید و مجددا تلاش کنید." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyO-Oj-PhD">
+                                <rect key="frame" x="16" y="203" width="288" height="36"/>
                                 <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="18"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -2739,7 +2783,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lle-OJ-2Ha" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
                                 <rect key="frame" x="100" y="247" width="120" height="35"/>
-                                <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.5211390843" green="0.61101948750000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="Hiw-OL-kLo"/>
                                     <constraint firstAttribute="height" constant="35" id="whP-CS-Bx9"/>

@@ -19,14 +19,15 @@ class OrderService {
         let uid = UserDataService.instance.uid
         let ssid = UserDataService.instance.ssid
         let url = ORDER_LIST_URL + "&uid=\(uid)&ssid=\(ssid)"
+        Orderlists.removeAll()
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: DEFAULT_HEADER).responseJSON { (response) in
             if response.result.error == nil {
-                guard  let data = response.data else { completion(false); return}
-                guard let json = try? JSON.init(data: data) else { completion(false); return}
+                guard  let data = response.data else { completion(false); return }
+                guard let json = try? JSON.init(data: data) else { completion(false); return }
                 let _ = json["type"].stringValue
                 guard let items = json["data"].array else { completion(false); return }
                 let disPathGroup = DispatchGroup()
-                for item in items {
+                for (index,item) in items.enumerated() {
                     let cart = item["cart"].stringValue
                     let send_time = item["send-time"].stringValue
                     let send_day = item["send-day"].intValue
@@ -44,13 +45,16 @@ class OrderService {
                     let date = item["date"].stringValue
                     let time = item["time"].stringValue
                     let status = item["status"].stringValue
+                    let order = Order(orderName: "", cart: cart, send_time: send_time, send_day: send_day, copon: copon, price: price, pay_method: pay_method, pay_id: pay_id, uid: uid, address: address, formatted_address: formatted_address, lat: lat, lng: lng, comment: comment, upm: upm, date: date, time: time, status: status)
+                    self.Orderlists.append(order)
                     disPathGroup.enter()
-                    self.orderListName(cart: cart, completion: { (success, orderName) in
+                    let i = self.Orderlists[index]
+                    self.orderListName(cart: i.cart, completion: { (success, orderName) in
                         if success {
-                            let order = Order(orderName: orderName!, cart: cart, send_time: send_time, send_day: send_day, copon: copon, price: price, pay_method: pay_method, pay_id: pay_id, uid: uid, address: address, formatted_address: formatted_address, lat: lat, lng: lng, comment: comment, upm: upm, date: date, time: time, status: status)
-                            self.Orderlists.append(order)
+                            self.Orderlists[index].orderName = orderName!
                             disPathGroup.leave()
                         } else {
+                            self.Orderlists[index].orderName = "سفارش بدون نام"
                             disPathGroup.leave()
                         }
                     })
@@ -67,7 +71,7 @@ class OrderService {
     func orderListName(cart: String, completion: @escaping (_ success: Bool, _ orderName: String?) -> Void) {
         let uid = UserDataService.instance.uid
         let ssid = UserDataService.instance.ssid
-        guard let url = URL.init(string: ORDER_LIST_URL + "&uid=\(uid)&ssid\(ssid)") else {return}
+        guard let url = URL.init(string: ORDER_LIST_URL + "&uid=\(uid)&ssid\(ssid)") else { return }
         let parameters:FORMDATA_PARAMETER = ["cart":"\(cart)"]
         var request = URLRequest.init(url: url)
         request.httpMethod = "POST"
@@ -86,8 +90,8 @@ class OrderService {
                 guard let json = jsonAny as? [String: Any] else { completion(false,nil) ; return }
                 guard let type = json["type"] as? String else { completion(false,nil) ; return }
                 guard let items = json["data"] as? [String] else { completion(false,nil) ; return }
-                let massage = items.joined(separator: "| ")
-                if type == "sucess" {
+                let massage = items.joined(separator: " | ")
+                if type == "success" {
                     completion(true,massage)
                 } else {
                     completion(false,nil)
@@ -100,7 +104,7 @@ class OrderService {
         task.resume()
     }
 
-    func CoponCheck(copon:String, completion: @escaping COMPLETION_SUCCESS) {
+    func CoponCheck(copon: String, completion: @escaping COMPLETION_SUCCESS) {
         let uid = UserDataService.instance.uid
         let ssid = UserDataService.instance.ssid
         guard let url = URL.init(string: COPON_CHECK_URL + "&uid=\(uid)&ssid=\(ssid)") else { return }
@@ -119,8 +123,8 @@ class OrderService {
             }
             if let data = data {
                 guard let jsonAny = try? JSONSerialization.jsonObject(with: data, options: []) else { completion(false) ; return }
-                guard let json = jsonAny as? [String:Any] else { completion(false) ; return }
-                guard let data = json["data"] as? [String:Any] else { completion(false) ; return }
+                guard let json = jsonAny as? [String: Any] else { completion(false) ; return }
+                guard let data = json["data"] as? [String: Any] else { completion(false) ; return }
                 let title = data["title"] as? String
                 let price = data["price"] as? String
                 let copon_id = data["copon-id"] as? Int

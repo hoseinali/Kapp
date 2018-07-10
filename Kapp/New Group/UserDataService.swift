@@ -81,6 +81,7 @@ class UserDataService {
         self.cash = 0
         self.mount = 0
         UserDefaults.standard.set(false, forKey: REGISTER_KEY)
+        UserDefaults.standard.set(Date(), forKey: BIRTHDAY_KEY)
         let image = UIImage(named: "profileDefault")!
         if let media = Media(withImage: image, forKey: "") {
             Media.encode(save: media, directory: Media.archiveURL) // save^

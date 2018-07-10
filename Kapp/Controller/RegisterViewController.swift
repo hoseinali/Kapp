@@ -28,6 +28,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         guard phoneNumberCondition(phoneNumber: phoneNumber)  else {
             return
         }
+        view.endEditing(true)
         startIndicatorAnimate()
         AuthenticationService.instance.registerGetCode(number: phoneNumber, refMobileNumber: refNumber) { (success) in
             if success {

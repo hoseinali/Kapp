@@ -12,10 +12,14 @@ class TimeViewController: UIViewController, DateTimePickerDelegate {
     
     // Outlet
     @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var dateButton: UIButton!
+    @IBOutlet weak var timeButton: UIButton!
 
     var datePicker: DateTimePicker?
     var timePicker: DateTimePicker?
-    var isTime: Bool = false
+    
+    var orderDate: String?
+    var orderTime: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,20 +27,26 @@ class TimeViewController: UIViewController, DateTimePickerDelegate {
     }
     
     @IBAction func agreeButtonPressed(_ sender: RoundedButton) {
+        guard let _ = orderTime, let _ = orderDate else {
+            let message = "هر دو مورد روز سفارش و زمان سفارش را انتخاب کنید !"
+            self.presentWarningAlert(message: message)
+            return
+        }
+        UserOrderService.instance.orderTime = orderTime
+        UserOrderService.instance.orderDate = orderDate
         performSegue(withIdentifier: REGISTER_ORDER_SEGUE, sender: sender)
     }
     
     // Action
     @IBAction func showDatePicker(sender: AnyObject) {
-        isTime = false
         let min = Date()
         let max = Date().addingTimeInterval(60 * 60 * 24 * 7)
         let datePicker = DateTimePicker.show(selected: Date(), minimumDate: min, maximumDate: max)
         datePicker.timeInterval = DateTimePicker.MinuteInterval.thirty
-        datePicker.highlightColor = UIColor(red: 255.0/255.0, green: 138.0/255.0, blue: 138.0/255.0, alpha: 1)
+        datePicker.highlightColor = #colorLiteral(red: 0.4979554415, green: 0.6144852042, blue: 0.812397182, alpha: 1)
         datePicker.darkColor = UIColor.darkGray
         datePicker.doneButtonTitle = "ثبت تاریخ"
-        datePicker.doneBackgroundColor = UIColor(red: 255.0/255.0, green: 138.0/255.0, blue: 138.0/255.0, alpha: 1)
+        datePicker.doneBackgroundColor = #colorLiteral(red: 0.4979554415, green: 0.6144852042, blue: 0.812397182, alpha: 1)
         datePicker.locale = Locale(identifier: "en")
         datePicker.calendar = Calendar.init(identifier: .persian)
         datePicker.todayButtonTitle = "امروز"
@@ -50,22 +60,24 @@ class TimeViewController: UIViewController, DateTimePickerDelegate {
             formatter.calendar = Calendar.init(identifier: .persian)
             formatter.locale = Locale(identifier: "en")
             formatter.dateFormat = "YYYY/MM/dd"
+            let dayDate = formatter.string(from: date)
+            self.orderDate = dayDate
+            self.dateButton.setTitle("روز سفارش : \(dayDate)", for: .normal)
         }
-        datePicker.delegate = self
         self.datePicker = datePicker
+        self.datePicker!.delegate = self
     }
     
     @IBAction func showTimePicker(sender: AnyObject) {
-        isTime = true
         let min = Date()
         let calendar = Calendar.current
         let max = calendar.date(byAdding: .minute, value: 60, to: min)
         let timePicker = DateTimePicker.show(selected: Date(), minimumDate: min, maximumDate: max)
         timePicker.timeInterval = DateTimePicker.MinuteInterval.thirty
-        timePicker.highlightColor = UIColor(red: 255.0/255.0, green: 138.0/255.0, blue: 138.0/255.0, alpha: 1)
+        timePicker.highlightColor = #colorLiteral(red: 0.4979554415, green: 0.6144852042, blue: 0.812397182, alpha: 1)
         timePicker.darkColor = UIColor.darkGray
         timePicker.doneButtonTitle = "ثبت تاریخ"
-        timePicker.doneBackgroundColor = UIColor(red: 255.0/255.0, green: 138.0/255.0, blue: 138.0/255.0, alpha: 1)
+        timePicker.doneBackgroundColor = #colorLiteral(red: 0.4979554415, green: 0.6144852042, blue: 0.812397182, alpha: 1)
         timePicker.locale = Locale(identifier: "en")
         timePicker.calendar = Calendar.init(identifier: .persian)
         timePicker.todayButtonTitle = "امروز"
@@ -78,20 +90,20 @@ class TimeViewController: UIViewController, DateTimePickerDelegate {
             let formatter = DateFormatter()
             formatter.calendar = Calendar.init(identifier: .persian)
             formatter.locale = Locale(identifier: "en")
-            formatter.dateFormat = "YYYY/MM/dd"
+            formatter.dateFormat = "hh:mm"
+            let timeDate = formatter.string(from: date)
+            self.orderTime = timeDate
+            self.timeButton.setTitle("ساعت سفارش : \(timeDate)", for: .normal)
+            print(formatter.string(from: date))
         }
-        timePicker.delegate = self
         self.timePicker = timePicker
+        self.timePicker!.delegate = self
     }
+    
     
     // Method
     func dateTimePicker(_ picker: DateTimePicker, didSelectDate: Date) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en")
-        dateFormatter.calendar = Calendar.init(identifier: .persian)
-        dateFormatter.dateFormat = "dd/MM/YYYY"
-        let _ = dateFormatter.string(from: didSelectDate)
-        print(picker.selectedDateString)
+        //
     }
     
     func updateUI() {
@@ -105,8 +117,9 @@ class TimeViewController: UIViewController, DateTimePickerDelegate {
         let backButton = UIBarButtonItem(title: "بازگشت", style: UIBarButtonItemStyle.plain, target: self, action: nil)
         backButton.setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: YEKAN_WEB_FONT, size: 16)!], for: .normal)
         navigationItem.backBarButtonItem = backButton
-        self.navigationItem.title = "انتخاب زمان"
+        self.navigationItem.title = "انتخاب زمان"        
     }
+    
     
     
 }

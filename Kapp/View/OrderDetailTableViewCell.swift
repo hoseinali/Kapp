@@ -34,12 +34,12 @@ class OrderDetailTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(date:String, time:String, orderName:String, nameCopon:Int, pay_id:Int, mount:Int, payMetod:Int, sendTime:String, status:String) {
+    func configureCell(date: String, time: String, orderName: String, nameCopon: Int, pay_id: Int, mount: Int, payMetod: Int, sendTime: String, status: String) {
         dateLabel.text = date
         timeLabel.text = time
         orderNameLabel.text = orderName
         nameCoponLabel.text = String(nameCopon)
-        mountLabel.text = String(mount)
+        mountLabel.text = mount.seperateByCama
         payIdLabel.text = String(pay_id)
         sendTimeLabel.text = sendTime
         switch payMetod {

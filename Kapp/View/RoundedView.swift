@@ -17,12 +17,26 @@ class RoundedView: UIView {
         }
     }
     
+    @IBInspectable var borderWidth: CGFloat = 0.0 {
+        didSet {
+            self.layer.borderWidth = borderWidth
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) {
+        didSet {
+            self.layer.borderColor = borderColor.cgColor
+        }
+    }
+    
     override func awakeFromNib() {
         self.setupView()
     }
     
     func setupView() {
         self.layer.cornerRadius = cornerRadius
+        self.layer.borderWidth = borderWidth
+        self.layer.borderColor = borderColor.cgColor
     }
     
     override func prepareForInterfaceBuilder() {

@@ -25,6 +25,7 @@
 		D83FBE4D20E599BD005FA553 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83FBE4920E599BC005FA553 /* DateCollectionViewCell.swift */; };
 		D83FBE4E20E599BD005FA553 /* FullDateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83FBE4A20E599BD005FA553 /* FullDateCollectionViewCell.swift */; };
 		D83FBE5020E599E3005FA553 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83FBE4F20E599E3005FA553 /* TimeViewController.swift */; };
+		D85C71BB20F5535D00B51A7A /* HashableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85C71BA20F5535D00B51A7A /* HashableExtension.swift */; };
 		D864364B20E05760003CFB4F /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864364A20E05760003CFB4F /* RoundedView.swift */; };
 		D864364D20E058B3003CFB4F /* CarChosenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864364C20E058B3003CFB4F /* CarChosenViewController.swift */; };
 		D878202920DEC61F0076416B /* UIImageExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878202820DEC61F0076416B /* UIImageExtention.swift */; };
@@ -94,6 +95,7 @@
 		D83FBE4920E599BC005FA553 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 		D83FBE4A20E599BD005FA553 /* FullDateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullDateCollectionViewCell.swift; sourceTree = "<group>"; };
 		D83FBE4F20E599E3005FA553 /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
+		D85C71BA20F5535D00B51A7A /* HashableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashableExtension.swift; sourceTree = "<group>"; };
 		D864364A20E05760003CFB4F /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		D864364C20E058B3003CFB4F /* CarChosenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarChosenViewController.swift; sourceTree = "<group>"; };
 		D878202820DEC61F0076416B /* UIImageExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtention.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				D8C9EBE120E3CB4E00750AEC /* UIViewControllerExtension.swift */,
 				D8F020AF20ED628A00F4BD0D /* DataExtension.swift */,
 				D8F020BF20F16D4900F4BD0D /* DateExtention.swift */,
+				D85C71BA20F5535D00B51A7A /* HashableExtension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				D8F020BB20F142BA00F4BD0D /* OrderService.swift */,
 				D8C9EBE420E3CFB600750AEC /* WebService.swift */,
 				D8F4275620F403F800573E88 /* UserOrderService.swift */,
+				16DD4B5420F3F7CE009D6347 /* SettingService.swift */,
 			);
 			name = Services;
 			path = "New Group";
@@ -502,6 +506,7 @@
 				D83941C520E25410008E09C9 /* SpendTableViewCell.swift in Sources */,
 				D8C9EBF320E438D800750AEC /* CarServiceViewController.swift in Sources */,
 				D8F020B720ED633500F4BD0D /* PersonalInfonrmationService.swift in Sources */,
+				D85C71BB20F5535D00B51A7A /* HashableExtension.swift in Sources */,
 				D864364D20E058B3003CFB4F /* CarChosenViewController.swift in Sources */,
 				D83FBE4B20E599BD005FA553 /* StepCollectionViewFlowLayout.swift in Sources */,
 				D8FC47E120E2E3BB0078CC8C /* OrderDetailViewController.swift in Sources */,
