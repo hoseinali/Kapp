@@ -32,7 +32,36 @@ class RegisterOrderViewController: UIViewController {
     // Action
     @IBAction func coponCheckButtonPressed(_ sender: RoundedButton) {
         view.endEditing(true)
-        //
+        guard let copon = coponTextField.text else { return }
+        guard !copon.isEmpty else {
+            let message = "لطفا کوپن را وارد کنید !"
+            presentWarningAlert(message: message)
+            return
+        }
+        startIndicatorAnimate()
+        OrderService.instance.CoponCheck(copon: copon) { (success) in
+            if success {
+                guard let copon = OrderService.instance.copon else { return }
+                let coponPrice = copon.price!
+                let coponId = copon.id!
+                UserOrderService.instance.coponPrice = coponPrice
+                UserOrderService.instance.coponPrice = coponPrice
+                UserOrderService.instance.coponId = coponId
+                self.stopIndicatorAnimate()
+                DispatchQueue.main.async {
+                    self.coponTextField.text = "مبلغ \(coponPrice.seperateByCama) کوپن ثبت شد"
+                    let message = "کوپن شما به مبلغ \(coponPrice.seperateByCama) ریـال با موفقیت ثبت شد !"
+                    self.presentWarningAlert(message: message)
+                }
+            } else {
+                self.stopIndicatorAnimate()
+                DispatchQueue.main.async {
+                    self.coponTextField.text = ""
+                    let message = "کوپن وارد شده صحیح نمیباشد !"
+                    self.presentWarningAlert(message: message)
+                }
+            }
+        }
     }
     
     @IBAction func creditPaymentButtonPressed(_ sender: RoundedButton) {
@@ -80,6 +109,7 @@ class RegisterOrderViewController: UIViewController {
         backgroundImageView.addSubview(blurEffectView)
         self.navigationItem.title = "ثبت سفارش"
         updateOrderLabel()
+        print("ordertime: \(UserOrderService.instance.orderTime!)\norderDate: \(UserOrderService.instance.orderDate!)\n")
     }
     
     func updateOrderLabel() {

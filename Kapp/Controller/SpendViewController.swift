@@ -41,9 +41,11 @@ class SpendViewController: UIViewController, SideMenuControllerDelegate {
         startIndicatorAnimate()
         BagService.instance.payList { (success) in
             if success {
+                print("success fetch bag spend")
                 self.stopIndicatorAnimate()
                 self.tableView.reloadData()
             } else {
+                print("failed fetch bag spend")
                 self.stopIndicatorAnimate()
             }
         }

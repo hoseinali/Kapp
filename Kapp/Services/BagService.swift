@@ -26,11 +26,12 @@ class BagService {
             if response.result.error == nil {
                 guard let dataJson = response.data else { completion(false) ; return }
                 guard let json = try? JSON.init(data: dataJson) else { completion(false) ; return }
+                let type = json["type"].stringValue
                 let massage = json["massage"].stringValue
                 guard let data = json["data"].dictionary else { completion(false) ;return }
                 let total = data["total"]!.intValue
                 let pagecount = data["pagecount"]!.intValue
-                guard let items = json["result"].array else { completion(false) ; return }
+                guard let items = json["result"].array else { completion(false) ;return }
                 for item in items {
                     let id = item["id"].intValue
                     let mount = item["mount"].intValue
@@ -43,7 +44,11 @@ class BagService {
                     let bagResult = PayList(id: id, mount: mount, flag: flag, massage: massage, description: description, uid: uid,  date: date, time: time, status: status, total: total, pagecount: pagecount)
                     self.bagResults.append(bagResult)
                 }
-                completion(true)
+                if type == "success" {
+                    completion(true)
+                } else {
+                    completion(false)
+                }
             } else {
                 completion(false)
             }
@@ -59,6 +64,7 @@ class BagService {
             if response.result.error == nil {
                 guard let data = response.data else { completion(false) ; return }
                 guard let json = try? JSON.init(data: data) else { completion(false) ; return }
+                let type = json["type"].stringValue
                 guard let items = json["data"].array else { completion(false) ; return }
                 for item in items {
                     let id = item["id"].intValue
@@ -68,15 +74,19 @@ class BagService {
                     let bank_response = item["bank-response"].stringValue
                     let description = item["desc"].stringValue
                     let date = item["date"].stringValue
+                    print(date)
                     let time = item["time"].stringValue
                     let status = item["status"].stringValue
                     let bagSpend = BagSpend(id: id, uid: uid, mount: mount, bank_name: bank_name, bank_response: bank_response, description: description, date: date, time: time, status: status)
                     self.bagSpends.append(bagSpend)
                 }
-                completion(true)
-            } else {
-                completion(false)
+                if type == "success" {
+                    completion(true)
+                } else {
+                    completion(false)
+                }
             }
+            completion(false)
         }
     }
     
@@ -101,8 +111,9 @@ class BagService {
         let uid = UserDataService.instance.uid
         let ssid = UserDataService.instance.ssid
         let mount = UserDataService.instance.mount
-        guard let url = URL.init(string: BANK_CASH_URL + "&uid=\(uid)&ssid=\(ssid)") else { completion(false) ; return }
+        guard let url = URL.init(string: BANK_CASH_URL + "&uid=\(uid)&ssid=\(ssid)&mount=\(mount)") else { completion(false) ; return }
         DispatchQueue.main.async {
+            print(url.path)
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }

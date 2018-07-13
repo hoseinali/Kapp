@@ -18,4 +18,26 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+    func hourNow() -> Int {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        let dateAsString = dateFormatter.string(from: self)
+        let date = dateFormatter.date(from: dateAsString)!
+        dateFormatter.dateFormat = "HH"
+        let Date24 = dateFormatter.string(from: date)
+        
+        return Int(dateFormatter.string(from: date))!
+    }
+    
+    func minuteInHourNow() -> Int {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        let dateAsString = dateFormatter.string(from: self)
+        let date = dateFormatter.date(from: dateAsString)!
+        dateFormatter.dateFormat = "mm"
+        let minute = dateFormatter.string(from: date)
+        
+        return Int(dateFormatter.string(from: date))!
+    }
+    
 }

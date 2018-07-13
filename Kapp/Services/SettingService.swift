@@ -69,52 +69,29 @@ class SettingService {
         return true
     }
     
-    var todayOpenTime: [Int] {
-        var times = [Int]()
+    var todayOpenTime: [String] {
+        var times = [String]()
         let amStart = Int(setting.AM_START)!
         let amStop = Int(setting.AM_STOP)!
         let pmStart = Int(setting.PM_START)!
         let pmStop = Int(setting.PM_STOP)!
-        for number in amStart..<amStop {
-            times.append(number)
-        }
-        for number in pmStart..<pmStop {
-            times.append(number)
-        }
-
-        var openTime = [Int]()
-        let hour = Date().hourNow()
-        let minute = Date().minuteInHourNow()
-        for time in times {
-            let intTime = time
-            if intTime >= hour {
-                openTime.append(intTime)
-            }
-        }
-        for (index,time) in openTime.enumerated() {
-            if time == hour {
-                if minute >= 30 {
-                    print("time is \(time) index \(index)")
-                    openTime.remove(at: index)
-                }
-            }
-        }
         
-        return [Int]()
+        return [String]()
     }
     
-    var weekOpenTime: [Int] {
-        var times = [Int]()
+    var weekOpenTime: [String] {
+        var times = [String]()
         let amStart = Int(setting.AM_START)!
         let amStop = Int(setting.AM_STOP)!
         let pmStart = Int(setting.PM_START)!
         let pmStop = Int(setting.PM_STOP)!
         for number in amStart..<amStop {
-            times.append(number)
+            times.append("\(number)")
         }
         for number in pmStart..<pmStop {
-            times.append(number)
+            times.append("\(number)")
         }
+        print("open week times is \(times.joined(separator: " | "))")
         
         return times
     }

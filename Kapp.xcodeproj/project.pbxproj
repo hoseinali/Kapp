@@ -16,6 +16,7 @@
 		16DD4B5520F3F7CE009D6347 /* SettingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DD4B5420F3F7CE009D6347 /* SettingService.swift */; };
 		16DD4B5720F40417009D6347 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DD4B5620F40417009D6347 /* Setting.swift */; };
 		1E7D07A58ED0250A180D7216 /* Pods_Kapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72A410325F023A3B0079A37 /* Pods_Kapp.framework */; };
+		D82A41F920F9378900795096 /* Copon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82A41F820F9378900795096 /* Copon.swift */; };
 		D83941C520E25410008E09C9 /* SpendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83941C420E25410008E09C9 /* SpendTableViewCell.swift */; };
 		D83941C720E25621008E09C9 /* BagResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83941C620E25621008E09C9 /* BagResultTableViewCell.swift */; };
 		D83FBE4220E4EA65005FA553 /* CarServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83FBE4120E4EA65005FA553 /* CarServiceCollectionViewCell.swift */; };
@@ -86,6 +87,7 @@
 		16DD4B5620F40417009D6347 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		53B3787B40C9483E4D27BA70 /* Pods-Kapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kapp/Pods-Kapp.release.xcconfig"; sourceTree = "<group>"; };
 		B887804619821CAF2C227FFA /* Pods-Kapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kapp/Pods-Kapp.debug.xcconfig"; sourceTree = "<group>"; };
+		D82A41F820F9378900795096 /* Copon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copon.swift; sourceTree = "<group>"; };
 		D83941C420E25410008E09C9 /* SpendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendTableViewCell.swift; sourceTree = "<group>"; };
 		D83941C620E25621008E09C9 /* BagResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagResultTableViewCell.swift; sourceTree = "<group>"; };
 		D83FBE4120E4EA65005FA553 /* CarServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarServiceCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				D8F020AD20ED627700F4BD0D /* PayList.swift */,
 				D8F020BD20F1431400F4BD0D /* Order.swift */,
 				16DD4B5620F40417009D6347 /* Setting.swift */,
+				D82A41F820F9378900795096 /* Copon.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				D8F020B320ED62BB00F4BD0D /* AuthenticationService.swift in Sources */,
 				D83FBE4C20E599BD005FA553 /* DateTimePicker.swift in Sources */,
 				D83FBE5020E599E3005FA553 /* TimeViewController.swift in Sources */,
+				D82A41F920F9378900795096 /* Copon.swift in Sources */,
 				D8F020AE20ED627700F4BD0D /* PayList.swift in Sources */,
 				D878203620DEF4F50076416B /* RegisterViewController.swift in Sources */,
 				D878202920DEC61F0076416B /* UIImageExtention.swift in Sources */,

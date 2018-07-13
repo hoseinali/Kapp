@@ -21,7 +21,7 @@ class CreditViewController: UIViewController, SideMenuControllerDelegate {
     @IBAction func agreeButtonPressed(_ sender: RoundedButton) {
         let ssid = UserDataService.instance.ssid
         let uid = UserDataService.instance.uid
-        let url = URL.init(string: "&uid=\(uid)&ssid=\(ssid)")
+        let url = URL.init(string: PAY_URL + "&uid=\(uid)&ssid=\(ssid)")
         if let url = url {
             DispatchQueue.main.async {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)

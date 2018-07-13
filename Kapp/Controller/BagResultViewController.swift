@@ -42,9 +42,11 @@ class BagResultViewController: UIViewController, SideMenuControllerDelegate {
         startIndicatorAnimate()
         BagService.instance.bagResult { (success) in
             if success {
+                print("success fetch bag result")
                 self.stopIndicatorAnimate()
                 self.tableView.reloadData()
             } else {
+                print("failed fetch bag result")
                 self.stopIndicatorAnimate()
             }
         }

@@ -14,7 +14,6 @@ class OrderService {
     
     static let instance = OrderService()
     var Orderlists = [Order]()
-    var copon: Copon?
     
     func Orderlist (completion: @escaping COMPLETION_SUCCESS) {
         let uid = UserDataService.instance.uid
@@ -129,7 +128,6 @@ class OrderService {
                 let title = data["title"] as? String
                 let price = data["price"] as? String
                 let copon_id = data["copon-id"] as? Int
-                self.copon = Copon(title: title, price: price, id: copon_id)
                 completion(true)
             } else {
                 completion(false)
