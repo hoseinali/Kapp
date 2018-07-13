@@ -16,6 +16,10 @@ class OrderService {
     var Orderlists = [Order]()
     var copon: Copon?
     
+    func registerOrder(orderType: OrderType, completion: @escaping COMPLETION_SUCCESS) {
+        
+    }
+    
     func Orderlist (completion: @escaping COMPLETION_SUCCESS) {
         let uid = UserDataService.instance.uid
         let ssid = UserDataService.instance.ssid

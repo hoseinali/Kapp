@@ -30,3 +30,7 @@ struct Order {
     let status: String
     
 }
+
+enum OrderType {
+    case byCredit, byBank, cashOnDelivery
+}
