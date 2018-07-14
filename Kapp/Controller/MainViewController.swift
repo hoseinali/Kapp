@@ -10,8 +10,9 @@ import UIKit
 import SideMenuController
 import GoogleMaps
 import CDAlertView
+import GooglePlaces
 
-class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocationManagerDelegate {
+class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocationManagerDelegate, GMSAutocompleteViewControllerDelegate {
     
     // Outlet
     @IBOutlet weak var addressView: RoundedView!
@@ -21,7 +22,7 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
 
     let slideDownTransition = SlideDownTransitionAnimator()
     var locationManager = CLLocationManager()
-    var userCurrentLocation = CLLocationCoordinate2D()
+    var centerMapCoordinate = CLLocationCoordinate2D()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +30,8 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let geoLong = userCurrentLocation.longitude
-        let geoLat = userCurrentLocation.latitude
+        let geoLong = centerMapCoordinate.longitude
+        let geoLat = centerMapCoordinate.latitude
         print("location in did appear is: \(geoLat),\(geoLong)")
     }
     
@@ -63,10 +64,19 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
             return
         }
         UserOrderService.instance.address = address
-        let userLocation: (lat: String, long: String) = (lat: "\(self.userCurrentLocation.latitude)",long: "\(self.userCurrentLocation.longitude)")
+        let userLocation: (lat: String, long: String) = (lat: "\(self.centerMapCoordinate.latitude)",long: "\(self.centerMapCoordinate.longitude)")
         UserOrderService.instance.userLocation = userLocation
         presentAlert()
     }
+    
+    @IBAction func serachGoogleMap(_ sender: Any) {
+        let autoComplete = GMSAutocompleteViewController()
+        let searchBarTextAttributes: [String : AnyObject] = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.darkGray, NSAttributedStringKey.font.rawValue: UIFont(name: YEKAN_WEB_FONT, size: 18)!]
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = searchBarTextAttributes
+        autoComplete.delegate = self
+        self.present(autoComplete, animated: true, completion: nil)
+    }
+    
     
     @IBAction func unwindToMainViewController(_ segue: UIStoryboardSegue) {
         //
@@ -93,7 +103,7 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
             self.startIndicatorAnimate()
             self.stopIndicatorAnimate()
             self.performSegue(withIdentifier: CAR_CHOSEN_SEGUE, sender: nil)
-            let userLocation: (lat: String, long: String) = (lat: "\(self.userCurrentLocation.latitude)",long: "\(self.userCurrentLocation.longitude)")
+            let userLocation: (lat: String, long: String) = (lat: "\(self.centerMapCoordinate.latitude)",long: "\(self.centerMapCoordinate.longitude)")
             UserOrderService.instance.userLocation = userLocation
             return true
         }
@@ -114,8 +124,8 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
         mapView.delegate = self
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
-        let geoLong = userCurrentLocation.longitude
-        let geoLat = userCurrentLocation.latitude
+        let geoLong = centerMapCoordinate.longitude
+        let geoLat = centerMapCoordinate.latitude
         print("location in view load is \(geoLat),\(geoLong)")
     }
     
@@ -126,28 +136,16 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
         let geoLat = userLocation.coordinate.latitude
         let camera = GMSCameraPosition.camera(withLatitude: geoLat, longitude: geoLong, zoom: 15)
         mapView.camera = camera
-        showMarker(position: camera.target)
         locationManager.stopUpdatingLocation()
-        print("First response position is \(geoLat),\(geoLong)")
     }
     
     func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
         mapView.clear()
-        showMarker(position: userCurrentLocation)
-        let geoLong = userCurrentLocation.longitude
-        let geoLat = userCurrentLocation.latitude
+        let geoLong = centerMapCoordinate.longitude
+        let geoLat = centerMapCoordinate.latitude
         print("Tap position is \(geoLat),\(geoLong)")
         
         return false
-    }
-    
-    func showMarker(position: CLLocationCoordinate2D) {
-        let marker = GMSMarker()
-        userCurrentLocation = position
-        marker.position = position
-        marker.isDraggable = true
-        marker.map = mapView
-        marker.icon = UIImage(named: "marker")?.resizeImage(newWidth: 60.0)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -157,6 +155,22 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
         }
     }
     
+    //GMSAutocomplete
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        let camera = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: 15)
+        self.mapView.camera = camera
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        print("###########     \(error)     ############")
+    }
+    
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     
 }
 
@@ -164,7 +178,10 @@ extension MainViewController: GMSMapViewDelegate {
     
     // MARK - GMSMarker Dragging
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-        // print("position Changed.")
+        let latitude = mapView.camera.target.latitude
+        let longitude = mapView.camera.target.longitude
+        centerMapCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        
     }
     
     func mapView(_ mapView: GMSMapView, didBeginDragging marker: GMSMarker) {
@@ -185,6 +202,7 @@ extension MainViewController: GMSMapViewDelegate {
         addressTextField.resignFirstResponder()
     }
     
+  
     
 }
 
