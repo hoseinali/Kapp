@@ -21,8 +21,6 @@ class OrderDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var sendTimeLabel: UILabel!
     @IBOutlet weak var StatusOrderLable: UILabel!
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
