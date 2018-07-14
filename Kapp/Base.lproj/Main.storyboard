@@ -1134,25 +1134,6 @@
                                             <action selector="creditPaymentButtonPressed:" destination="iwK-8Y-HbT" eventType="touchUpInside" id="6VJ-gO-L4w"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wl4-T4-Khy" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="339" width="270" height="35"/>
-                                        <color key="backgroundColor" red="0.5211390843" green="0.61101948750000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="zzy-XP-InM"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="WeblogmaYekan" family="WeblogmaYekan" pointSize="17"/>
-                                        <state key="normal" title="پرداخت درگاه بانکی">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="bankPaymentButtonPressed:" destination="iwK-8Y-HbT" eventType="touchUpInside" id="U82-fd-zLS"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiY-pn-6HN" customClass="RoundedButton" customModule="Kapp" customModuleProvider="target">
                                         <rect key="frame" x="10" y="300" width="270" height="35"/>
                                         <color key="backgroundColor" red="0.5211390843" green="0.61101948750000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1175,7 +1156,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="wl4-T4-Khy" firstAttribute="leading" secondItem="AiY-pn-6HN" secondAttribute="leading" id="01J-D2-mqK"/>
                                     <constraint firstItem="OIm-MD-Hzv" firstAttribute="leading" secondItem="MUf-UY-4bR" secondAttribute="leading" constant="10" id="3Vs-3w-AHu"/>
                                     <constraint firstItem="CjE-i8-6r1" firstAttribute="leading" secondItem="6Yd-8r-r7J" secondAttribute="trailing" constant="8" id="6Tl-L4-9Vd"/>
                                     <constraint firstItem="MIN-f2-omv" firstAttribute="centerY" secondItem="gd1-Zg-qLb" secondAttribute="centerY" id="9Zq-Ao-gvp"/>
@@ -1203,8 +1183,6 @@
                                     <constraint firstAttribute="trailing" secondItem="loR-sR-hbA" secondAttribute="trailing" constant="10" id="dUs-x7-MpB"/>
                                     <constraint firstItem="gd1-Zg-qLb" firstAttribute="top" secondItem="zP9-gx-Mrn" secondAttribute="bottom" constant="8" id="dVr-KG-9fP"/>
                                     <constraint firstItem="hw6-sN-IBw" firstAttribute="top" secondItem="loR-sR-hbA" secondAttribute="bottom" constant="2" id="eKq-8f-3pk"/>
-                                    <constraint firstItem="wl4-T4-Khy" firstAttribute="top" secondItem="AiY-pn-6HN" secondAttribute="bottom" constant="4" id="eQY-La-hGm"/>
-                                    <constraint firstItem="wl4-T4-Khy" firstAttribute="trailing" secondItem="AiY-pn-6HN" secondAttribute="trailing" id="h0m-rf-DjS"/>
                                     <constraint firstItem="4W1-7O-qEV" firstAttribute="leading" secondItem="MUf-UY-4bR" secondAttribute="leading" constant="10" id="hEf-dU-0Kw"/>
                                     <constraint firstItem="FBT-HQ-D54" firstAttribute="centerY" secondItem="25M-2b-cbD" secondAttribute="centerY" id="hTQ-j0-AXl"/>
                                     <constraint firstItem="25M-2b-cbD" firstAttribute="top" secondItem="OIm-MD-Hzv" secondAttribute="bottom" constant="20" id="hwh-eh-NjL"/>

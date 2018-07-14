@@ -86,6 +86,7 @@ class RegisterOrderViewController: UIViewController {
         performSegue(withIdentifier: UNWIND_MAIN_SEGUE, sender: sender)
     }
     
+    /*
     @IBAction func bankPaymentButtonPressed(_ sender: RoundedButton) {
         view.endEditing(true)
         guard SettingService.instance.orderStatus else {
@@ -96,7 +97,8 @@ class RegisterOrderViewController: UIViewController {
         // if success clear userOrderService *
         performSegue(withIdentifier: UNWIND_MAIN_SEGUE, sender: sender)
     }
-    
+    */
+ 
     // Method
     func updateUI() {
         let touchTap = UITapGestureRecognizer(target: self, action: #selector(closeTouch))
