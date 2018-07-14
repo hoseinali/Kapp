@@ -57,11 +57,14 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
     // Action
     @IBAction func agreeButtonPressed(_ sender: RoundedButton) {
         addressTextField.resignFirstResponder()
-        guard let text = addressTextField.text, text != "" else {
+        guard let address = addressTextField.text, address != "" else {
             let message = "لطفا آدرس خود را وارد کنید !"
             self.presentWarningAlert(message: message)
             return
         }
+        UserOrderService.instance.address = address
+        let userLocation: (lat: String, long: String) = (lat: "\(self.userCurrentLocation.latitude)",long: "\(self.userCurrentLocation.longitude)")
+        UserOrderService.instance.userLocation = userLocation
         presentAlert()
     }
     

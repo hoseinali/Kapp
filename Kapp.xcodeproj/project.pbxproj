@@ -17,6 +17,10 @@
 		16DD4B5720F40417009D6347 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DD4B5620F40417009D6347 /* Setting.swift */; };
 		1E7D07A58ED0250A180D7216 /* Pods_Kapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72A410325F023A3B0079A37 /* Pods_Kapp.framework */; };
 		D82A41F920F9378900795096 /* Copon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82A41F820F9378900795096 /* Copon.swift */; };
+		D82A41FB20F94EBE00795096 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82A41FA20F94EBE00795096 /* ProductService.swift */; };
+		D82A41FD20F950FD00795096 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82A41FC20F950FD00795096 /* Category.swift */; };
+		D82A41FF20F951FF00795096 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82A41FE20F951FF00795096 /* Product.swift */; };
+		D82A420120F9557C00795096 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82A420020F9557C00795096 /* UIImageViewExtension.swift */; };
 		D83941C520E25410008E09C9 /* SpendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83941C420E25410008E09C9 /* SpendTableViewCell.swift */; };
 		D83941C720E25621008E09C9 /* BagResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83941C620E25621008E09C9 /* BagResultTableViewCell.swift */; };
 		D83FBE4220E4EA65005FA553 /* CarServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83FBE4120E4EA65005FA553 /* CarServiceCollectionViewCell.swift */; };
@@ -88,6 +92,10 @@
 		53B3787B40C9483E4D27BA70 /* Pods-Kapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kapp/Pods-Kapp.release.xcconfig"; sourceTree = "<group>"; };
 		B887804619821CAF2C227FFA /* Pods-Kapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kapp/Pods-Kapp.debug.xcconfig"; sourceTree = "<group>"; };
 		D82A41F820F9378900795096 /* Copon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copon.swift; sourceTree = "<group>"; };
+		D82A41FA20F94EBE00795096 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		D82A41FC20F950FD00795096 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		D82A41FE20F951FF00795096 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		D82A420020F9557C00795096 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		D83941C420E25410008E09C9 /* SpendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendTableViewCell.swift; sourceTree = "<group>"; };
 		D83941C620E25621008E09C9 /* BagResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagResultTableViewCell.swift; sourceTree = "<group>"; };
 		D83FBE4120E4EA65005FA553 /* CarServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarServiceCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -237,6 +245,7 @@
 				D8F020AF20ED628A00F4BD0D /* DataExtension.swift */,
 				D8F020BF20F16D4900F4BD0D /* DateExtention.swift */,
 				D85C71BA20F5535D00B51A7A /* HashableExtension.swift */,
+				D82A420020F9557C00795096 /* UIImageViewExtension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -320,6 +329,8 @@
 				D8F020BD20F1431400F4BD0D /* Order.swift */,
 				16DD4B5620F40417009D6347 /* Setting.swift */,
 				D82A41F820F9378900795096 /* Copon.swift */,
+				D82A41FC20F950FD00795096 /* Category.swift */,
+				D82A41FE20F951FF00795096 /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,6 +346,7 @@
 				D8C9EBE420E3CFB600750AEC /* WebService.swift */,
 				D8F4275620F403F800573E88 /* UserOrderService.swift */,
 				16DD4B5420F3F7CE009D6347 /* SettingService.swift */,
+				D82A41FA20F94EBE00795096 /* ProductService.swift */,
 			);
 			name = Services;
 			path = "New Group";
@@ -529,6 +541,7 @@
 				D878203120DEE7120076416B /* CallUsViewController.swift in Sources */,
 				D8F020AC20ED626500F4BD0D /* BagSpend.swift in Sources */,
 				D88EE4CF20DE91C600E04C16 /* SideTableViewController.swift in Sources */,
+				D82A41FB20F94EBE00795096 /* ProductService.swift in Sources */,
 				D8F020AA20ED625800F4BD0D /* Media.swift in Sources */,
 				D83941C720E25621008E09C9 /* BagResultTableViewCell.swift in Sources */,
 				D8C9EBE220E3CB4E00750AEC /* UIViewControllerExtension.swift in Sources */,
@@ -546,8 +559,10 @@
 				D878203A20DEF9A50076416B /* SlideDownTransitionAnimator.swift in Sources */,
 				D8C9EBEE20E42FC900750AEC /* ChosenServiceCollectionViewCell.swift in Sources */,
 				D8F020B020ED628A00F4BD0D /* DataExtension.swift in Sources */,
+				D82A41FD20F950FD00795096 /* Category.swift in Sources */,
 				D88EE4D320DEB66F00E04C16 /* RootViewController.swift in Sources */,
 				D8C9EBE520E3CFB600750AEC /* WebService.swift in Sources */,
+				D82A420120F9557C00795096 /* UIImageViewExtension.swift in Sources */,
 				16DD4B5720F40417009D6347 /* Setting.swift in Sources */,
 				D8F020B320ED62BB00F4BD0D /* AuthenticationService.swift in Sources */,
 				D83FBE4C20E599BD005FA553 /* DateTimePicker.swift in Sources */,
@@ -555,6 +570,7 @@
 				D82A41F920F9378900795096 /* Copon.swift in Sources */,
 				D8F020AE20ED627700F4BD0D /* PayList.swift in Sources */,
 				D878203620DEF4F50076416B /* RegisterViewController.swift in Sources */,
+				D82A41FF20F951FF00795096 /* Product.swift in Sources */,
 				D878202920DEC61F0076416B /* UIImageExtention.swift in Sources */,
 				D878202F20DEE54C0076416B /* CreditViewController.swift in Sources */,
 				D88EE4CB20DE908900E04C16 /* Constants.swift in Sources */,

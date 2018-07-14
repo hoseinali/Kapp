@@ -8,17 +8,38 @@
 
 import UIKit
 
+protocol CarServiceTableViewCellDelegate {
+    func deleteButtonpressed(cell: CarServiceTableViewCell)
+}
+
 class CarServiceTableViewCell: UITableViewCell {
+    
+    // Outlet
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var pricelLabel: UILabel!
+    @IBOutlet weak var removeButton: UIButton!
+    
+    var delegate: CarServiceTableViewCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
+    
+    // Action
+    @IBAction func deleteButtonPressed(_ sender: RoundedButton) {
+        delegate?.deleteButtonpressed(cell: self)
+        
+    }
+    
+    // Method
+    func configureCell(title: String, price: Int) {
+        productNameLabel.text = title
+        pricelLabel.text = String(price)
+    }
+    
 
 }

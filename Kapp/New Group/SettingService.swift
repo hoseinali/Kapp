@@ -81,7 +81,6 @@ class SettingService {
         for number in pmStart..<pmStop {
             times.append(number)
         }
-
         var openTime = [Int]()
         let hour = Date().hourNow()
         let minute = Date().minuteInHourNow()
@@ -100,7 +99,7 @@ class SettingService {
             }
         }
         
-        return [Int]()
+        return openTime
     }
     
     var weekOpenTime: [Int] {

@@ -18,6 +18,8 @@ class UserOrderService {
     public var coponPrice: String?
     public var coponId: Int?
     public var totalPrice: Int?
+    public var products: [Product]?
+    public var address: String?
     
     func clearUserOrder() {
         userLocation = nil
@@ -26,6 +28,8 @@ class UserOrderService {
         coponPrice = nil
         coponId = nil
         totalPrice = nil
+        products = nil
+        address = nil
     }
     
 

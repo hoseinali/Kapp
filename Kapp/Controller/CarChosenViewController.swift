@@ -62,7 +62,6 @@ extension CarChosenViewController: UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        
         return carChosens.count
     }
     
@@ -76,8 +75,20 @@ extension CarChosenViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selected = indexPath.row
-        performSegue(withIdentifier: CAR_SERVICE_SEGUE, sender: nil)
+        startIndicatorAnimate()
+        let selected = indexPath.row + 1
+        ProductService.instance.fetchCategory(type: selected) { (success) in
+            if success {
+                self.stopIndicatorAnimate()
+                self.performSegue(withIdentifier: CAR_SERVICE_SEGUE, sender: nil)
+            } else {
+                self.stopIndicatorAnimate()
+                DispatchQueue.main.async {
+                    let message = "دریافت اطلاعات با مشکل مواجه شده است‌! لطفا مجددا تلاش کنید."
+                    self.presentWarningAlert(message: message)
+                }
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

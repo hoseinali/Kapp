@@ -113,7 +113,9 @@ class RegisterOrderViewController: UIViewController {
     }
     
     func updateOrderLabel() {
-        self.timeLabel.text = UserOrderService.instance.orderTime
+        let orderTime = UserOrderService.instance.orderTime!
+        let timeText = "\(orderTime) الی \(Int(orderTime)! + 1)"
+        self.timeLabel.text = timeText
         self.dateLabel.text = UserOrderService.instance.orderDate
     }
     

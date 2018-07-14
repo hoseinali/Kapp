@@ -31,6 +31,8 @@ let COPON_CHECK_URL = "\(BASE_URL)api-order.php?do=coponcheck"
 let ORDER_CART_URL = "\(BASE_URL)api-users.php?do=ordercart"
 let CONTROLL_SERVICE_URL = "\(BASE_URL)api-users.php?do=partika"
 let PAY_URL = "http://samcarcare.ir/ic-app/api-pay.php?do=pay"
+let PRODUCT_URL = "\(BASE_URL)api-users.php?do=products"
+let IMAGE_URL = "\(BASE_URL)" // **
 
 // DEFAULT USERS
 let PHONE_KEY = "phone"
