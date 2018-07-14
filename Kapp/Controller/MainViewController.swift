@@ -90,13 +90,25 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
         alert.messageFont = UIFont(name: YEKAN_WEB_FONT, size: 13)!
         let done = CDAlertViewAction(title: "بله", font: UIFont(name: YEKAN_WEB_FONT, size: 12)!, textColor: UIColor.darkGray, backgroundColor: .white) { (action) -> Bool in
             self.startIndicatorAnimate()
-            self.stopIndicatorAnimate()
-            self.performSegue(withIdentifier: CAR_CHOSEN_SEGUE, sender: nil)
-            let userLocation: (lat: String, long: String) = (lat: "\(self.centerMapCoordinate.latitude)",long: "\(self.centerMapCoordinate.longitude)")
-            UserOrderService.instance.userLocation = userLocation
-            let address = self.addressTextField.text!
-            UserOrderService.instance.address = address
-            
+            let parameters = ["address": self.addressTextField.text!]
+            PersonalInfromationService.instance.updateUserInformation(withParameters: parameters, completion: { (success) in
+                if success {
+                    self.stopIndicatorAnimate()
+                    let userLocation: (lat: String, long: String) = (lat: "\(self.centerMapCoordinate.latitude)",long: "\(self.centerMapCoordinate.longitude)")
+                    UserOrderService.instance.userLocation = userLocation
+                    let address = self.addressTextField.text!
+                    UserOrderService.instance.address = address
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: CAR_CHOSEN_SEGUE, sender: nil)
+                    }
+                } else {
+                    self.stopIndicatorAnimate()
+                    let message = "خطا در دریافت اطلاعات کاربری !"
+                    DispatchQueue.main.async {
+                        self.presentWarningAlert(message: message)
+                    }
+                }
+            })
 
             return true
         }
