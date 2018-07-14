@@ -21,7 +21,11 @@ class CarServiceViewController: UIViewController, dropDownProtocol, carServiceCo
     var products = [Product]()
     var basketProducts = [Product]()
     var totalPrice: Int = 0
-    var categorySelected = [Bool](repeating: false, count: ProductService.instance.categorys.count)
+    var categorySelected = [Bool](repeating: false, count: ProductService.instance.categorys.count) {
+        didSet {
+            print(categorySelected)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +68,7 @@ class CarServiceViewController: UIViewController, dropDownProtocol, carServiceCo
         tableView.delegate = self
         self.navigationItem.title = "انتخاب سرویس"
         configureParrentButton()
-        totalPriceLabel.text = String(totalPrice)
+        totalPriceLabel.text = totalPrice.seperateByCama
     }
     
     func configureParrentButton() {
@@ -100,10 +104,16 @@ class CarServiceViewController: UIViewController, dropDownProtocol, carServiceCo
     }
     
     func addButtonPressed(cell: CarServiceCollectionViewCell) {
+        print("add button pressed")
+        guard basketProducts.count < 3 else {
+            let message = "نمیتوانید بیشتر از سه خدمات به سبد اضافه کنید !"
+            presentWarningAlert(message: message)
+            return
+        }
         if let indexPath = collectionView.indexPath(for: cell) {
             let product = products[indexPath.row]
             totalPrice += product.price
-            totalPriceLabel.text = String(totalPrice)
+            totalPriceLabel.text = totalPrice.seperateByCama
             basketProducts.append(product)
             let index = findCatIndex(categoryName: parrentDropButton.title(for: .normal)!)
             categorySelected[index] = true
@@ -114,12 +124,20 @@ class CarServiceViewController: UIViewController, dropDownProtocol, carServiceCo
     
     func deleteButtonpressed(cell: CarServiceTableViewCell) {
         if let indexPath = tableView.indexPath(for: cell) {
-            basketProducts.remove(at: indexPath.row)
+            let removeProduct = basketProducts[indexPath.row]
             let removePrice = basketProducts[indexPath.row].price
+            basketProducts.remove(at: indexPath.row)
             totalPrice -= removePrice
-            totalPriceLabel.text = String(totalPrice)
-            let index = findCatIndex(categoryName: parrentDropButton.title(for: .normal)!)
-            categorySelected[index] = false
+            totalPriceLabel.text = totalPrice.seperateByCama
+            let productCat = removeProduct.cat
+            let categorys = ProductService.instance.categorys
+            for category in categorys {
+                if category.id == productCat {
+                    let catName = category.title
+                    let index = findCatIndex(categoryName: catName)
+                    categorySelected[index] = false
+                }
+            }
             collectionView.reloadData()
             tableView.reloadData()
         }
@@ -175,11 +193,9 @@ extension CarServiceViewController: UICollectionViewDelegate, UICollectionViewDa
         updateButton(button: cell.addButton)
         cell.configureCell(productName: product.title, price: product.price)
         // fetch image
-        if let picture = product.picture {
-            let imageURL = IMAGE_URL + picture
-            if let imageView = cell.imageView {
-                imageView.loadImageUsingCache(withUrl: imageURL)
-            }
+        let imageURL = IMAGE_URL + String(product.cat) + ".jpg"
+        if let imageView = cell.imageView {
+            imageView.loadImageUsingCache(withUrl: imageURL)
         }
         
         return cell

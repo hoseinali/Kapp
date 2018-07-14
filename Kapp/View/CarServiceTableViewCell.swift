@@ -38,7 +38,7 @@ class CarServiceTableViewCell: UITableViewCell {
     // Method
     func configureCell(title: String, price: Int) {
         productNameLabel.text = title
-        pricelLabel.text = String(price)
+        pricelLabel.text = price.seperateByCama
     }
     
 

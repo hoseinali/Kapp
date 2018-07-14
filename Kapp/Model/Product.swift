@@ -15,6 +15,5 @@ struct Product {
     var price: Int
     var cat: Int
     var status: Int
-    var picture: String?
     
 }

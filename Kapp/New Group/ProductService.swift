@@ -20,7 +20,7 @@ class ProductService {
     func fetchCategory(type: Int, completion: @escaping COMPLETION_SUCCESS) {
         let uid = UserDataService.instance.uid
         let ssid = UserDataService.instance.ssid
-        let url = PRODUCT_URL + "&uid=\(uid)&ssid=\(ssid)"
+        let url = PRODUCT_URL + "&uid=\(uid)&ssid=\(ssid)&type=\(type)"
         self.categorys.removeAll()
         self.products.removeAll()
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: DEFAULT_HEADER).responseJSON { (response) in
@@ -36,8 +36,19 @@ class ProductService {
                     let category = Category(title: title, id: id, status: status)
                     self.categorys.append(category)
                 }
-                guard let products = data["products"]!.array else { completion(false) ; return }
-                //
+                guard let array = data["products"]!.array else { completion(false) ; return }
+                for i in array {
+                    guard let products = i.array else { completion(false) ; return }
+                    for product in products {
+                        let id = product["id"].intValue
+                        let title = product["title"].stringValue
+                        let price = product["price"].intValue
+                        let cat = product["cat"].intValue
+                        let status = product["status"].intValue
+                        let product = Product(id: id, title: title, price: price, cat: cat, status: status)
+                        self.products.append(product)
+                    }
+                }
                 completion(true)
             } else {
                 completion(false)
