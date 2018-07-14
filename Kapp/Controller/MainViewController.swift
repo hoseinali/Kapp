@@ -29,20 +29,12 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
         updateUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        let geoLong = centerMapCoordinate.longitude
-        let geoLat = centerMapCoordinate.latitude
-        print("location in did appear is: \(geoLat),\(geoLong)")
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("\(#function) -- \(self)")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("\(#function) -- \(self)")
     }
     
     var randomColor: UIColor {
@@ -63,9 +55,6 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
             self.presentWarningAlert(message: message)
             return
         }
-        UserOrderService.instance.address = address
-        let userLocation: (lat: String, long: String) = (lat: "\(self.centerMapCoordinate.latitude)",long: "\(self.centerMapCoordinate.longitude)")
-        UserOrderService.instance.userLocation = userLocation
         presentAlert()
     }
     
@@ -101,10 +90,26 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
         alert.messageFont = UIFont(name: YEKAN_WEB_FONT, size: 13)!
         let done = CDAlertViewAction(title: "بله", font: UIFont(name: YEKAN_WEB_FONT, size: 12)!, textColor: UIColor.darkGray, backgroundColor: .white) { (action) -> Bool in
             self.startIndicatorAnimate()
-            self.stopIndicatorAnimate()
-            self.performSegue(withIdentifier: CAR_CHOSEN_SEGUE, sender: nil)
-            let userLocation: (lat: String, long: String) = (lat: "\(self.centerMapCoordinate.latitude)",long: "\(self.centerMapCoordinate.longitude)")
-            UserOrderService.instance.userLocation = userLocation
+            let parameters = ["address": self.addressTextField.text!]
+            PersonalInfromationService.instance.updateUserInformation(withParameters: parameters, completion: { (success) in
+                if success {
+                    self.stopIndicatorAnimate()
+                    let userLocation: (lat: String, long: String) = (lat: "\(self.centerMapCoordinate.latitude)",long: "\(self.centerMapCoordinate.longitude)")
+                    UserOrderService.instance.userLocation = userLocation
+                    let address = self.addressTextField.text!
+                    UserOrderService.instance.address = address
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: CAR_CHOSEN_SEGUE, sender: nil)
+                    }
+                } else {
+                    self.stopIndicatorAnimate()
+                    let message = "خطا در دریافت اطلاعات کاربری !"
+                    DispatchQueue.main.async {
+                        self.presentWarningAlert(message: message)
+                    }
+                }
+            })
+
             return true
         }
         let cancel = CDAlertViewAction(title: "خیر", font: UIFont(name: YEKAN_WEB_FONT, size: 13)!, textColor: UIColor.darkGray, backgroundColor: .white, handler: nil)
@@ -121,12 +126,12 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        mapView.delegate = self
-        mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
-        let geoLong = centerMapCoordinate.longitude
-        let geoLat = centerMapCoordinate.latitude
-        print("location in view load is \(geoLat),\(geoLong)")
+        mapView.isMyLocationEnabled = true
+        mapView.delegate = self
+        centerMapCoordinate.longitude = mapView.camera.target.longitude
+        centerMapCoordinate.latitude = mapView.camera.target.latitude
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -171,7 +176,6 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
     }
     
     
-    
 }
 
 extension MainViewController: GMSMapViewDelegate {
@@ -181,15 +185,14 @@ extension MainViewController: GMSMapViewDelegate {
         let latitude = mapView.camera.target.latitude
         let longitude = mapView.camera.target.longitude
         centerMapCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        
     }
     
     func mapView(_ mapView: GMSMapView, didBeginDragging marker: GMSMarker) {
-        // print("didBeginDragging")
+        print("didBeginDragging")
     }
     
     func mapView(_ mapView: GMSMapView, didDrag marker: GMSMarker) {
-        // print("didDrag")
+        print("didDrag")
     }
     
     func mapView(_ mapView: GMSMapView, didEndDragging marker: GMSMarker) {
