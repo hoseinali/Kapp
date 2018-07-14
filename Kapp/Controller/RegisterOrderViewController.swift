@@ -119,6 +119,10 @@ class RegisterOrderViewController: UIViewController {
         let timeText = "\(orderTime) الی \(Int(orderTime)! + 1)"
         self.timeLabel.text = timeText
         self.dateLabel.text = UserOrderService.instance.orderDate
+        let productName = UserOrderService.instance.products!.map { $0.title }.joined(separator: " , ")
+        self.productNameLabel.text = productName
+        self.totalPriceLabel.text = UserOrderService.instance.totalPrice?.seperateByCama
     }
+    
     
 }

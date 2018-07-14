@@ -21,11 +21,7 @@ class CarServiceViewController: UIViewController, dropDownProtocol, carServiceCo
     var products = [Product]()
     var basketProducts = [Product]()
     var totalPrice: Int = 0
-    var categorySelected = [Bool](repeating: false, count: ProductService.instance.categorys.count) {
-        didSet {
-            print(categorySelected)
-        }
-    }
+    var categorySelected = [Bool](repeating: false, count: ProductService.instance.categorys.count)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,7 +100,6 @@ class CarServiceViewController: UIViewController, dropDownProtocol, carServiceCo
     }
     
     func addButtonPressed(cell: CarServiceCollectionViewCell) {
-        print("add button pressed")
         guard basketProducts.count < 3 else {
             let message = "نمیتوانید بیشتر از سه خدمات به سبد اضافه کنید !"
             presentWarningAlert(message: message)
@@ -163,7 +158,11 @@ class CarServiceViewController: UIViewController, dropDownProtocol, carServiceCo
                 let index = findCatIndex(categoryName: parrentDropButton.title(for: .normal)!)
                 if categorySelected[index] {
                     button.isEnabled = false
+                    button.backgroundColor = .lightGray
+                    button.setTitle("افزوده شد", for: .normal)
                 } else {
+                    button.setTitle("افزودن", for: .normal)
+                    button.backgroundColor = #colorLiteral(red: 0.4979554415, green: 0.6144852042, blue: 0.812397182, alpha: 1)
                     button.isEnabled = true
                 }
             }
