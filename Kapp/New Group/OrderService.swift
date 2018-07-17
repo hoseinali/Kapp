@@ -65,6 +65,7 @@ class OrderService {
                 guard let json = try? JSON.init(data: data) else { completion(false) ; return }
                 let type = json["type"].stringValue
                 guard type == "success" else { completion(false) ; return }
+                UserOrderService.instance.clearUserOrder()
                 completion(true)
             }
             else {

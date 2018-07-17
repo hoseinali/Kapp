@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CDAlertView
 
 class RegisterOrderViewController: UIViewController {
 
@@ -71,8 +72,22 @@ class RegisterOrderViewController: UIViewController {
             self.presentWarningAlert(message: message)
             return
         }
-        // if success clear userOrderService *
-        performSegue(withIdentifier: UNWIND_MAIN_SEGUE, sender: sender)
+        startIndicatorAnimate()
+        OrderService.instance.registerOrder(orderType: .byCredit) { (success) in
+            if success {
+                self.stopIndicatorAnimate()
+                DispatchQueue.main.async {
+                    let message = "سفارش شما با متود کسر از اعتبار با موفقیت ثبت شد !"
+                    self.presentAlert(message: message)
+                }
+            } else {
+                self.stopIndicatorAnimate()
+                DispatchQueue.main.async {
+                    let message = "خطا در ثبت سفارش رخ داده است، لطفا مجددا تلاش کنید !"
+                    self.presentWarningAlert(message: message)
+                }
+            }
+        }
     }
     
     @IBAction func deliveryPaymentButtonPressed(_ sender: RoundedButton) {
@@ -82,8 +97,22 @@ class RegisterOrderViewController: UIViewController {
             self.presentWarningAlert(message: message)
             return
         }
-        // if success clear userOrderService *
-        performSegue(withIdentifier: UNWIND_MAIN_SEGUE, sender: sender)
+        startIndicatorAnimate()
+        OrderService.instance.registerOrder(orderType: .byCredit) { (success) in
+            if success {
+                self.stopIndicatorAnimate()
+                DispatchQueue.main.async {
+                    let message = "سفارش شما با متود پرداخت در محل با موفقیت ثبت شد !"
+                    self.presentAlert(message: message)
+                }
+            } else {
+                self.stopIndicatorAnimate()
+                DispatchQueue.main.async {
+                    let message = "خطا در ثبت سفارش رخ داده است، لطفا مجددا تلاش کنید !"
+                    self.presentWarningAlert(message: message)
+                }
+            }
+        }
     }
     
     /*
@@ -124,5 +153,18 @@ class RegisterOrderViewController: UIViewController {
         self.totalPriceLabel.text = UserOrderService.instance.totalPrice?.seperateByCama
     }
     
+    func presentAlert(message: String) {
+        let alert = CDAlertView(title: "توجه", message: message, type: CDAlertViewType.notification)
+        alert.titleFont = UIFont(name: YEKAN_WEB_FONT, size: 14)!
+        alert.messageFont = UIFont(name: YEKAN_WEB_FONT, size: 13)!
+        let done = CDAlertViewAction(title: "باشه", font: UIFont(name: YEKAN_WEB_FONT, size: 13)!, textColor: UIColor.darkGray, backgroundColor: .white) { (action) -> Bool in
+            self.performSegue(withIdentifier: UNWIND_MAIN_SEGUE, sender: nil)
+            
+            return true
+        }
+        alert.add(action: done)
+        alert.show()
+    }
     
+
 }
