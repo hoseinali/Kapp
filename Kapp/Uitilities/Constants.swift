@@ -75,7 +75,7 @@ let INTERNET_VC_ID = "InternetConnectionViewControllerID"
 let YEKAN_WEB_FONT = "WeblogmaYekan"
 
 // GOOGLE API KEY
-let GOOGLE_API_KEY = "AIzaSyBvaSz-b6j8UJBrxzSnFvaSDWrhACWoDHY"
+let GOOGLE_API_KEY = "AIzaSyAJO2yRHFXS4xqvFOzPS2RcdxJCXyX5tQk" // "AIzaSyBvaSz-b6j8UJBrxzSnFvaSDWrhACWoDHY"
 
 // CELL IDENTIFIER
 let SPEND_CELL = "spendCell"
