@@ -9,7 +9,7 @@
 import UIKit
 
 // COMPLETION HANDLERS
-typealias COMPLETION_SUCCESS = (_ Success:Bool) -> ()
+typealias COMPLETION_SUCCESS = (_ Success: Bool) -> ()
 typealias FORMDATA_PARAMETER = [String:String]
 
 // URL
@@ -27,8 +27,9 @@ let PAY_LIST_URL = "\(BASE_URL)api-pay.php?do=paylist"
 let CASH_LOG_URL = "\(BASE_URL)api-pay.php?do=cashlog"
 let BANK_CASH_URL = "\(BASE_URL)api-pay.php?do=pay"
 let ORDER_LIST_URL = "\(BASE_URL)api-order.php?do=orderlist"
+let ORDER_NAME_URL = "\(BASE_URL)api-order.php?do=ordercart"
 let COPON_CHECK_URL = "\(BASE_URL)api-order.php?do=coponcheck"
-let ORDER_CART_URL = "\(BASE_URL)api-users.php?do=ordercart"
+let ORDER_CART_URL = "\(BASE_URL)api-order.php?do=orderreg"
 let CONTROLL_SERVICE_URL = "\(BASE_URL)api-users.php?do=partika"
 let PAY_URL = "http://samcarcare.ir/ic-app/api-pay.php?do=pay"
 let PRODUCT_URL = "\(BASE_URL)api-products.php?do=products"
@@ -87,7 +88,7 @@ let CAR_SERVICE_TABLE_CELL = "CarServiceTableCell"
 // NOTIFICATION
 let DISMISS_ROOT_INDICATOR_NOTIFI = Notification.Name("dismissRootActivityIndicator")
 let DISMISS_INDICATOR_VC_NOTIFI = Notification.Name("dismissIndicatorVCActivityIndicator")
-
+let UPDATE_MOUNT_NOTIFI = Notification.Name("updateMountNotifi")
 
 
 

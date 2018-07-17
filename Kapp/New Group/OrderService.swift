@@ -17,7 +17,61 @@ class OrderService {
     var copon: Copon?
     
     func registerOrder(orderType: OrderType, completion: @escaping COMPLETION_SUCCESS) {
-        //
+        let uid = UserDataService.instance.uid
+        let ssid = UserDataService.instance.ssid
+        guard let url = URL(string: ORDER_CART_URL + "&uid=\(uid)&ssid\(ssid)") else { completion(false) ; return }
+        // parameters
+        var cart = ""
+        var sendDay = ""
+        var sendTime = ""
+        let quantity = UserOrderService.instance.products!.count
+        let address = UserOrderService.instance.address!
+        let coponId = UserOrderService.instance.coponId
+        let price = UserOrderService.instance.totalPrice!
+        var paymentMethod = ""
+        switch orderType {
+        case .byCredit:
+            paymentMethod = "2"
+        case .cashOnDelivery:
+            paymentMethod = "1"
+        default:
+            return
+        }
+        let productId = UserOrderService.instance.products!.map { $0.id }
+        var ids = [String]()
+        for id in productId {
+            ids.append("\(id)q1")
+        }
+        cart = ids.joined(separator: ",")
+        // send-time **
+        // send-day **
+        var parameters: FORMDATA_PARAMETER = ["payment": paymentMethod,"cart": cart,"send-time": sendTime, "send-day": sendDay, "quantity": "\(quantity)", "address": address, "price": "\(price)"]
+        if let coponId = coponId {
+            parameters.updateValue("\(coponId)", forKey: "copon-id")
+        }
+        var request = URLRequest.init(url: url)
+        request.httpMethod = "POST"
+        let boundary = generateBoundary()
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        let dataBody = createDataBody(withParameters: parameters, media: nil, boundary: boundary)
+        request.httpBody = dataBody
+        let session = URLSession.shared
+        let task = session.dataTask(with: request) { (data, response, error) in
+            if let _ = response {
+                //
+            }
+            if let data = data {
+                guard let json = try? JSON.init(data: data) else { completion(false) ; return }
+                let type = json["type"].stringValue
+                guard type == "success" else { completion(false) ; return }
+                completion(true)
+            }
+            else {
+                completion(false)
+            }
+        }
+        task.resume()
     }
     
     func Orderlist (completion: @escaping COMPLETION_SUCCESS) {
@@ -76,7 +130,7 @@ class OrderService {
     func orderListName(cart: String, completion: @escaping (_ success: Bool, _ orderName: String?) -> Void) {
         let uid = UserDataService.instance.uid
         let ssid = UserDataService.instance.ssid
-        guard let url = URL.init(string: ORDER_LIST_URL + "&uid=\(uid)&ssid\(ssid)") else { return }
+        guard let url = URL.init(string: ORDER_NAME_URL + "&uid=\(uid)&ssid=\(ssid)") else { return }
         let parameters:FORMDATA_PARAMETER = ["cart":"\(cart)"]
         var request = URLRequest.init(url: url)
         request.httpMethod = "POST"

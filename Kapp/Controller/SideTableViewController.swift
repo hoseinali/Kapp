@@ -37,11 +37,22 @@ class SideTableViewController: UITableViewController {
         }
     }
     
-    // Method
+    // Objc
+    @objc func updateMount() {
+        BagService.instance.bagCash { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    self.moneyLabel.text = UserDataService.instance.cash.seperateByCama
+                }
+            }
+        }
+    }
     
+    // Method
     func updateUI() {
         moneyLabel.text = UserDataService.instance.cash.seperateByCama
         nameLabel.text = PersonalInfromationService.instance.userInformation?.name
+        NotificationCenter.default.addObserver(self, selector: #selector(updateMount), name: UPDATE_MOUNT_NOTIFI, object: nil)
     }
     
     private func exitProfile() {

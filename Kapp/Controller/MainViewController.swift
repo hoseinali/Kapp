@@ -37,13 +37,21 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
         super.viewWillDisappear(animated)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if let userInformation = PersonalInfromationService.instance.userInformation {
+            if userInformation.address != "" {
+                addressTextField.text = userInformation.address
+            }
+        }
+    }
+    
     var randomColor: UIColor {
         let colors = [UIColor(hue:0.65, saturation:0.33, brightness:0.82, alpha:1.00),
                       UIColor(hue:0.57, saturation:0.04, brightness:0.89, alpha:1.00),
                       UIColor(hue:0.55, saturation:0.35, brightness:1.00, alpha:1.00),
                       UIColor(hue:0.38, saturation:0.09, brightness:0.84, alpha:1.00)]
-        
         let index = Int(arc4random_uniform(UInt32(colors.count)))
+        
         return colors[index]
     }
     
@@ -62,6 +70,10 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
         let autoComplete = GMSAutocompleteViewController()
         let searchBarTextAttributes: [String : AnyObject] = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.darkGray, NSAttributedStringKey.font.rawValue: UIFont(name: YEKAN_WEB_FONT, size: 18)!]
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = searchBarTextAttributes
+        let customrAttribute: [NSAttributedStringKey: Any] = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.darkGray, NSAttributedStringKey.font: UIFont(name: YEKAN_WEB_FONT, size: 15)!]
+        let attributePlaceHolder = NSAttributedString(string: "مکان خود را جستجو کنید...", attributes: customrAttribute)
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).attributedPlaceholder = attributePlaceHolder
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).setTitleTextAttributes(customrAttribute, for: .normal)
         autoComplete.delegate = self
         self.present(autoComplete, animated: true, completion: nil)
     }
@@ -77,6 +89,7 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
     }
     
     func sideMenuControllerDidReveal(_ sideMenuController: SideMenuController) {
+        NotificationCenter.default.post(name: UPDATE_MOUNT_NOTIFI, object: nil)
         print(#function)
     }
     
@@ -96,9 +109,9 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
                     self.stopIndicatorAnimate()
                     let userLocation: (lat: String, long: String) = (lat: "\(self.centerMapCoordinate.latitude)",long: "\(self.centerMapCoordinate.longitude)")
                     UserOrderService.instance.userLocation = userLocation
-                    let address = self.addressTextField.text!
-                    UserOrderService.instance.address = address
                     DispatchQueue.main.async {
+                        let address = self.addressTextField.text!
+                        UserOrderService.instance.address = address
                         self.performSegue(withIdentifier: CAR_CHOSEN_SEGUE, sender: nil)
                     }
                 } else {
@@ -131,7 +144,6 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
         mapView.delegate = self
         centerMapCoordinate.longitude = mapView.camera.target.longitude
         centerMapCoordinate.latitude = mapView.camera.target.latitude
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -168,7 +180,7 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
     }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        print("###########     \(error)     ############")
+        //
     }
     
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {

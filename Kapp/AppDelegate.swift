@@ -27,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SideMenuController.preferences.animating.transitionAnimator = FadeAnimator.self
         GMSPlacesClient.provideAPIKey(GOOGLE_API_KEY)
         GMSServices.provideAPIKey(GOOGLE_API_KEY)
-
         
         return true
     }
