@@ -64,7 +64,8 @@ class OrderService {
             if let data = data {
                 guard let json = try? JSON.init(data: data) else { completion(false) ; return }
                 let type = json["type"].stringValue
-                guard type == "success" else { completion(false) ; return }
+                guard type == "PM" else { completion(false) ; return }
+                
                 UserOrderService.instance.clearUserOrder()
                 completion(true)
             }
@@ -156,8 +157,7 @@ class OrderService {
                 } else {
                     completion(false,nil)
                 }
-            }
-            else {
+            } else {
                 completion(false,nil)
             }
         }

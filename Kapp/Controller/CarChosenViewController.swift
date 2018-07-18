@@ -47,7 +47,6 @@ class CarChosenViewController: UIViewController {
         navigationItem.backBarButtonItem = backButton
         collectionView.dataSource = self
         collectionView.delegate = self
-        
     }
     
     

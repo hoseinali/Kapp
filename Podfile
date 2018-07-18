@@ -20,3 +20,5 @@ target 'Kapp' do
     pod "SBCardPopup"
 
 end
+
+

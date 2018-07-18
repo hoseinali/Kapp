@@ -63,6 +63,10 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
             self.presentWarningAlert(message: message)
             return
         }
+        let customrAttribute: [NSAttributedStringKey: Any] = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.darkGray, NSAttributedStringKey.font: UIFont(name: YEKAN_WEB_FONT, size: 15)!]
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).setTitleTextAttributes(customrAttribute, for: .normal)
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).setTitleTextAttributes(customrAttribute, for: .selected)
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).setTitleTextAttributes(customrAttribute, for: .highlighted)
         presentAlert()
     }
     
@@ -70,10 +74,12 @@ class MainViewController: UIViewController, SideMenuControllerDelegate, CLLocati
         let autoComplete = GMSAutocompleteViewController()
         let searchBarTextAttributes: [String : AnyObject] = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.darkGray, NSAttributedStringKey.font.rawValue: UIFont(name: YEKAN_WEB_FONT, size: 18)!]
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = searchBarTextAttributes
-        let customrAttribute: [NSAttributedStringKey: Any] = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.darkGray, NSAttributedStringKey.font: UIFont(name: YEKAN_WEB_FONT, size: 15)!]
+        let customrAttribute: [NSAttributedStringKey: Any] = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.clear, NSAttributedStringKey.font: UIFont(name: YEKAN_WEB_FONT, size: 15)!]
         let attributePlaceHolder = NSAttributedString(string: "مکان خود را جستجو کنید...", attributes: customrAttribute)
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).attributedPlaceholder = attributePlaceHolder
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).setTitleTextAttributes(customrAttribute, for: .normal)
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).setTitleTextAttributes(customrAttribute, for: .selected)
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).setTitleTextAttributes(customrAttribute, for: .highlighted)
         autoComplete.delegate = self
         self.present(autoComplete, animated: true, completion: nil)
     }
