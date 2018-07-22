@@ -32,6 +32,7 @@ class OrderDetailTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // Method
     func configureCell(date: String, time: String, orderName: String, nameCopon: Int, pay_id: Int, mount: Int, payMetod: Int, sendTime: String, status: String) {
         dateLabel.text = date
         timeLabel.text = time
@@ -39,7 +40,7 @@ class OrderDetailTableViewCell: UITableViewCell {
         nameCoponLabel.text = String(nameCopon)
         mountLabel.text = mount.seperateByCama
         payIdLabel.text = String(pay_id)
-        sendTimeLabel.text = sendTime
+        sendTimeLabel.text = "ساعت \(sendTime)"
         switch payMetod {
         case 1: payMetodLabel.text = "در محل"
         case 2: payMetodLabel.text = "اعتباری"
@@ -61,5 +62,6 @@ class OrderDetailTableViewCell: UITableViewCell {
         default: StatusOrderLable.text = "ثبت اولیه"
         }
     }
+    
 
 }

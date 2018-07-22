@@ -13,17 +13,18 @@ import SwiftyJSON
 class OrderService {
     
     static let instance = OrderService()
+    
     var Orderlists = [Order]()
     var copon: Copon?
     
     func registerOrder(orderType: OrderType, completion: @escaping COMPLETION_SUCCESS) {
         let uid = UserDataService.instance.uid
         let ssid = UserDataService.instance.ssid
-        guard let url = URL(string: ORDER_CART_URL + "&uid=\(uid)&ssid\(ssid)") else { completion(false) ; return }
+        guard let url = URL(string: ORDER_CART_URL + "&uid=\(uid)&ssid=\(ssid)") else { completion(false) ; return }
         // parameters
         var cart = ""
-        var sendDay = ""
-        var sendTime = ""
+        let sendDay = UserOrderService.instance.orderDate!
+        let sendTime = UserOrderService.instance.orderTime!
         let quantity = UserOrderService.instance.products!.count
         let address = UserOrderService.instance.address!
         let coponId = UserOrderService.instance.coponId
@@ -43,8 +44,6 @@ class OrderService {
             ids.append("\(id)q1")
         }
         cart = ids.joined(separator: ",")
-        // send-time **
-        // send-day **
         var parameters: FORMDATA_PARAMETER = ["payment": paymentMethod,"cart": cart,"send-time": sendTime, "send-day": sendDay, "quantity": "\(quantity)", "address": address, "price": "\(price)"]
         if let coponId = coponId {
             parameters.updateValue("\(coponId)", forKey: "copon-id")
@@ -65,11 +64,9 @@ class OrderService {
                 guard let json = try? JSON.init(data: data) else { completion(false) ; return }
                 let type = json["type"].stringValue
                 guard type == "PM" else { completion(false) ; return }
-                
                 UserOrderService.instance.clearUserOrder()
                 completion(true)
-            }
-            else {
+            } else {
                 completion(false)
             }
         }

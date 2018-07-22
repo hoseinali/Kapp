@@ -27,6 +27,7 @@ class ConfirmViewController: UIViewController {
 
     // Action
     @IBAction func resendButtonPressed(_ sender: UIButton) {
+        view.endEditing(true)
         startIndicatorAnimate()
         AuthenticationService.instance.reOkCode(number: AuthenticationService.instance.phoneNumber) { (success) in
             if success {
@@ -50,6 +51,7 @@ class ConfirmViewController: UIViewController {
     }
     
     @IBAction func confirmButtonPressed(_ sender: RoundedButton) {
+        view.endEditing(true)
         UserDefaults.standard.set(true, forKey: REGISTER_KEY)
         guard let code = codeTextField.text, code != "" else {
             presentWarningAlert(message: "کد تایید را وارد کنید !")
@@ -94,6 +96,7 @@ class ConfirmViewController: UIViewController {
     }
     
     @IBAction func wrongNumberButtonPressed(_ sender: UIButton) {
+        view.endEditing(true)
         resetTimer()
         dismiss(animated: true, completion: nil)
     }

@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bb1-8R-QFT">
-                                <rect key="frame" x="60" y="184" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bb1-8R-QFT">
+                                <rect key="frame" x="10" y="134" width="300" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="fTx-au-ZZP"/>
-                                    <constraint firstAttribute="width" constant="200" id="vGa-ld-LdO"/>
+                                    <constraint firstAttribute="height" constant="300" id="fTx-au-ZZP"/>
+                                    <constraint firstAttribute="width" constant="300" id="vGa-ld-LdO"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -38,4 +38,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="263" height="260"/>
+    </resources>
 </document>

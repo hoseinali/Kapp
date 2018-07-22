@@ -24,11 +24,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     // Action
     @IBAction func RegisterButtonPressed(_ sender: RoundedButton) {
+        view.endEditing(true)
         guard let phoneNumber = phoneTextField.text, let refNumber = refTextField.text else { return }
         guard phoneNumberCondition(phoneNumber: phoneNumber)  else {
             return
         }
-        view.endEditing(true)
         startIndicatorAnimate()
         AuthenticationService.instance.registerGetCode(number: phoneNumber, refMobileNumber: refNumber) { (success) in
             if success {

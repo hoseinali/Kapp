@@ -30,6 +30,7 @@ class SpendTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // Method
     func configureCell(date: String, time: String, id: Int, bankName: String,  status: String , mount: String , bankResponse: String) {
         dateLabel.text = date
         timeLabel.text = time

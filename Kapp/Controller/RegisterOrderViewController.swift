@@ -72,6 +72,11 @@ class RegisterOrderViewController: UIViewController {
             self.presentWarningAlert(message: message)
             return
         }
+        guard UserDataService.instance.cash > UserOrderService.instance.totalPrice! else {
+            let message = "اعتبار شما کافی نمیباشد، لطفا اعتبار خود را افزایش دهید و سپس خرید را ادامه دهید !"
+            presentWarningAlert(message: message)
+            return
+        }
         startIndicatorAnimate()
         OrderService.instance.registerOrder(orderType: .byCredit) { (success) in
             if success {
@@ -98,7 +103,7 @@ class RegisterOrderViewController: UIViewController {
             return
         }
         startIndicatorAnimate()
-        OrderService.instance.registerOrder(orderType: .byCredit) { (success) in
+        OrderService.instance.registerOrder(orderType: .cashOnDelivery) { (success) in
             if success {
                 self.stopIndicatorAnimate()
                 DispatchQueue.main.async {
