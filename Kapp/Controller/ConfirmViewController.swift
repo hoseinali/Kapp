@@ -63,7 +63,7 @@ class ConfirmViewController: UIViewController {
                 if success {
                     self.stopIndicatorAnimate()
                     DispatchQueue.main.async {
-                        print("success old user login code with ssid: \(UserDataService.instance.ssid)")
+                        print("success old user login code with ssid: \(UserDataService.instance.ssid) uid \(UserDataService.instance.uid)")
                         self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
                     }
                 } else {

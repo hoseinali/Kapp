@@ -17,7 +17,7 @@ target 'Kapp' do
     pod 'NVActivityIndicatorView'
     pod 'CDAlertView'
     pod 'UICheckbox.Swift'
-    pod "SBCardPopup"
+    pod 'SBCardPopup'
 
 end
 
